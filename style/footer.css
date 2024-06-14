@@ -1,0 +1,27 @@
+footer{
+    display: flex;
+    background-color: #FFB30D;
+    gap: 40px;
+}
+
+footer>article>h1{
+    color: #000000;
+    font-size: 20px;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 570;
+}
+
+footer>nav{
+    display: flex;
+}
+
+footer>article{
+    display: flex;
+    flex-direction: column;
+}
+
+footer li{
+    color: #BF1501;
+}
+
