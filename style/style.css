@@ -19,10 +19,7 @@
 /* ----------------BODY-------------------------- */
 
 body{
-    background-color: #FFB30D;
-    /* max-width: 800px; */
     max-width: 1126px;
-    /* margin: auto; */
     margin-right: 100px;
     margin-left: 78px;
 
@@ -32,80 +29,6 @@ body{
 /* ----------------BODY-------------------------- */
 
 
-header{
-    margin-top: 13px;
-}
-
-.nav-header{
-    display: flex;
-    width: 100%;
-    /* border: 6px solid rgb(167, 231, 169); */
-    /* background-color: rgb(56, 83, 83); */
-    align-items: center;
-    /* border: solid 2px black; */
-
-}
-
-ul>li>a{
-    color: #BF1501;
-    font-size: 16px;
-
-    font-family: "Inter", sans-serif;
-    /* font-optical-sizing: auto; */
-    /* font-weight: 480; */
-    font-weight: 570;
-
-    
-}
-
-.ul-ancoras{
-    /* background-color: rgb(90, 90, 128); */
-    /* border: solid 2px gray; */
-    /* width: 100%; */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-    gap: 80px;
-
-}
-
-
-
-.section-login{
-    /* background-color: rgb(90, 90, 128); */
-    display: flex;
-    /* border: solid 2px gray; */
-    width: 214px;
-    /* width: 184px; */
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    border: solid 1px #BF1501;
-    border-radius: 16px;
-    
-}
-
-.section-login>button{
-    background-color: Transparent;
-    border: transparent;
-
-    color: #000000;
-    font-size: 16px;
-
-    font-family: "Inter", sans-serif;
-    /* font-optical-sizing: auto; */
-    font-weight: 570;
-
-}
-
-
-.linha{
-    border: 1.32px solid black;
-    height: 20px;
-}
 
 
 
