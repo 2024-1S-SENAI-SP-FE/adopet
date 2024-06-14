@@ -1,0 +1,80 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------BODY-------------------------- */
+
+body{
+    background-color: #FFB30D;
+    /* max-width: 800px; */
+    max-width: 1126px;
+    margin: auto;
+    }
+
+/* ----------------BODY-------------------------- */
+
+
+.nav-header{
+    display: flex;
+    width: 100%;
+    /* border: 6px solid rgb(167, 231, 169); */
+    /* background-color: rgb(56, 83, 83); */
+    align-items: center;
+    border: solid 2px black;
+
+}
+
+ul>li>a{
+    color: #BF1501;
+    font-size: 16px;
+
+    font-family: "Inter", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 480;
+    
+}
+
+.ul-ancoras{
+    /* background-color: rgb(90, 90, 128); */
+    display: flex;
+    /* border: solid 2px gray; */
+    /* width: 100%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 100px;
+
+}
+
+.ul-login{
+    /* background-color: rgb(90, 90, 128); */
+    display: flex;
+    /* border: solid 2px gray; */
+    /* width: 100%; */
+    width: 200px;
+    /* width: 184px; */
+    height: 48px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    gap: 8px;
+    border: solid 1px #BF1501;
+    border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+
