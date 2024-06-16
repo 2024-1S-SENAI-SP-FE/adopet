@@ -16,9 +16,18 @@
     box-sizing: border-box;
 }
 
+
+
 /* ----------------BODY-------------------------- */
 
-body{
+/* body{
+    max-width: 1126px;
+    margin-right: 100px;
+    margin-left: 78px;
+
+    background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444);
+    } */
+header, main{
     max-width: 1126px;
     margin-right: 100px;
     margin-left: 78px;
@@ -27,6 +36,8 @@ body{
     }
 
 /* ----------------BODY-------------------------- */
+
+
 
 
 
