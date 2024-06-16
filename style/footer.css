@@ -1,27 +1,100 @@
-footer{
-    display: flex;
-    background-color: #FFB30D;
-    gap: 40px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-footer>article>h1{
+
+/* ---------- Afeta os dois h1 dos articles ---------- */
+
+footer>article h1{
     color: #000000;
     font-size: 20px;
-
+    
     font-family: "Inter", sans-serif;
-    font-weight: 570;
+    font-weight: 400;
+    
+    padding-bottom: 16px;
 }
 
-footer>nav{
+/* ---------- Afeta os dois h1 dos articles ---------- */
+
+/* footer>nav{
     display: flex;
+    background-color: #F9F9F9;
+    gap: 40px;
+    height: 438px;
+} */
+
+footer{
+    background-color: #F9F9F9;
 }
 
-footer>article{
+/* -------------- Article1 --------------*/
+
+/* ---------------TESTE----------------- */
+.article1{
+    margin-left: 107px;
+}
+/* ---------------TESTE----------------- */
+
+.article1{
     display: flex;
-    flex-direction: column;
+    gap: 137px;
+    /* gap: 16px; */
+    padding-top: 57px;
+    padding-bottom: 123px;
 }
 
-footer li{
+footer li, a{
     color: #BF1501;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
+footer>.article1>nav>ul>li{
+    /* background-color: gray; */
+    display: flex;
+    gap: 16px;
+    /* o gap ta distanciando os icon do texto */
+    padding-bottom: 16px;
+    /* gap não funcionou nos li, entao usei padding bottom -GB*/
+    line-height: 24px;
+    
+}
+
+
+
+
+/* footer>article a{
+    color: #BF1501;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+} */
+
+
+
+/* --------------------------- Article2 */
+
+.article2{
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;  
+    height: 80px;
+    padding-left: 71px;
+    padding-right: 92px;
+    background-color: #FFB30D;
+}
+
+.article2 ul{
+    display: flex;
+    gap: 33px;
+}
+
+.article2 nav{
+    display: flex;
+    align-items: center;
+}
+
+
+.article2 p{
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-weight: 405;
+}
