@@ -28,7 +28,7 @@ header ul>li>a{
     /* font-optical-sizing: auto; */
     /* font-weight: 480; */
     font-weight: 570;
-
+    cursor: pointer;
     
 }
 
@@ -41,7 +41,7 @@ header ul>li>a{
     align-items: center;
     /* justify-content: space-between; */
     gap: 80px;
-
+    
 }
 
 
@@ -72,6 +72,8 @@ header ul>li>a{
     font-family: "Inter", sans-serif;
     /* font-optical-sizing: auto; */
     font-weight: 570;
+
+    cursor: pointer
 
 }
 

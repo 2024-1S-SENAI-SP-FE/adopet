@@ -4,36 +4,93 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-/* .acme-regular {
-    font-family: "Acme", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  } */
-
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    /* background-color:#FFC027; */
 }
-
 
 
 /* ----------------BODY-------------------------- */
 
-/* body{
-    max-width: 1126px;
-    margin-right: 100px;
-    margin-left: 78px;
-
-    background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444);
-    } */
 header, main{
     max-width: 1126px;
     margin-right: 100px;
     margin-left: 78px;
+    
+}
 
-    /* background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444); */
-    }
+body{
+    background-color: #FFB30D;
+}
+
+.sec-pai{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    justify-content: space-around;
+}
+
+.sec-pai .bg-infos{
+    background-color: #ffffff ;
+    height: 640px;
+    width: 640px;
+    position: absolute;
+    left: 0;
+    border-radius: 0% 87% 87% 0%;
+    z-index: -1;
+    margin-bottom: 90px;
+    /* overflow: hidden; */
+}
+
+.sec-home1{
+    width: 50% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 74px;
+    /* background-color: #a17171; */
+    /* border: solid red; */
+}
+
+.sec-home1 h1{
+    font-family: 'inter';
+    font-size: 32px;
+    font-weight: 550;
+}
+
+.sec-home1 h2{
+    font-family: 'acme';
+    font-size: 40px;
+    color: #F82C10;
+    /* text-align: center; */
+}
+
+.sec-home1 p{
+    font-family: 'inter';
+    font-size: 18px;
+    color: #000000;
+    text-align: start;
+    width: 420px;
+    margin: 30px
+}
+
+.sec-home2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    height: 500px;
+    width: 400vw;
+    border: solid red;
+    
+}
+
+.sec-home2 img{
+    border: solid red;
+    width: 100%;
+}
 
 /* ----------------BODY-------------------------- */
 
