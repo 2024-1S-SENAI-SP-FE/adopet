@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,20 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
+    <script src="script/script.js" defer></script>
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav class="nav-header">
             <ul class="ul-ancoras">
 
                 <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
-               <li><a href="/adote.html">Adote</a></li>
-               <li><a href="">Doe</a></li>
-               <li><a href="">Contato</a></li>
-               <li><a href="">Sobre nós</a></li>
+                <li><a href="/adote.html">Adote</a></li>
+                <li><a href="">Doe</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="">Sobre nós</a></li>
             </ul>
 
             <section class="section-login">
@@ -27,22 +30,37 @@
                 <section class="linha"></section>
                 <button>Cadastro</button>
             </section>
-            
+
         </nav>
     </header>
 
-    <main>
-        <section>
+    <section class="father">
 
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolores autem vitae dolor voluptate molestiae ipsum perspiciatis molestias tenetur dignissimos, beatae consectetur exercitationem deleniti velit rem! Et earum minus voluptas aliquam voluptatem harum accusamus ipsum dolorum laudantium, nemo, facere laborum praesentium voluptates dolores vero sunt?</p> -->
+        <section id="section-pet">
+
 
         </section>
+
+    </section>
+
+    <section>
+        <form onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
+            <input type="file" name="photopet" id="photopet">
+            <input type="text" id="name" placeholder="name:">
+            <input type="text" id="age" placeholder="age:">
+            <input type="text" id="size" placeholder="size">
+            <input type="text" id="gender" placeholder="gender">
+            <input type="text" name="situantion" id="situation">
+            <button type="submit">enviar</button>
+        </form>
+    </section>
+
     </main>
-    
+
     <footer>
         <article class="article1">
             <nav>
-                <h1 > Como Podemos Ajudar?</h1>
+                <h1> Como Podemos Ajudar?</h1>
                 <ul>
                     <li><a href="/adote.html">Adote</a></li>
                     <li><a href="#">Doe</a></li>
@@ -50,17 +68,17 @@
                     <li><a href="#">Sobre nós</a></li>
                 </ul>
             </nav>
-        
+
 
             <nav>
                 <h1> Entre em contato</h1>
                 <ul class="contato-ul">
-                    
+
                     <li><img src="/assets/location_on.svg" alt=""> Rua Moreira de Godoi n° 226<br />
                         Ipiranga - Sao Paulo - SP<br />
                         CEP : 04256-060</li>
-                        <li><img src="/assets/call.svg" alt=""> + 55 (11) 1234-5678</li>
-                        
+                    <li><img src="/assets/call.svg" alt=""> + 55 (11) 1234-5678</li>
+
                     <li><img src="/assets/email.svg" alt=""><a href="#">email: adopet.com</a></li>
                 </ul>
             </nav>
@@ -76,5 +94,7 @@
             </nav>
         </article>
     </footer>
+
 </body>
+
 </html>
