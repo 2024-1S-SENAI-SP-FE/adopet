@@ -9,6 +9,9 @@
 
 header{
     margin-top: 13px;
+    margin: auto;
+    width: 100%;
+    max-width: 1126px;
 }
 .nav-header{
     display: flex;
