@@ -2,6 +2,7 @@ body{
     background-color: #FFB30D;
 }
 
+
 .sec-pai{
     display: flex;
     align-items: center;
@@ -53,6 +54,36 @@ body{
     margin: 30px
 }
 
+.botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 46px;;
+}
+
+.bt1{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: var(--red) ;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
+.bt2{
+    border-style: none;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: var(--red);
+    /* color: rgb(0, 0, 0); */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
 .sec-home2{
     display: flex;
     align-items: center;
@@ -68,3 +99,4 @@ body{
     border: solid red;
     width: 100%;
 }
+
