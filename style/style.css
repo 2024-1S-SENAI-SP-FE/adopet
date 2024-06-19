@@ -118,6 +118,9 @@ main {
 .test{
     border: solid black;
 }
+.foto img{
+    height: 100px;
+}
 /* footer {
     background-color: #333;
     color: #fff;
