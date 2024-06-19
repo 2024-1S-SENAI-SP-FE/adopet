@@ -1,0 +1,109 @@
+
+body{
+    /* border: solid 3px darkorange; */
+  }
+  
+
+  table th {
+    font-size: 16px;
+  
+  
+}
+  
+ main table{
+   border: solid 1.7px #aeaeae;
+   border-radius: 16px;
+   border-collapse:separate;
+   width: 330px;
+   height: 159px;
+
+}
+
+
+tbody{
+    display:initial;
+    border-spacing: 15px;   
+    /* padding: 5px;  */
+    width: 100%;
+}
+
+tfoot{
+    display: block;
+    border-spacing: 15px; 
+    /* padding: 15px; */
+
+}
+
+tbody img{
+  height: 20px;
+}
+
+.tbody-tr{
+  /* background-color: hotpink; */
+}
+
+th{
+  font-weight: bold;
+  text-align: left;
+}
+
+tbody td{
+  font-size: 12px;
+  text-align: right;
+  
+}
+
+
+
+
+  
+  thead th>img{
+    width: 100%;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+
+  }
+  
+  tfoot button{
+    width: 100%
+  }
+
+
+
+  .th-lola{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .td-cor, .th-lola{
+    color: #FFB30D;
+
+  }
+
+  .td-cor-female{
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    width: 40px;
+    /* text-align: center; */
+    
+  }
+  .td-cor-months{
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    width: 80px;
+    padding: 2px;
+  }
+  .td-cor-medium{
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    width: 80PX;
+    padding: 2px;
+  }
+
+  table button{
+    color: red;
+    border: solid 2px red;
+    background-color: transparent;
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+  }
