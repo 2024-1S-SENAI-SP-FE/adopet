@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/section.css">
+    <link rel="stylesheet" href="/style/form.css">
     <script src="/script/favorite.js"></script>
     <title>Document</title>
 </head>
@@ -33,7 +34,64 @@
         </nav>
     </header>
 
+    <hr>
+
     <main class="main">
+
+        <Header class="test2">
+            <section>
+
+                <form method="get" class="form-filter-pet">
+
+                    <div class="control-form-options">
+                    <select name="age" id="age">
+                        <option value="todos">Idade</option>
+                        <option value="filhote">Filhote (3 a 5 meses)</option>
+                        <option value="adulto">Adulto (1 a 7 anos)</option>
+                        <option value="idoso">Idoso (a partir dos 12)</option>
+                    </select>
+                    </div>
+
+                    <div class="control-form-options">
+                    <select name="order" id="order">
+                        <option value="order">ordenar</option>
+                        <option value="A-Z">ordenar de A a Z</option>
+                        <option value="Z-A">ordenar de Z a A</option>
+                    </select>
+                    </div>
+
+                    <div class="control-form-options">
+                    <select name="gender" id="gender">
+                        <option value="todos">gênero</option>
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                    </select>
+                    </div>
+
+                    <div class="control-form-range">
+                    <input type="range" name="size" id="size">
+                    <div class="control-form-range-img">
+                        <img src="/assets/dog 1.svg" alt="">
+                    <img src="/assets/dog 2.svg" alt="">
+                    <img src="/assets/dog (1) 1.svg" alt="">
+                    </div>
+                    </div>
+                    
+
+                    <div class="control-form-checkbox">
+                        <input type="checkbox" name="cachorro" id="gato">
+                        <input type="checkbox" name="gato" id="gato">
+                    </div>
+
+                    <div class="control-form-buttons">
+                        <button type="reset">Limpar Filtros</button>
+                        <button type="submit">Buscar</button>
+                    </div>
+
+                </form>
+
+            </section>
+        </Header>
 
             <section class="father">
 

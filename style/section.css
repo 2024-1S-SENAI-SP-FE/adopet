@@ -1,35 +1,33 @@
-/* 
+
 .body{
-    max-width: 80vw;
     margin: auto;
-} */
+}
 .father{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin: auto;
     width: 90%;
 }
-.main{
+.main:not(:test2){
     display: flex; 
     align-items: center; 
     justify-content: space-between;
     width: 100%;
-    margin: 7vh auto 7vh auto;
+    /* margin: 7vh auto 7vh auto; */
 }
-
 .main section {
-    border: solid 1.7px #aeaeae;
     border-radius: 16px;
     padding: 20px; 
     max-width: 90%;
-    margin: auto 30px auto 30px; 
+    margin: auto;
+    /* margin: auto 30px auto 30px;  */
 }
 
 .father .son{
     /* max-width: 25%;
     min-width: 30%; */
+    border: solid 1.7px #aeaeae;
     width: 24%;
     margin-left: 20px;
     margin-right: 20px;
@@ -91,8 +89,8 @@
 }
 
 .footer-section button:hover{
-    background-color: #FFB30D;
-    border: #FFB30D;
+    background-color: var(--yellow);
+    border: var(--yellow);
     color: white;
 
 }
@@ -108,7 +106,7 @@
     color: #000000;
 }
 .td-gender{
-    margin-left: 10px
+    margin-left: 2vw;
 }
 .td-gender,
 .td-months,
@@ -126,5 +124,3 @@
     justify-content: space-between;
 
 }
-
-

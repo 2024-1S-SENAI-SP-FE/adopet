@@ -85,3 +85,9 @@ header ul>li>a{
     border: 1.32px solid black;
     height: 20px;
 }
+:root{
+    --yellow: #FFB30D;
+    --red: #F82C10;
+    --dark-red: #BF1501;
+}
+
