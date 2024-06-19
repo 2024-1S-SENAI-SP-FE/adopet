@@ -2,6 +2,7 @@ body{
     background-color: #FFB30D;
 }
 
+
 .sec-pai{
     display: flex;
     align-items: center;
@@ -53,6 +54,51 @@ body{
     margin: 30px
 }
 
+.botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 46px;;
+}
+
+.bt1{
+    border: solid var(--dark-red) 1.5px;
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
+.bt1{
+    background-color: #ffff;
+}
+
+.bt1:hover{
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
+.bt2{
+    border: solid var(--dark-red) 1.5px;
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
+.bt2{
+    background-color: #ffff;
+}
+.bt2:hover{
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
 .sec-home2{
     display: flex;
     align-items: center;
@@ -60,11 +106,12 @@ body{
     margin: 20px;
     height: 500px;
     width: 400vw;
-    border: solid red;
+    /* border: solid red; */
     
 }
 
 .sec-home2 img{
-    border: solid red;
+    /* border: solid red; */
     width: 100%;
 }
+

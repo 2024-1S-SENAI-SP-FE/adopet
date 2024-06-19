@@ -18,6 +18,12 @@ header, main{
     margin-left: 78px;
 }
 
+:root{
+    --yellow: #FFB30D;
+    --red: #F82C10;
+    --dark-red: #BF1501;
+}
+
 
 
 
