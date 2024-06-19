@@ -7,12 +7,127 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/hover.css">
     <title>Document</title>
+    <style>
+
+body{
+    /* border: solid 3px darkorange; */
+  }
+  
+
+  table th {
+    font-size: 16px;
+  
+  
+}
+  
+ main table{
+   border: solid 1.7px #aeaeae;
+   border-radius: 16px;
+   border-collapse:separate;
+   width: 330px;
+   height: 159px;
+
+}
+
+
+tbody{
+    display:initial;
+    border-spacing: 15px;   
+    /* padding: 5px;  */
+    width: 100%;
+}
+
+tfoot{
+    display: block;
+    border-spacing: 15px; 
+    /* padding: 15px; */
+
+}
+
+tbody img{
+  height: 20px;
+}
+
+.tbody-tr{
+  /* background-color: hotpink; */
+}
+
+th{
+  font-weight: bold;
+  text-align: left;
+}
+
+tbody td{
+  font-size: 12px;
+  text-align: right;
+  
+}
+
+
+
+
+  
+  thead th>img{
+    width: 100%;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+
+  }
+  
+  tfoot button{
+    width: 100%
+  }
+
+
+
+  .th-lola{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .td-cor, .th-lola{
+    color: #FFB30D;
+
+  }
+
+  .td-cor-female{
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    width: 40px;
+    /* text-align: center; */
+    
+  }
+  .td-cor-months{
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    width: 80px;
+    padding: 2px;
+  }
+  .td-cor-medium{
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    width: 80PX;
+    padding: 2px;
+  }
+
+  table button{
+    color: red;
+    border: solid 2px red;
+    background-color: transparent;
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+  }
+
+
+    </style>
+    
 </head>
 <body>
     <header>
         <nav class="nav-header">
-            <ul class="ul-ancoras">
+            <ul class="ul-dropdown">
 
                 <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
                <li><a href="/adote.html">Adote</a></li>
@@ -31,14 +146,63 @@
         </nav>
     </header>
 
+
+
     <main>
-        <section>
-
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolores autem vitae dolor voluptate molestiae ipsum perspiciatis molestias tenetur dignissimos, beatae consectetur exercitationem deleniti velit rem! Et earum minus voluptas aliquam voluptatem harum accusamus ipsum dolorum laudantium, nemo, facere laborum praesentium voluptates dolores vero sunt?</p> -->
-
-        </section>
-    </main>
+        <table >
+          <thead  >
+            
+            <tr>
+              <th colspan="5" ><img src="assets\adote\dogpic.png" alt="foto de um">
+                
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr class="tbody-tr">
     
+              <th colspan="4" class="th-lola">Lola</th>
+    
+              <td colspan="4">
+                <img src="assets\adote\heart.svg" alt="">
+              </td>
+    
+            </tr>
+            <tr>
+              
+              <th >Gender</th>
+              <td colspan="4" class="td-cor-female">Female</td>
+            </tr>
+            
+            <tr>
+              
+              <th style="width: 3px;" colspan="4">Age</th>
+              <td colspan="4" class="td-cor-months">14 months</td>
+              
+              
+              
+                <th colspan="4">Size</th>
+    
+                <td colspan="4" class="td-cor-medium">Medium</td>
+            </tr>
+            <tfoot >
+              <tr>
+                <td colspan="6">Lola is a friendly, playfull smart male dog, only adopted to a house with fee...</td>
+              </tr>
+              <tr >
+                <td colspan="3"><button type="button"  >More info</button></td>
+              </tr>
+            </tfoot>
+          </tbody>
+          
+        </table>
+        
+        
+      </main>
+      
+
+
     <footer>
         <article class="article1">
             <nav>
