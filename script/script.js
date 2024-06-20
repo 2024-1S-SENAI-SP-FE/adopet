@@ -21,7 +21,7 @@ const GetPet = () => {
 
             if (!("erro" in response)) {
 
-                let section = document.getElementById('section-pet');
+                let section = document.getElementById('father');
 
                 let template = ""
 
@@ -31,28 +31,38 @@ const GetPet = () => {
 
                     template += `
 
-                    <section class="test">
+                     <section class="son">
+                    <header class="header-section">
+                        <img src="http://localhost:8080/${list.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
+                    </span>
+                    </header>
+                    <div class="dog-details">
 
-       <section class="foto">
-        <img src="http://localhost:8080${list.photopetUrl}" alt="Foto do(a) ${list.name}">
-    </section>
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">${list.gender}</span>
+                        </div>
 
-    <section class="informacoes">
-        <h2>${list.name}</h2>
-        <ul>
-            <li>Sexo: ${list.gender}</li>
-            <li>Idade: ${list.age}</li>
-            <li>Porte: ${list.size}</li>
-        </ul>
-        <br>
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">${list.age}</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">${list.size}</span>
 
-        <p>${list.petStory}</p>
+                        </div>
 
-        <button class="more-info">Saiba mais</button>
-
-    </section>
-     </section>
-          
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
         `
                 });
 

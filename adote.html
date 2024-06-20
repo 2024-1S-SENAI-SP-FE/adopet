@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/style/section.css">
     <link rel="stylesheet" href="/style/form.css">
     <script src="/script/favorite.js"></script>
+    <script src="/script/script.js"></script>
     <title>Document</title>
 </head>
 <body class="body">
@@ -33,6 +34,16 @@
             
         </nav>
     </header>
+
+    <form onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
+        <input type="file" name="photopet" id="photopet">
+        <input type="text" id="name" placeholder="name:">
+        <input type="text" id="age" placeholder="age:">
+        <input type="text" id="size" placeholder="size">
+        <input type="text" id="gender" placeholder="gender">
+        <input type="text" name="situantion" id="situation">
+        <button type="submit">enviar</button>
+    </form>
 
     <hr>
 
@@ -95,12 +106,16 @@
             </section>
         </Header>
 
+        <form action="">
+
+        </form>
+
             <section class="father">
 
 
                 <section class="son">
                     <header class="header-section">
-                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <img src="assets/gatinho.png" alt="foto de um cachorro" class="pet-pic">
                         <span class="itens-top">
                         <h2>Lola</h2>
                         <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
