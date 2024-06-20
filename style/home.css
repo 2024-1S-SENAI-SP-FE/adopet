@@ -1,3 +1,8 @@
+
+*{
+    box-sizing: border-box;
+
+}
 body{
     background-color: #FFB30D;
 }
@@ -6,30 +11,28 @@ body{
 .sec-pai{
     display: flex;
     align-items: center;
-    width: 90vw;
-    justify-content: space-around;
+    width: 80vw;
+    /* justify-content: space-around; */
 }
 
 .sec-pai .bg-infos{
     background-color: #ffffff ;
     height: 640px;
-    width: 640px;
+    width: 610px;
     position: absolute;
     left: 0;
     border-radius: 0% 87% 87% 0%;
     z-index: -1;
     margin-bottom: 90px;
-    /* overflow: hidden; */
+    scale:1.1;
 }
 
 .sec-home1{
-    width: 50% ;
+    width: 45% ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 74px;
-    /* background-color: #a17171; */
-    /* border: solid red; */
+    margin-top: 30px;
 }
 
 .sec-home1 h1{
@@ -42,7 +45,6 @@ body{
     font-family: 'acme';
     font-size: 40px;
     color: #F82C10;
-    /* text-align: center; */
 }
 
 .sec-home1 p{
@@ -57,7 +59,8 @@ body{
 .botoes{
     display: flex;
     flex-direction: row;
-    gap: 46px;;
+    gap: 40px;
+    margin-right: 23px;
 }
 
 .bt1{
@@ -74,6 +77,12 @@ body{
 
 .bt1{
     background-color: #ffff;
+}
+
+.bt1 a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
 }
 
 .bt1:hover{
@@ -95,6 +104,7 @@ body{
 .bt2{
     background-color: #ffff;
 }
+
 .bt2:hover{
     box-shadow: inset 200px 0 0 var(--red);
 }
@@ -102,16 +112,15 @@ body{
 .sec-home2{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 20px;
+    justify-content: flex-start;
+    margin-top: 40px;
     height: 500px;
-    width: 400vw;
-    /* border: solid red; */
-    
+    /* width: 290vw;  */
 }
 
 .sec-home2 img{
     /* border: solid red; */
-    width: 100%;
+    scale: 2.3;
+    width: 50%;
+    margin-left: 260px;
 }
-
