@@ -9,6 +9,9 @@
 
 header{
     margin-top: 13px;
+    margin: auto;
+    width: 100%;
+    max-width: 1126px;
 }
 .nav-header{
     display: flex;
@@ -28,7 +31,7 @@ header ul>li>a{
     /* font-optical-sizing: auto; */
     /* font-weight: 480; */
     font-weight: 570;
-
+    cursor: pointer;
     
 }
 
@@ -41,7 +44,7 @@ header ul>li>a{
     align-items: center;
     /* justify-content: space-between; */
     gap: 80px;
-
+    
 }
 
 
@@ -73,6 +76,8 @@ header ul>li>a{
     /* font-optical-sizing: auto; */
     font-weight: 570;
 
+    cursor: pointer
+
 }
 
 
@@ -80,3 +85,9 @@ header ul>li>a{
     border: 1.32px solid black;
     height: 20px;
 }
+:root{
+    --yellow: #FFB30D;
+    --red: #F82C10;
+    --dark-red: #BF1501;
+}
+

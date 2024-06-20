@@ -4,38 +4,28 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-/* .acme-regular {
-    font-family: "Acme", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  } */
-
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    /* background-color:#FFC027; */
 }
 
 
-
-/* ----------------BODY-------------------------- */
-
-/* body{
-    max-width: 1126px;
-    margin-right: 100px;
-    margin-left: 78px;
-
-    background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444);
-    } */
 header, main{
     max-width: 1126px;
     margin-right: 100px;
     margin-left: 78px;
+}
 
-    /* background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444); */
-    }
+:root{
+    --yellow: #FFB30D;
+    --red: #F82C10;
+    --dark-red: #BF1501;
+}
 
-/* ----------------BODY-------------------------- */
+
+
 
 body {
     font-family: sans-serif;
