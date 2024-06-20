@@ -6,10 +6,12 @@
     margin: auto;
     height: 400px;
 }
-.control-form-options:nth-child(2){
+
+.control-form-options:nth-of-type(2) {
     width: 40%;
 }
-.control-form-options:nth-child(1){
+
+.control-form-options:nth-of-type(1) {
     width: 20%;
 }
 
@@ -42,20 +44,9 @@
 }
 
 .control-form-range input[type=range] {
-    /* --webkit-appearance: none; */
-    /* appearance: none; */
-    /* border-radius: 5px; */
-    /* outline: none; */
     width: 90%;
     color: var(--red);
     background-color: var(--red);
-}
-
-.submit {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    /* margin: auto; */
 }
 
 .control-form-checkbox {
@@ -71,12 +62,9 @@
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
-
 }
 
 .control-form-checkbox {
-    /* margin-left: 40px;
-    margin-right: 40px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,23 +98,8 @@ label::before {
     width: 75%;
     height: 100%;
     border-radius: 50%;
-    background-color: #ccc;
-    /* opacity: 0;  */
+    background-color: white;
 }
-
-/* .gato::before {
-    /* content: url("../assets/cat\ 1.svg"); 
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #ccc;
-    /* opacity: 0;  
-}*/
 
 .gato::after {
     content: url("../assets/cat\ 1.svg");
@@ -137,7 +110,6 @@ label::before {
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    /* opacity: 0;   */
 }
 
 .cachorro::after {
@@ -149,16 +121,16 @@ label::before {
     transform: translate(-50%, -50%);
     width: 15px;
     height: 15px;
-    /* opacity: 0;  */
 }
 
-input[type="checkbox"]:checked+label::before {
+input[type="checkbox"]:checked + label::before {
     background-color: var(--red);
 }
 
-input[type="checkbox"]:checked+label::after {
+input[type="checkbox"]:checked + label::after {
     opacity: 1;
 }
+
 .control-form-buttons {
     width: 25%;
     display: flex;
@@ -180,4 +152,14 @@ input[type="checkbox"]:checked+label::after {
     background-color: var(--red);
     border: var(--red);
     color: white;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    display: none;
 }

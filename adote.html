@@ -35,7 +35,7 @@
         </nav>
     </header>
 
-    <form onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
+    <!-- <form onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
         <input type="file" name="photopet" id="photopet">
         <input type="text" id="name" placeholder="name:">
         <input type="text" id="age" placeholder="age:">
@@ -43,69 +43,64 @@
         <input type="text" id="gender" placeholder="gender">
         <input type="text" name="situantion" id="situation">
         <button type="submit">enviar</button>
-    </form>
+    </form> -->
 
     <hr>
 
     <main class="main">
 
-        <Header class="test2">
+        <header class="test2">
             <section>
-
                 <form method="get" class="form-filter-pet">
-
-                    <div class="control-form-options">
-                    <select name="age" id="age">
-                        <option value="todos">Idade</option>
-                        <option value="filhote">Filhote (3 a 5 meses)</option>
-                        <option value="adulto">Adulto (1 a 7 anos)</option>
-                        <option value="idoso">Idoso (a partir dos 12)</option>
-                    </select>
-                    </div>
-
-                    <div class="control-form-options">
-                    <select name="order" id="order">
-                        <option value="order">ordenar</option>
-                        <option value="A-Z">ordenar de A a Z</option>
-                        <option value="Z-A">ordenar de Z a A</option>
-                    </select>
-                    </div>
-
-                    <div class="control-form-options">
-                    <select name="gender" id="gender">
-                        <option value="todos">gênero</option>
-                        <option value="macho">Macho</option>
-                        <option value="femea">Fêmea</option>
-                    </select>
-                    </div>
-
-                    <div class="control-form-range">
-                    <input type="range" name="size" id="size">
-                    <div class="control-form-range-img">
-                        <img src="/assets/dog 1.svg" alt="">
-                    <img src="/assets/dog 2.svg" alt="">
-                    <img src="/assets/dog (1) 1.svg" alt="">
-                    </div>
-                    </div>
-                    
-
-                    <div class="control-form-checkbox">
+                    <fieldset class="control-form-options">
+                        <!-- <legend>Idade</legend> -->
+                        <select name="age" id="age">
+                            <option value="todos">Idade</option>
+                            <option value="filhote">Filhote (3 a 5 meses)</option>
+                            <option value="adulto">Adulto (1 a 7 anos)</option>
+                            <option value="idoso">Idoso (a partir dos 12)</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="control-form-options">
+                        <!-- <legend>Ordenar</legend> -->
+                        <select name="order" id="order">
+                            <option value="order">ordenar</option>
+                            <option value="A-Z">ordenar de A a Z</option>
+                            <option value="Z-A">ordenar de Z a A</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="control-form-options">
+                        <!-- <legend>Gênero</legend> -->
+                        <select name="gender" id="gender">
+                            <option value="todos">gênero</option>
+                            <option value="macho">Macho</option>
+                            <option value="femea">Fêmea</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="control-form-range">
+                        <!-- <legend>Tamanho</legend> -->
+                        <input type="range" name="size" id="size">
+                        <div class="control-form-range-img">
+                            <img src="/assets/dog 1.svg" alt="">
+                            <img src="/assets/dog 2.svg" alt="">
+                            <img src="/assets/dog (1) 1.svg" alt="">
+                        </div>
+                    </fieldset>
+                    <fieldset class="control-form-checkbox">
+                        <!-- <legend>Tipos de Animal</legend> -->
                         <input type="checkbox" name="cachorro" id="cachorro">
                         <label for="cachorro" class="cachorro"></label>
                         <input type="checkbox" name="gato" id="gato">
                         <label for="gato" class="gato"></label>
-                    </div>
-
-                    <div class="control-form-buttons">
+                    </fieldset>
+                    <fieldset class="control-form-buttons">
                         <button type="reset">Limpar Filtros</button>
                         <button type="submit">Buscar</button>
-                    </div>
-
+                    </fieldset>
                 </form>
-
             </section>
-        </Header>
-
+        </header>
+        
         <form action="">
 
         </form>
@@ -115,7 +110,7 @@
 
                 <section class="son">
                     <header class="header-section">
-                        <img src="assets/gatinho.png" alt="foto de um cachorro" class="pet-pic">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
                         <span class="itens-top">
                         <h2>Lola</h2>
                         <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
