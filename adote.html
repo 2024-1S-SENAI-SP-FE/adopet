@@ -40,10 +40,11 @@
     <form id="petForm" onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
         <input type="file" name="photopet" id="photopet">
         <input type="text" id="name" placeholder="name:">
+        <input type="text" id="specie" placeholder="specie">
         <input type="text" id="age" placeholder="age:">
         <input type="text" id="size" placeholder="size">
         <input type="text" id="gender" placeholder="gender">
-        <input type="text" name="situantion" id="situation">
+        <input type="text" name="situantion" id="situation" placeholder="situantion">
         <button type="submit">enviar</button>
     </form>
 
@@ -75,21 +76,22 @@
                         <!-- <legend>Gênero</legend> -->
                         <select name="gender" id="gender-select">
                             <option value="todos" selected>gênero</option>
-                            <option value="macho">Macho</option>
-                            <option value="femea">Fêmea</option>
+                            <option value="MACHO">Macho</option>
+                            <option value="FÊMEA">Fêmea</option>
                         </select>
                     </fieldset>
                     <fieldset class="control-form-range">
                         <!-- <legend>Tamanho</legend> -->
-                        <p id="display"></p>
-                        <input type="range" name="size" id="size" value="1" min="1" max="3"
-                        oninput="p.innerHTML=value" onchange="p.innerHTML=value">
+                        <p id="display">Porte</p>
+                        <input type="range" name="size" id="size" value="1" min="1" max="4" 
+                        oninput="updateDisplay(this.value)">
                         <div class="control-form-range-img">
-                            <img src="/assets/dog 1.svg" alt="porte pequeno">
-                            <img src="/assets/dog 2.svg" alt="porte médio">
-                            <img src="/assets/dog (1) 1.svg" alt="porte grande">
+                            <img id="small" src="/assets/paw-print.png" alt="porte pequeno">
+                            <img id="medium" src="/assets/paw-print.png" alt="porte médio">
+                            <img id="large" src="/assets/paw-print.png" alt="porte grande">
                         </div>
                     </fieldset>
+                    
                     <fieldset class="control-form-checkbox">
                         <!-- <legend>Tipos de Animal</legend> -->
                         <input type="checkbox" name="cachorro" id="cachorro">
@@ -99,8 +101,7 @@
                     </fieldset>
                     <fieldset class="control-form-buttons">
                         <button type="reset" class="btn1">Limpar Filtros</button>
-                        <button
-                        type="button" onclick="FilterPet()"  class="btn2">Buscar</button>
+                        <button type="submit" onclick="FilterPet(event)" class="btn2">Buscar</button>
                     </fieldset>
                 </form>
             </section>

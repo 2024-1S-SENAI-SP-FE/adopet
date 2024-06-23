@@ -35,28 +35,28 @@ const GetPet = () => {
     <header class="header-section">
         <img src="http://localhost:8080${list.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
         <span class="itens-top">
-            <h2>${list.name}</h2>
+            <h2>${list.name.toLowerCase()}</h2>
             <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
         </span>
     </header>
     <section class="dog-details">
         <article id="gender-info">
             <span>Gender:</span>
-            <span class="td-gender">${list.gender}</span>
+            <span class="td-gender">${list.gender.toLowerCase()}</span>
         </article>
         <article class="additional-details">
             <span>Age:</span>
-            <span class="td-months">${list.age}</span>
+            <span class="td-months">${list.age.toLowerCase()}</span>
             <span>Size:</span>
-            <span class="td-size">${list.size}</span>
+            <span class="td-size">${list.size.toLowerCase()}</span>
         </article>
     </section>
-    <footer class="footer-section">
+    <article class="footer-article">
         <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
-        <div>
+        <section>
             <button type="button">More info</button>
-        </div>
-    </footer>
+        </section>
+    </article>
 </section>
 
         `
@@ -83,6 +83,9 @@ const RegisterPet = async (event) => {
     formData.append('size', document.getElementById('size').value);
     formData.append('gender', document.getElementById('gender').value);
     formData.append('situation', document.getElementById('situation').value);
+    formData.append('species', document.getElementById('specie').value);
+
+    
 
     const careInputs = document.querySelectorAll('input[name=care]:checked');
     const veterinaryCare = [];

@@ -1,17 +1,16 @@
-const FilterPet = () => {
+const FilterPet = (event) => {
     event.preventDefault();
 
-    // Capturar os valores dos filtros
     const age = document.getElementById('age-select').value;
     const order = document.getElementById('order-select').value;
     const genders = document.getElementById('gender-select').value
-    const size = document.getElementById('size').value;
+    const size = document.getElementById('display').innerText.toUpperCase();
     const cachorro = document.getElementById('cachorro').checked;
     const gato = document.getElementById('gato').checked;
-    // let genderSelect = gender.options[gender.selectedIndex].value;
 
 
-    alert(order)
+    console.log(cachorro)
+    console.log(gato)
 
     let listPet = [];
 
@@ -20,7 +19,7 @@ const FilterPet = () => {
     const requests = new Request(ApiPet, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json' // Corrigido o valor do cabeçalho
+            'Content-Type': 'application/json' 
         }
     });
 
@@ -40,11 +39,11 @@ const FilterPet = () => {
             if (age != 'todos') {
                 petFilter = petFilter.filter(pet => pet.age == age);
             }
-            // if (size != 'todos') {
-            //     petFilter = petFilter.find(pet => pet.size == size);
-            // }
+            if (size != 'TODOS OS TAMANHOS') {
+                petFilter = petFilter.filter(pet => pet.size == size);
+            }
             if (cachorro || gato) {
-                petFilter = petFilter.find(pet => (cachorro && pet.type == 'cachorro') || (gato && pet.type == 'gato'));
+                petFilter = petFilter.filter(pet => (cachorro && pet.species == 'CACHORRO') || (gato && pet.species == 'GATO'));
             }
 
             if (order != 'todos') {
@@ -88,28 +87,28 @@ const FilterPet = () => {
                         <header class="header-section">
                             <img src="http://localhost:8080${list.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
-                                <h2>${list.name}</h2>
+                                <h2>${list.name.toLowerCase()}</h2>
                                 <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
                             </span>
                         </header>
                         <section class="dog-details">
                             <article id="gender-info">
                                 <span>Gender:</span>
-                                <span class="td-gender">${list.gender}</span>
+                                <span class="td-gender">${list.gender.toLowerCase()}</span>
                             </article>
                             <article class="additional-details">
                                 <span>Age:</span>
-                                <span class="td-months">${list.age}</span>
+                                <span class="td-months">${list.age.toLowerCase()}</span>
                                 <span>Size:</span>
-                                <span class="td-size">${list.size}</span>
+                                <span class="td-size">${list.size.toLowerCase()}</span>
                             </article>
                         </section>
-                        <footer class="footer-section">
+                        <article class="footer-article">
                             <p class="info-text">${list.description}</p>
-                            <div>
+                            <section>
                                 <button type="button">More info</button>
-                            </div>
-                        </footer>
+                            </section>
+                        </article>
                     </section>`;
                 });
 
@@ -121,3 +120,34 @@ const FilterPet = () => {
         })
         .catch(error => console.error('Error:', error));
 };
+
+function updateDisplay(value) {
+    var display = document.getElementById('display');
+    var small = document.getElementById('small')
+    var medium = document.getElementById('medium')
+    var large = document.getElementById('large')
+    if (value == 1) {
+        display.innerHTML = 'todos os tamanhos';
+        small.src = '../assets/paw-print.png'
+        medium.src = '../assets/paw-print.png'
+        large.src = '../assets/paw-print.png'
+    } else if (value == 2) {
+        display.innerHTML = 'pequeno';
+        small.src = '../assets/paw-print (1).png'
+        medium.src = '../assets/paw-print.png'
+        large.src = '../assets/paw-print.png'
+    } else if (value == 3) {
+        display.innerHTML = 'médio';
+        small.src = '../assets/paw-print.png'
+        medium.src = '../assets/paw-print (1).png'
+        large.src = '../assets/paw-print.png'
+    }
+    else if (value == 4) {
+        display.innerHTML = 'grande';
+        small.src = '../assets/paw-print.png'
+        medium.src = '../assets/paw-print.png'
+        large.src = '../assets/paw-print (1).png'
+    }
+}
+
+updateDisplay(document.getElementById('size').value);
