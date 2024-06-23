@@ -154,13 +154,12 @@
 .icon_heart {
     width: 15px;
 }
-
-.itens-top {
-
 .itens-top {
     display: flex;
     justify-content: space-between;
     margin: 15px;
+    margin: 15px;
+
 }
 .not-found{
     display: flex;
@@ -182,8 +181,6 @@
 .not-found img{
     width: 50%;
 
-}
-    margin: 15px;
 }
 .not-found{
     display: flex;
