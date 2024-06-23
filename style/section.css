@@ -1,0 +1,159 @@
+.body {
+    margin: auto;
+}
+
+.father {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.header-main section {
+    /* width: 100%; */
+}
+
+.main:not(:header-main) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main section {
+    border-radius: 16px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.father .son {
+    border: solid 1.7px #aeaeae;
+    width: 25%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    /* padding: 20px; */
+
+}
+
+.header-section {
+    text-align: center;
+    padding: 0;
+    /* margin-bottom: 20px; */
+    width: 100%;
+    height: 30vh; 
+}
+
+.header-section h2 {
+    display: flex;
+    justify-content: flex-start;
+    color: #FFB30D;
+}
+
+.pet-pic {
+    width: 100%;
+    height: 80%;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.dog-details {
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+.dog-details article {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.dog-details span {
+    font-weight: bold;
+    color: #FFB30D;
+}
+
+.info-text {
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.footer-article {
+    margin: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-article button {
+    color: red;
+    border: 2px solid red;
+    background-color: transparent;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.footer-article button:hover {
+    background-color: var(--yellow);
+    border: var(--yellow);
+    color: white;
+}
+
+#gender-info {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#gender-info span:first-child {
+    color: #000000;
+}
+
+.additional-details span:nth-child(odd) {
+    color: #000000;
+}
+
+.td-gender {
+    margin-left: 2vw;
+}
+
+.td-gender,
+.td-months,
+.td-size {
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 13px;
+}
+
+.icon_heart {
+    width: 15px;
+}
+
+.itens-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+}
+
+.not-found h3{
+    font-size: 2.5rem;
+}
+.not-found h4{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.not-found img{
+    width: 50%;
+
+}
