@@ -10,9 +10,9 @@
     width: 90%;
 }
 
-.header-main section {
+/* .header-main section {
     /* width: 100%; */
-}
+
 
 .main:not(:header-main) {
     display: flex;
@@ -45,12 +45,10 @@
     height: 30vh; 
 }
 
-<<<<<<< HEAD
 .header-section h2{
     font-family: 'inter';
-=======
+}
 .header-section h2 {
->>>>>>> 12cd60d16563dc1c36e501aca48c7e2719194762
     display: flex;
     justify-content: flex-start;
     color: #FFB30D;
