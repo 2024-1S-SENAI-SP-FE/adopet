@@ -17,7 +17,7 @@ const GetPet = () => {
 
             listPet = response
 
-            console.log(listPet)
+            // console.log(listPet)
 
             if (!("erro" in response)) {
 
@@ -27,7 +27,7 @@ const GetPet = () => {
 
                 listPet.forEach(list => {
 
-                    console.log(list.photopet_url)
+                    // console.log(list.photopet_url)
 
                     template += `
 
