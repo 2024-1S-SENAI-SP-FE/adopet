@@ -43,6 +43,7 @@
 }
 
 .header-section h2{
+    font-family: 'inter';
     display: flex;
     justify-content: flex-start;
     color: #FFB30D;
@@ -67,11 +68,13 @@
 }
 
 .dog-details span {
+    font-family: 'inter';
     font-weight: bold;
     color: #FFB30D;
 }
 
 .info-text {
+    font-family: 'inter';
     font-style: italic;
     text-align: justify; 
     margin-bottom: 20px; 
