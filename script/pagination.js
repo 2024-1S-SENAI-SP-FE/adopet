@@ -26,8 +26,8 @@ populateList().then(datas => {
 function initializePagination(datas) {
     const state = {
         page: 1,
-        petPage: 3,
-        totalPages: Math.ceil(datas.length / 3),
+        petPage: 6,
+        totalPages: Math.ceil(datas.length / 6),
         data: datas
     };
 
