@@ -6,12 +6,18 @@
     margin: auto;
     height: 400px;
 }
-.control-form-options:nth-child(2){
-    width: 40%;
+
+.control-form-options:nth-of-type(2) {
+    width: 30%;
 }
-.control-form-options:nth-child(1){
-    width: 20%;
+
+.control-form-options:nth-of-type(1) {
+    width: 27%;
 }
+.control-form-options:nth-of-type(3) {
+    width: 23%;
+}
+
 
 .control-form-options {
     padding: 10px;
@@ -38,27 +44,72 @@
     width: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-
+.control-form-range-img img:nth-child(3){
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control-form-range-img img:nth-child(2){
+    width: 75px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control-form-range-img img:nth-child(1){
+    width: 65px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .control-form-range input[type=range] {
-    /* --webkit-appearance: none; */
-    /* appearance: none; */
-    /* border-radius: 5px; */
-    /* outline: none; */
-    width: 90%;
+    width: 100%;
     color: var(--red);
     background-color: var(--red);
 }
-
-.submit {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    /* margin: auto; */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    line-height: 10px;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity .2s;
 }
 
-.control-form-checkbox {
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: url('../assets/Vector.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: url('../assets/Vector.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+#display{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* .control-form-checkbox {
     background-color: white;
     width: 90%;
     height: 90%;
@@ -71,12 +122,9 @@
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
-
-}
+} */
 
 .control-form-checkbox {
-    /* margin-left: 40px;
-    margin-right: 40px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,23 +158,8 @@ label::before {
     width: 75%;
     height: 100%;
     border-radius: 50%;
-    background-color: #ccc;
-    /* opacity: 0;  */
+    background-color: white;
 }
-
-/* .gato::before {
-    /* content: url("../assets/cat\ 1.svg"); 
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #ccc;
-    /* opacity: 0;  
-}*/
 
 .gato::after {
     content: url("../assets/cat\ 1.svg");
@@ -137,7 +170,6 @@ label::before {
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    /* opacity: 0;   */
 }
 
 .cachorro::after {
@@ -149,35 +181,111 @@ label::before {
     transform: translate(-50%, -50%);
     width: 15px;
     height: 15px;
-    /* opacity: 0;  */
 }
 
-input[type="checkbox"]:checked+label::before {
+input[type="checkbox"]:checked+label.gato::before {
     background-color: var(--red);
+    /* content: ""; */
 }
 
-input[type="checkbox"]:checked+label::after {
+input[type="checkbox"]:checked+label.gato::after {
     opacity: 1;
+    /* background-color: var(--red); */
+    /* content: url("../assets/labrador-retriever\ \(2\).png"); */
+    /* width: 10%;height: 40%; */
+    /* display: block;
+    position: absolute;
+    top: 10%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px; */
 }
+
+input[type="checkbox"]:checked+label.cachorro::before {
+    background-color: var(--red);
+    /* content: ""; */
+}
+
+input[type="checkbox"]:checked+label.cachorro::after {
+    opacity: 1;
+    /* background-color: var(--red); */
+    /* content: url("../assets/labrador-retriever\ \(2\).png"); */
+    /* width: 10%;height: 40%; */
+    /* display: block;
+    position: absolute;
+    top: 10%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px; */
+}
+
+
 .control-form-buttons {
-    width: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 40px;
+    margin-right: 23px;
 }
 
-.control-form-buttons button {
-    color: red;
-    border: 2px solid red;
-    background-color: var();
-    max-width: 100%;
-    height: 48px;
-    border-radius: 8px;
-    margin: 10px;
+.btn1 {
+    border: solid var(--dark-red) 1.5px;
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
 }
+
+.btn1 {
+    background-color: #ffff;
+}
+
+.btn1 a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.btn1:hover {
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
+.btn2 {
+    border: solid var(--dark-red) 1.5px;
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
+.btn2 {
+    background-color: #ffff;
+}
+
+.btn2:hover {
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
 
 .control-form-buttons button:hover {
-    background-color: var(--red);
-    border: var(--red);
-    color: white;
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    display: none;
 }
