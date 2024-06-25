@@ -102,7 +102,7 @@ function initializePagination(datas) {
                         <article class="footer-article">
                             <p class="info-text">${list.description}</p>
                             <section>
-                                <button type="button">More info</button>
+                                <button type="button" onclick="GetById(${list.id})">More info</button>
                             </section>
                         </article>
                     </section>`;
@@ -141,8 +141,8 @@ function initializePagination(datas) {
 function updatePaginatedData(filteredData) {
     const state = {
         page: 1,
-        petPage: 3,
-        totalPages: Math.ceil(filteredData.length / 3),
+        petPage: 6,
+        totalPages: Math.ceil(filteredData.length / 6),
         data: filteredData
     };
 

@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="/style/form.css">
     <link rel="shortcut icon" href="assets/award (1).png" type="image/x-icon">
     <link rel="stylesheet" href="style/paginate.css">
+    <link rel="stylesheet" href="style/description.css">
     <!-- <script src="/script/favorite.js"></script> -->
     <script src="/script/script.js"></script>
     <script src="/script/filter.js"></script> 
     <script src="/script/pagination.js"></script>
+    <script src="/script/getPet.js"></script>
     <title>Document</title>
 </head>
 <body class="body">
@@ -40,7 +42,7 @@
         </nav>
     </header>
 
-    <form id="petForm" onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
+    <!-- <form id="petForm" onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
         <input type="file" name="photopet" id="photopet">
         <input type="text" id="name" placeholder="name:">
         <input type="text" id="specie" placeholder="specie">
@@ -49,13 +51,13 @@
         <input type="text" id="gender" placeholder="gender">
         <input type="text" name="situantion" id="situation" placeholder="situantion">
         <button type="submit">enviar</button>
-    </form>
+    </form> -->
 
-    <hr>
+    <hr class="hr-class-main">
 
-    <main class="main">
+    <main class="main" >
 
-        <header class="header-main">
+        <header class="header-main" id="header-m">
             <section>
                 <form class="form-filter-pet" id="form">
                     <fieldset class="control-form-options">
@@ -110,7 +112,7 @@
             </section>
         </header>
 
-        <hr>
+        <hr class="hr-class-father" id="hr-class">
 
 
             <section class="father" id="father">
