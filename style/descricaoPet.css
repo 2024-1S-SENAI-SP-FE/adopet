@@ -229,7 +229,6 @@ body{
 
 .card-info article h1{
     font-size: 18px;
-    
     color: #0A453A;
     font-weight: bolder;
     font-optical-sizing: auto;
@@ -244,15 +243,9 @@ body{
     font-family: "Inter", sans-serif;
     font-weight: 420;
     line-height: 22px;
-
     width: 525px;
-
     overflow-x: scroll;
     overflow-x: auto;
-    /* overflow: hidden;
-    text-overflow: ellipsis;
-     */
-
 }
 
 
@@ -266,16 +259,12 @@ h2{
 
 .section-card2{
     /* border: solid 2px rgb(106, 100, 191); */
-    /* position: relative; */
     min-height: 600px;
     width: 100%;
     /* width: 1074px; */
-
     display: flex;
     flex-wrap: wrap;
-
     margin-top: 16px;
-
     gap: 17px;
 }
 
@@ -371,33 +360,5 @@ h2{
 
 /* ---------------------- BOTOES -------------------------- */
 
-/* .more-card button{
-    border: solid 1.5px #F82C10;
-    color: #F82C10;
-    background-color: transparent;
-    width: 284px;
-    height: 48px;
 
-    border-radius: 8px;
-    /* padding-right: 24px;
-    padding-left: 24px; 
-    transition: box-shadow .6s ease;
-
-
-
-} */
-/* .more-card button:hover{
-     background-color: #ebcfcc; 
-    cursor: pointer;
-    right: -20px;
-    transition: 0.5s;
-
-   transition: box-shadow .6s ease; 
-  box-shadow: #ebcfcc inset 483px 0 0;
-} */
-
-/* button:hover{
-    cursor: pointer;
-    
-} */
 

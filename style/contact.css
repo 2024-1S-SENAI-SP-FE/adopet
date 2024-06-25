@@ -1,0 +1,110 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.main-contato{
+    display: flex;
+    justify-content: center;
+    gap: 144px;
+    padding-top: 71px;
+}
+
+.main-contato p, h1, label{
+    font-family: 'Inter';
+}
+
+
+.image-figure{
+    background-color: #BCFBFF;
+    border-radius: 50%;
+
+    height:404px ;
+    width: 391px ;
+
+    overflow: hidden;
+}
+
+
+.card-1 p{
+    font-weight: 500;
+    font-size: 20px;
+    height: 60px;
+    width: 391px ;
+    text-align: center;
+
+    margin-top: 38px;
+    margin-bottom: 50px;
+}
+
+/* ----------------- FORMS------------------- */
+
+.form{
+    border: solid 2px black;
+    width: 496px;
+    height: 474px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h1{
+    font-size: 24px;
+    font-weight: 460;
+    margin-bottom: 40px;
+}
+
+
+.form label {
+    font-weight: 400;
+    font-size: 16px;
+    
+}
+
+.form input{
+    margin-bottom: 14px;
+    margin-top: 14px;
+    height: 100px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Estilizando texto do input */
+.form input {
+    font-weight: 400;
+    font-size: 14px;
+    
+}
+/* Estilizando texto do input */
+
+
+/* ----------- BOTOES --------- */
+.form button{
+    border: solid var(--dark-red) 1.5px;
+    height: 190px;
+    width: 180px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+    margin-top: 14px;
+    margin-left: 324px;
+    
+}
+
+.form:last-child{
+    justify-content: end;
+}
+
+.form button {
+    background-color: #ffff;
+}
+
+.form button:hover{
+    /* background-color: var(--red); */
+    border: var(--red);
+    color: white;
+    box-shadow: inset 500px 0 0 var(--red);
+    
+}
