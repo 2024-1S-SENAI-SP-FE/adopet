@@ -11,41 +11,19 @@ body{
 
 .father{
     /* border:solid 2px #520dff; */
-
     margin-top: 42px;
     margin-bottom: 81px;
     margin-left: 77px;
     margin-right: 50px;
-    /* border: solid red; */
-    
     display: flex;
     flex-direction: column;
-    /* height: 1830px;
-    min-height: 1195px; */
-
     height: 100%;
-
-
-    /* align-items: center; */
-
-    /* align-items: center; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* width: 100%; */
-    /* max-width: 1126px; */
-    
-    
 }
 
 .profile-section{
     display: flex;
-    /* border: solid 2px green; */
-    /* width: 1097.67px;
-    max-width: 1097.67px; */
-
     width: 100%;
-    /* min-width: 100%;
-    min-width: 100%; */
+
 }
 
 
@@ -59,8 +37,6 @@ body{
     border: dashed 1.5px #404040;
     border-radius: 50px;
     padding: 6px;
-    /* 404040 */
-
     min-height: 80px;
     min-width: 80px;
 }
@@ -69,7 +45,6 @@ body{
     min-height: 25px;
     margin-top: 13px;
     margin-left: 7px;
-    
     color: #0A453A ;
     font-size: 24px;
     font-weight: 500;
@@ -83,16 +58,8 @@ body{
 .card1{
     /* border: solid 2px black; */
     display: flex;
-    /* flex-wrap: wrap; */
     gap: 44px;
-
     height: 370px;
-
-    /* min-height: 371px; */
-    /* min-height: 100%; */
-
-
-    /* width: 1085px; */
     width: 100%;
 
     margin-bottom: 76px;
@@ -106,18 +73,11 @@ body{
     border-radius: 20px;
     border: solid 2px #EDEDED;
 
-    /* margin-bottom: 3px; */
-    /* margin-top: 18px; */
-
-    /* display: none; */
-
 }
 
 .big-profile-section{
     width: 100%;
     height: 100%;
-    /* border: solid 2px green; */
-
 
 }
 
@@ -140,33 +100,18 @@ body{
     background-color: #F9F9F9;
     border: solid 3px #EDEDED;
     /* border:solid 2px #FFB30D; */
-
     display: flex;
     flex-direction: column;
-
     border-radius: 16px;
-    /* padding: 20px; */
     gap: 30px;
     min-width: 86%;
     max-width: 95%;
-    /* width: 525px; */
-    /* width: 100%; */
-
-
-    /* height: 220px; */
     max-height: 188px;
-    /* max-height: 688px; */
-
-    /* height: 188px; */
-    /* altura que esconde dps do sunt in */
     margin-bottom: 54px;
-
     padding-bottom: 32px;
     padding-top: 14px;
     padding-left: 13px;
     padding-right: 5px;
-
-    /* overflow: scroll; */
 }
 
 .card-info{
@@ -176,17 +121,14 @@ body{
     align-items: center;
     width: 825px;
     height: 235px;
-    
 }
 
 .card1 ul{
     background-color: #F0F0F0;
     width: 89px;
-    /* height: 80px; */
     border-radius: 16px;
     text-align: center;
     padding-top: 6px;
-    /* padding-bottom: 19px; */
     margin-right: 14px;
 
     
@@ -198,7 +140,6 @@ body{
 }
 
 .card1 ul>li{
-    /* color: #FFB30D; */
     font-weight: 900;
     font-size: 12px;
 }
@@ -220,7 +161,6 @@ body{
 }
 
 .card-info button:hover{
-    /* background-color: var(--red); */
     border: var(--red);
     color: white;
     box-shadow: inset 200px 0 0 var(--red);
@@ -268,12 +208,6 @@ h2{
     gap: 17px;
 }
 
-/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
-
-
-
-
-
 .more-card-container{
     border: solid 2px black;
 
@@ -284,34 +218,23 @@ h2{
 .more-card{
     /* border: solid 2px #F82C10; */
     background-color: #F9F9F9;
-    width: 484px;
-    /* height: 200px; */
-    /* width: 484px;
-    height: 188px; */
-    /* height: 267px; */
-    
+    width: 484px; 
     text-align: center;
     align-items: center;
-    /* justify-content: end; */
     display: flex;
     flex-direction: column;
-
     gap: 18px;
     border-radius: 16px;
-
     padding-top: 62px;
     padding-right: 24px;
     padding-left: 24px;
     padding-bottom: 24px;
-
     margin-top: 56px;
 }
 
 .more-card img{
     height: 107px;
     width: 107px;
-    /* display: none; */
-    /* bottom: 0px; */
     top: 0px;
     position: absolute;
     z-index: 2;
@@ -321,18 +244,13 @@ h2{
     border: solid 7px #FFC027;
     height: 40px;
     width: 100px;
-    
     position: absolute;
     top: 57px;
-
     z-index: 1;
-
     border-radius: 0 0 150px 150px ;
 }
 
 .position-container{
-    /* position: relative; */
-    /* border: solid 1px #000000; */
     width: 537px;
     height: 298px;
     position: relative;
@@ -349,16 +267,9 @@ h2{
 
 .perfilTitulo{
     color: #FFC027;
-    /* Lola 16 resto 14 */
     font-size: 17px;
 }
 .more-card ul:not(:first-child){
-   
     font-size: 14px;
     font-weight: 500;
 }
-
-/* ---------------------- BOTOES -------------------------- */
-
-
-
