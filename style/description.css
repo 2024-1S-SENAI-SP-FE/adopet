@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.son-for-id {
+    margin-top: 42px;
+    margin-bottom: 81px;
+    margin-left: 77px;
+    margin-right: 50px;
+    max-width: 1126px;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.profile-section img{
+    display: flex;
+    justify-content: flex-start;
+    width: 20px;
+}
+
+.son-for-id .text-h1,
+.text-h2,
+p,
+li {
+    font-family: "Inter", sans-serif;
+}
+
+.profile-section img {
+    border: dashed 1.5px #404040;
+    border-radius: 50px;
+    padding: 6px;
+    min-height: 80px;
+    min-width: 80px;
+}
+
+.profile-section .text-h1 {
+    min-height: 25px;
+    margin-top: 13px;
+    margin-left: 7px;
+
+    color: #0A453A;
+    font-size: 24px;
+    font-weight: 500;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.card{
+    display: flex;
+    /* flex-direction: column; */
+    width: 90%;
+}
+
+.article-story {
+    background-color: #F9F9F9;
+    border: solid 3px #EDEDED;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 32px;
+    padding-top: 14px;
+    padding-left: 13px;
+    padding-right: 5px; 
+}
+
+.card-img {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50vh;
+    border-radius: 20px;
+}
+.card1-img{
+    width: 35vw;
+    height: 100%;
+    border-radius: 20px;
+}
+.big-profile-section{
+    width: 100%;
+}
+.section-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+
+}
+.card-article {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    height: 30%;
+    width: 90%;
+    align-items: flex-start;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+}
+.card-info ul:not(.list-button){
+    background-color: #F0F0F0;
+    width: 40%;
+    /* height: 100%; */
+    border-radius: 16px;
+    text-align: center;
+    margin-right: 14px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px; */
+}
+.card-info ul>li:last-child{
+    color: var(--yellow);
+    font-weight: 900;
+    font-size: 16px;
+}
+.card-info ul>li{
+    padding: 5px;
+}
+.list-img img{
+    width: 25px;
+}
+.gender-simbol{
+    font-size: 25px;
+}
+.list-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+.button-adote{
+    display: flex;
+    align-items: center;
+    border: solid var(--dark-red) 1.5px;
+    height: 60px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+.button-adote{
+    background-color: #ffff;
+}
+
+.button-adote:hover{
+    /* background-color: var(--red); */
+    border: var(--red);
+    color: white;
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
+.pet-recommendation{
+    width: 90%;
+}
+
+.title-recommendation{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--red);
+}
+.pet-recommended{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}

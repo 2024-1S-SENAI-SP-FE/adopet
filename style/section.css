@@ -9,10 +9,20 @@
     flex-wrap: wrap;
     width: 90%;
 }
+.main{
+    display: block;
+}
 
-/* .header-main section {
-    /* width: 100%; */
+.hr-class-main{
+    width: 95%;
+    margin-top: 30px;
 
+}
+
+.hr-class-father{
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
 
 .main:not(:header-main) {
     display: flex;
@@ -43,7 +53,7 @@
 .header-section {
     text-align: center;
     padding: 0;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
     width: 100%;
     height: 30vh; 
     text-align: center;
@@ -157,8 +167,8 @@
 .itens-top {
     display: flex;
     justify-content: space-between;
-    margin: 15px;
-    margin: 15px;
+    margin: 20px;
+
 
 }
 .not-found{
