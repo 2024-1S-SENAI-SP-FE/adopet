@@ -158,7 +158,7 @@ const GetById = (id) => {
 
                 petFilter.forEach(similarPet => {
                     similar += `
-                  <section class="son">
+                  <section class="son-description">
                         <header class="header-section">
                             <img src="http://localhost:8080${similarPet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
