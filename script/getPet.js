@@ -1,3 +1,23 @@
+function Petequals() {
+    let listPet = [];
+
+const ApiPet = 'http://localhost:8080/pet';
+
+const FilterRequest = new Request(ApiPet, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
+    return fetch(FilterRequest)
+        .then(response => response.json())
+        .then(response => {
+            listPet = response;
+            return listPet;
+        })
+        .catch(error => console.error('Error:', error));
+}
+
 const GetById = (id) => {
 
     let headerMain = document.getElementById('header-m');
@@ -24,105 +44,153 @@ const GetById = (id) => {
         .then(response => response.json())
         .then(response => {
             Pet = response
+            let infoAge;
+
             let section = document.getElementById('father');
 
             let template = ""
 
             console.log(Pet)
+            if(Pet.age == "FILHOTE"){
+                infoAge = "0 a 2 anos"
+            }else if(Pet.age == "ADULTO"){
+                infoAge = "3 á 9 anos"
+            }else if(Pet.age == "IDOSO"){
+                infoAge = "a partir de 10 anos"
+            }
 
             template += `
             <section class="son-for-id">
 
-            <section class="profile-section">
-                <img src="http://localhost:8080${Pet.photopetUrl}" alt="">
-                <h1 class="text-h1">${Pet.name}</h1>
-            </section>
+                <section class="profile-section">
 
-        <section class="card">
-            
-             <figure class="big-profile-section">
-                    <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto de um shiba">
-                </figure>
+                    <img src="http://localhost:8080${Pet.photopetUrl}" alt="">
 
+                    <h1 class="text-h1">${Pet.name}</h1>
 
+                 </section>
 
-            <section class="card1">
+            <section class="card">
 
-                 <article class="article-story">
+                    <section class="card-img">
 
-                        <h1 class="text-h1">${Pet.name} Story</h1>
+                        <figure class="big-profile-section">
 
-                        <p>
-                        ${Pet.petStory}
-                        </p>
+                            <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto de um shiba">
 
-                </article>
-
-              </section>
-
-            </section>
-
-
-
-                <section class="card-info">
-    
-                    <ul>
-                        <li><img src="assets/paw.svg" alt=""></li>
-                        <li>Gênero</li>
-                        <li class="titulo-cards">${Pet.gender.toLowerCase()}</li>
-                    </ul>
-                    <ul>
-                        <li><img src="assets/paw.svg" alt=""></li>
-                        <li>Idade</li>
-                        <li class="titulo-cards">${Pet.age.toLowerCase()}</li>
-                    </ul>
-                    <ul>
-                        <li><img src="assets/paw.svg" alt=""></li>
-                        <li>Porte</li>
-                        <li class="titulo-cards">${Pet.size.toLowerCase()}</li>
-                    </ul>
-
-                    <button class="button-adote" type="button">Adote</button>
+                        </figure>
 
                 </section>
 
+            <section class="section-info">
+
+
+                <section class="card-article">
+
+                    <article class="article-story">
+
+                            <h1 class="text-h1">${Pet.name} Story</h1>
+
+                                <p>
+
+                            ${Pet.petStory} "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                                </p>
+
+                    </article>
+
+                </section>
+
+                <section class="card-info">
+    
+                    <ul class="list-info">
+                        <li class="gender-simbol">&#x26A4;</li>
+                        <li>Gênero</li>
+                        <li class="title-cards">${Pet.gender.toLowerCase()}</li>
+                    </ul>
+
+                    <ul class="list-info">
+                        <li class="list-img"><img src="assets/pet-age.png" alt="calendar-pet"></li>
+                        <li>Idade</li>
+                        <li class="title-cards">${Pet.age.toLowerCase()} (${infoAge})</li>
+                    </ul>
+
+                    <ul class="list-info">
+                        <li class="list-img"><img src="assets/size-pet.png" alt="size pet"></li>
+                        <li>Porte</li>
+                        <li class="title-cards">${Pet.size.toLowerCase()}</li>
+                    </ul>
+
+                    <ul class="list-button">
+                        <li><button class="button-adote" type="button">Adote</button></li>
+                    </ul>
+
+                </section>
+
+            </section>
+
         </section>
-            
+
+                    <section class="pet-recommendation">
+
+                        <article class="title-recommendation">
+                            <h2>
+                                Veja também
+                            </h2>
+                        </article>
+
+                        <section class="pet-recommended" id="pet">
+                        
+                        </section>
+
+                    </section>
+
+
             `
+            section.innerHTML = template;
 
-            //     template += `
-            
-            //                      <section class="son">
-            //     <header class="header-section">
-            //         <img src="http://localhost:8080${Pet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
-            //         <span class="itens-top">
-            //             <h2>${Pet.name.toLowerCase()}</h2>
-            //             <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
-            //         </span>
-            //     </header>
-            //     <section class="dog-details">
-            //         <article id="gender-info">
-            //             <span>Gender:</span>
-            //             <span class="td-gender">${Pet.gender.toLowerCase()}</span>
-            //         </article>
-            //         <article class="additional-details">
-            //             <span>Age:</span>
-            //             <span class="td-months">${Pet.age.toLowerCase()}</span>
-            //             <span>Size:</span>
-            //             <span class="td-size">${Pet.size.toLowerCase()}</span>
-            //         </article>
-            //     </section>
-            //     <article class="footer-article">
-            //         <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
-            //         <section>
-            //             <button type="button">More info</button>
-            //         </section>
-            //     </article>
-            // </section>
-            
-            //         `
+            Petequals().then(data => {
+                let petFilter = data.filter(similarPet => 
+                    similarPet.age === Pet.age && similarPet.species === Pet.species
+                ).slice(0, 3);;
 
-            section.innerHTML = template
+                let similar = "";
+
+                petFilter.forEach(similarPet => {
+                    similar += `
+                  <section class="son">
+                        <header class="header-section">
+                            <img src="http://localhost:8080${similarPet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
+                            <span class="itens-top">
+                                <h2>${similarPet.name.toLowerCase()}</h2>
+                                <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
+                            </span>
+                        </header>
+                        <section class="dog-details">
+                            <article id="gender-info">
+                                <span>Gender:</span>
+                                <span class="td-gender">${similarPet.gender.toLowerCase()}</span>
+                            </article>
+                            <article class="additional-details">
+                                <span>Age:</span>
+                                <span class="td-months">${similarPet.age.toLowerCase()}</span>
+                                <span>Size:</span>
+                                <span class="td-size">${similarPet.size.toLowerCase()}</span>
+                            </article>
+                        </section>
+                        <article class="footer-article">
+                            <p class="info-text">${similarPet.description}</p>
+                            <section>
+                                <button type="button" onclick="GetById(${similarPet.id})">More info</button>
+                            </section>
+                        </article>
+                    </section>
+                    `;
+                });
+
+                let petSection = document.getElementById('pet');
+                petSection.innerHTML = similar;
+            });
 
         })
         .catch(error => console.error('Error:', error));
