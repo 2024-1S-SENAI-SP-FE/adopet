@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="/style/reset.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
-    <!-- <link rel="stylesheet" href="/style/section.css"> -->
     <link rel="stylesheet" href="/style/adocao.css">
 
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav class="nav-header">
             <ul class="ul-ancoras">
 
@@ -37,68 +36,69 @@
 
     <main class="main">
 
-
-        <section class="steps-container-header">
-
-            <section class="present">
-                    <img src="/assets/initialSelected.svg" alt="">
-                    <label for="">Inicio</label>
-            <section>
-
-                <span>&#x21e2;</span>
+        <header class="steps-container-header">
 
             <section class="present">
-                    <img src="/assets/localIcon.svg" alt="">
-                    <label for="">Endereço</label>
+                <img class="present-img" src="/assets/initialSelected.svg" alt="">
+                <label class="steps-label" for="">Inicio</label>
+            </section>
+            <span class="arrow-start">&#x21e2;</span>
+
+            <section class="present">
+                <img class="present-img" src="/assets/localIcon.svg" alt="">
+                <label class="steps-label" for="">Endereço</label>
             </section>
 
-                <span>&#x2015;</span>
+            <span class="red-line">&#x2015;</span>
 
-                <section class="present">
-                    <img src="/assets/pawIcon.svg" alt="">
-                    <label for="">Historico de Animais</label>
-                </section>
-
-                <span>&#x2015;</span>
-<!-- 
-                <section class="present">
-                    <img src="/assets/pawIcon.svg" alt="">
-                    <label for="">Motivo da adoção</label>
-                </section>
-
-                <span>&#x2015;</span>
-
-                <section class="present">
-                    <img src="/assets/familyIcon.svg" alt="">
-                    <label for="">Composição familiar</label>
-                </section>
-
-                <span>&#x2015;</span>
-
-                <section class="present">
-                    <img src="/assets/checkIcon.svg" alt="">
-                    <label for="">Confirmação</label>
-                </section> -->
-
+            <section class="present">
+                <img class="present-img" src="/assets/pawIcon.svg" alt="">
+                <label class="steps-label" for="">Historico de Animais</label>
             </section>
 
-        <section>
-            <img src="/assets/profilePic.svg" alt="">
+            <span class="red-line">&#x2015;</span>
 
-            <ul>
-                <li>Email/Username</li>
+            <section class="present">
+                <img class="present-img" src="/assets/pawIcon.svg" alt="">
+                <label class="steps-label" for="">Motivo da adoção</label>
+            </section>
+
+            <span class="red-line">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" src="/assets/familyIcon.svg" alt="">
+                <label class="steps-label" for="">Composição familiar</label>
+            </section>
+
+            <span class="red-line">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" src="/assets/checkIcon.svg" alt="">
+                <label class="steps-label" for="">Confirmação</label>
+            </section> 
+
+        </header>
+
+        <section class="profile-section-card">
+            <figure class="profile-pic-container">
+                <img class="profile-pic" src="/assets/profilePic.svg" alt="">
+            </figure>
+
+            <ul class="email-fullName">
+                <li class="emailUsername">Email/Username</li>
                 <li>Full name</li>
             </ul>
-            <ul>
-                <li>SamanthaSmith@gmail.com</li>
-                <li>samanrha smith</li>
+            <ul class="email-name">
+                <li class="registered-email">SamanthaSmith@gmail.com</li>
+                <li class="registered-name">samantha smith</li>
             </ul>
         </section>
 
-        <section>
-            <p>Para adotar é necessário preencher um formulário</p>
-            <button type="button">Começar</button>
+        <section class="button-section">
+            <p class="paragraph">Para adotar é necessário preencher um formulário.</p>
+            <button class="button" type="button">Começar</button>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -108,8 +108,8 @@
                 <ul>
                     <li><a href="/adote.html">Adote</a></li>
                     <li><a href="#">Doe</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                    <li><a href="/sobre-nos.html">Sobre nós</a></li>
                 </ul>
             </nav>
 
@@ -132,8 +132,8 @@
             <p>&copy;2024 adopet.com</p>
             <nav>
                 <ul>
-                    <li><img src="/assets/Instagram.svg" alt=""></li>
-                    <li><img src="/assets/facebok.svg" alt=""></li>
+                    <li><a href="https://www.instagram.com"><img src="/assets/Instagram.svg" alt="Link para o Instagram"></a></li>
+                    <li><a href="https://www.facebook.com"><img src="/assets/facebok.svg" alt="Link para o Facebook"></a></li>
                 </ul>
             </nav>
         </article>
