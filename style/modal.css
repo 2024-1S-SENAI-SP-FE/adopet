@@ -57,7 +57,19 @@
     color: white;
 }
 
-.modal-form{
+.modal-form-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    height: 40%;
+    width: 50%;
+    margin: auto;
+}
+
+.modal-form-login{
     display: flex;
     justify-content: center;
     align-items: center;
