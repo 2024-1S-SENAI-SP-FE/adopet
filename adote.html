@@ -38,6 +38,7 @@
                 <button id="loginUser">Login</button>
                 <section class="linha"></section>
                 <button id="registerUser">Cadastro</button>
+
             </section>
 
         </nav>
@@ -120,18 +121,6 @@
 
             </section>
 
-            <footer id="paginate">
-            <section class="controls">
-                    <article class="first">&#171;</article>
-                    <article class="prev">Anterior</article>
-                    <article class="numbers">
-                        <article>1</article>
-                    </article>
-                    <article class="next">Próximo</article>
-                    <article class="last">&#187;</article>
-                </section>
-            </footer>
-
             <div class="modal" id="modal">
 
                 <section class="modal-content">
@@ -144,29 +133,52 @@
     
                     </header>
     
-                    <form class="modal-form">
+                    <form class="modal-form-register" id="register">
 
                         <section id="signUpMessage" class="messageDiv" style="display:none;"></section>
 
     
                         <section class="input-container">
                             <i class="icon">&#128100;</i>
-                            <input type="text" id="name" placeholder="Nome completo">
+                            <input type="text" id="register-name" placeholder="Nome completo">
                         </section>
                         <section class="input-container">
                             <i class="icon">&#9993;</i>
-                            <input type="email" id="email" placeholder="E-mail">
+                            <input type="email" id="register-email" placeholder="E-mail">
                         </section>
                         <section class="input-container">
                             <i class="icon">&#128273;</i>
-                            <input type="password" id="password" placeholder="Senha">
+                            <input type="password" id="register-password" placeholder="Senha">
                         </section>
         
                     </form>
+
+                    <footer class="modal-footer" id="footer-register">
     
-                    <footer class="modal-footer">
+                        <button class="btn1" type="button" id="register-btn">
+                            Save
+                        </button>
+
+                    </footer>
+
+
+                    <form class="modal-form-login" id="login">
     
-                        <button class="btn1" type="button" id="save-Value">
+                        <section class="input-container">
+                            <i class="icon">&#9993;</i>
+                            <input type="email" id="login-email" placeholder="E-mail">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#128273;</i>
+                            <input type="password" id="login-password" placeholder="Senha">
+                        </section>
+        
+                    </form>
+
+    
+                    <footer class="modal-footer" id="footer-login">
+    
+                        <button class="btn1" type="button" id="login-btn">
                             Save
                         </button>
     
@@ -177,6 +189,20 @@
             </div>
     
 
+
+            <footer id="paginate">
+            <section class="controls">
+                    <article class="first">&#171;</article>
+                    <article class="prev">Anterior</article>
+                    <article class="numbers">
+                        <article>1</article>
+                    </article>
+                    <article class="next">Próximo</article>
+                    <article class="last">&#187;</article>
+                </section>
+            </footer>
+
+           
     </main>
 
     <footer class="footer">
