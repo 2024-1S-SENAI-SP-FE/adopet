@@ -7,7 +7,7 @@
 
 /* ------------------------TESTE--------------------------- */
 
-header{
+.header{
     margin-top: 13px;
     margin: auto;
     width: 100%;
@@ -23,7 +23,7 @@ header{
 
 }
 
-header ul>li>a{
+.header ul>li>a{
     color: #BF1501;
     font-size: 16px;
 

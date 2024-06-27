@@ -31,7 +31,13 @@
     width: 100%;
 }
 
-.main section {
+.main .father {
+    border-radius: 16px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.main .son {
     border-radius: 16px;
     max-width: 90%;
     margin: auto;

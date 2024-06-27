@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/reset.css">
-    <!-- <link rel="stylesheet" href="/style/style.css"> -->
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/section.css">
@@ -13,15 +12,17 @@
     <link rel="shortcut icon" href="assets/award (1).png" type="image/x-icon">
     <link rel="stylesheet" href="style/paginate.css">
     <link rel="stylesheet" href="style/description.css">
+    <link rel="stylesheet" href="style/modal.css">
     <!-- <script src="/script/favorite.js"></script> -->
     <script src="/script/script.js"></script>
     <script src="/script/filter.js"></script> 
     <script src="/script/pagination.js"></script>
     <script src="/script/getPet.js"></script>
+    <script type="module" src="/script/login/firebaseAuth.js"></script>
     <title>Document</title>
 </head>
 <body class="body">
-    <header>
+    <header class="header">
         <nav class="nav-header">
             <ul class="ul-ancoras">
 
@@ -34,9 +35,9 @@
 
             <section class="section-login">
 
-                <button>Login</button>
+                <button id="loginUser">Login</button>
                 <section class="linha"></section>
-                <button>Cadastro</button>
+                <button id="registerUser">Cadastro</button>
             </section>
 
         </nav>
@@ -433,6 +434,51 @@
                     <article class="last">&#187;</article>
                 </section>
             </footer>
+
+            <div class="modal" id="modal">
+
+                <section class="modal-content">
+    
+                    <header class="modal-header">
+    
+                        <h2 id="title-modal">New User</h2>
+    
+                        <span class="modal-close" id="modalClose">&#10006</span>
+    
+                    </header>
+    
+                    <form class="modal-form">
+
+                        <section id="signUpMessage" class="messageDiv" style="display:none;"></section>
+
+    
+                        <section class="input-container">
+                            <i class="icon">&#128100;</i>
+                            <input type="text" id="name" placeholder="Nome completo">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#9993;</i>
+                            <input type="email" id="email" placeholder="E-mail">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#128273;</i>
+                            <input type="password" id="password" placeholder="Senha">
+                        </section>
+        
+                    </form>
+    
+                    <footer class="modal-footer">
+    
+                        <button class="btn1" type="button" id="save-Value">
+                            Save
+                        </button>
+    
+    
+                    </footer>
+                </section>
+    
+            </div>
+    
 
     </main>
 
