@@ -26,8 +26,8 @@ populateList().then(datas => {
 function initializePagination(datas) {
     const state = {
         page: 1,
-        petPage: 6,
-        totalPages: Math.ceil(datas.length / 6),
+        petPage: 9,
+        totalPages: Math.ceil(datas.length / 9),
         data: datas
     };
 
@@ -77,7 +77,16 @@ function initializePagination(datas) {
                 </section>
             `;
         } else {
+            let Petsize;
             currentPageItems.forEach(list => {
+                if(list.age == "FILHOTE"){
+                    Petsize = "0 a 2 anos"
+                }else if(list.age == "ADULTO"){
+                    Petsize = "3 a 9 anos"
+                }else if(list.age == "IDOSO"){
+                    Petsize = "10 anos pra cima"
+                }
+
                 const petSection = `
                     <section class="son">
                         <header class="header-section">
@@ -88,14 +97,14 @@ function initializePagination(datas) {
                             </span>
                         </header>
                         <section class="dog-details">
-                            <article id="gender-info">
-                                <span>Gender:</span>
-                                <span class="td-gender">${list.gender.toLowerCase()}</span>
+                            <article id="months-info">
+                             <span>Idade:</span>
+                                <span class="td-months">${list.age.toLowerCase()} (${Petsize})</span>
                             </article>
                             <article class="additional-details">
-                                <span>Age:</span>
-                                <span class="td-months">${list.age.toLowerCase()}</span>
-                                <span>Size:</span>
+                                <span>Gênero:</span>
+                                <span class="td-gender">${list.gender.toLowerCase()}</span>
+                                <span>Tamanho:</span>
                                 <span class="td-size">${list.size.toLowerCase()}</span>
                             </article>
                         </section>

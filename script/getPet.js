@@ -157,8 +157,17 @@ const GetById = (id) => {
                 let similar = "";
 
                 petFilter.forEach(similarPet => {
+
+                    if(similarPet.age == "FILHOTE"){
+                        Petsize = "0 a 2 anos"
+                    }else if(similarPet.age == "ADULTO"){
+                        Petsize = "3 a 9 anos"
+                    }else if(similarPet.age == "IDOSO"){
+                        Petsize = "10 anos pra cima"
+                    }
+                   
                     similar += `
-                  <section class="son">
+                  <section class="son-description">
                         <header class="header-section">
                             <img src="http://localhost:8080${similarPet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
@@ -166,15 +175,15 @@ const GetById = (id) => {
                                 <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
                             </span>
                         </header>
-                        <section class="dog-details">
-                            <article id="gender-info">
-                                <span>Gender:</span>
-                                <span class="td-gender">${similarPet.gender.toLowerCase()}</span>
+                       <section class="dog-details">
+                            <article id="months-info">
+                             <span>Idade:</span>
+                                <span class="td-months">${similarPet.age.toLowerCase()} (${Petsize})</span>
                             </article>
                             <article class="additional-details">
-                                <span>Age:</span>
-                                <span class="td-months">${similarPet.age.toLowerCase()}</span>
-                                <span>Size:</span>
+                                <span>Gênero:</span>
+                                <span class="td-gender">${similarPet.gender.toLowerCase()}</span>
+                                <span>Tamanho:</span>
                                 <span class="td-size">${similarPet.size.toLowerCase()}</span>
                             </article>
                         </section>
