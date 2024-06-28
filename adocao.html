@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/adocao.css">
+    <link rel="stylesheet" href="/style/progressBarAdopt.css">
 
     <script src="/script/adocao.js"></script>
 
@@ -39,7 +40,7 @@
 
     <main class="main">
 
-        <header class="steps-container-header">
+        <header id="progressContainer" class="steps-container-header">
 
             <section class="present">
                 <img id="catIconProgress" class="catIconProgress" src="/assets/catIcon.svg" alt="foto de um gato pulando">
@@ -84,27 +85,30 @@
 
         </header> 
 
-        <section class="profile-section-card">
-            <figure class="profile-pic-container">
-                <img class="profile-pic" src="/assets/profilePic.svg" alt="">
-            </figure>
+        <section id="adoptPage1" class="adoptPage1">
 
-            <ul class="email-fullName">
-                <li class="emailUsername">Email/Username</li>
-                <li>Full name</li>
-            </ul>
-            <ul class="email-name">
-                <li class="registered-email">SamanthaSmith@gmail.com</li>
-                <li class="registered-name">samantha smith</li>
-            </ul>
+            <section class="profile-section-card">
+                <figure class="profile-pic-container">
+                    <img class="profile-pic" src="/assets/profilePic.svg" alt="">
+                </figure>
+    
+                <ul class="email-fullName">
+                    <li class="emailUsername">Email/Username</li>
+                    <li>Full name</li>
+                </ul>
+                <ul class="email-name">
+                    <li class="registered-email">SamanthaSmith@gmail.com</li>
+                    <li class="registered-name">samantha smith</li>
+                </ul>
+            </section>
+    
+            <section class="button-section">
+                <p class="paragraph">Para adotar é necessário preencher um formulário.</p>
+                <button onclick="movingArrow1()" class="button" type="button">Começar</button>
+            </section>
         </section>
 
-        <section class="button-section">
-            <p class="paragraph">Para adotar é necessário preencher um formulário.</p>
-            <button onclick="movingArrow1()" class="button" type="button">Começar</button>
-        </section>
-<br>
-         <form id="form1" action="">
+         <form id="form1" class="adoptPage2" action="">
             <label for="adress" name="adress">Endereço</label>
             <input placeholder="Endereço" type="text">
 
@@ -118,11 +122,11 @@
             <input placeholder="Casa,apartamento etc." type="text">
 
             <section class="btn-box1">
-                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow1()" type="button">Voltar</button>
                 <button onclick="movingArrow2()" type="button">Continue</button>
             </section>
-        </form> 
-<br>
+        </form>
+
         <form id="form2" action="">
             <label for="adress" name="adress">Voce ja teve outros animais?</label>
             <input type="checkbox">
@@ -151,17 +155,17 @@
             </select>
 
             <section class="btn-box2">
-                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow1()" type="button">Voltar</button>
                 <button onclick="movingArrow3()" type="button">Continue</button>
             </section>
         </form> 
-        <br>
+
         <form id="form3">
             <label for="">Descreva o motivo da adoção:</label>
             <textarea class="textarea" name="" id=""></textarea>
             
             <section class="btn-box2">
-                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow2()" type="button">Voltar</button>
                 <button onclick="movingArrow4()" type="button">Continue</button>
             </section>
         </form>
@@ -173,10 +177,33 @@
             <input type="number">
             
             <section class="btn-box2">
-                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow3()" type="button">Voltar</button>
                 <button onclick="movingArrow5()" type="button">Continue</button>
             </section>
         </form>
+
+        <form id="form5">
+            <p>Eu,<span>nome completo</span>, declaro que compreendo e aceito os compromissos e responsabilidades associados à adoção de um animal de estimação. Ao assinar este documento, concordo em seguir as políticas e procedimentos estabelecidos pela organização “ADOPET”.
+                Declaro que possuo experiência prévia com animais de estimação e que meu lar oferece um ambiente adequado para um novo membro da família.
+                Entendo a importância dos cuidados veterinários regulares e me comprometo a fornecer ao novo animal todas as vacinas e tratamentos de saúde necessários. Além disso, estou ciente das despesas financeiras associadas à manutenção de um animal de estimação e me comprometo a prover recursos adequados para suas necessidades.
+                
+                Como futuro guardião do animal, estou disposto(a) a dedicar tempo e esforço para seu treinamento, socialização e bem-estar geral. Comprometo-me a fornecer exercícios físicos e mentais adequados, assim como amor, carinho e cuidado constantes.
+                
+                Assumo a responsabilidade de cuidar deste animal pelo resto de sua vida e prometo tratá-lo como parte integrante de minha família. Estou ciente de que a adoção de um animal de estimação é uma decisão séria e estou totalmente comprometido(a) em fornecer-lhe um lar seguro.</p>
+            
+            <section class="btn-box2">
+                <button onclick="movingArrow4()" type="button" type="button">Voltar</button>
+                <button onclick="movingArrow6()" type="button">Continue</button>
+            </section>
+            
+        </form>
+        <!-- <form id="form6" action="">
+
+            <img src="" alt="">
+            <section class="btn-box2">
+                <button onclick="" type="button">Ir para meu perfil</button>
+            </section>
+        </form> -->
     </main>
 
     <footer class="footer">
