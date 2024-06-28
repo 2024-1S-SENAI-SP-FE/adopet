@@ -1,9 +1,15 @@
-// const orangeArrow = document.getElementById("arrow-start")
-// const localIcon = document.getElementById("localImg")
-// const redLine1 = document.getElementById("redLine1")
-// const redLine2 = document.getElementById("redLine2")
 
+// function movingArrowReverse(){
+//     window.history.back();
+    
+// }
 function movingArrow1() {
+    const adoptPage1 = document.getElementById("adoptPage1") 
+    adoptPage1.style.display = "none";
+    
+    const form1 = document.getElementById("form1") 
+    form1.style.display = "flex";
+
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "28.6%";
 
@@ -27,6 +33,13 @@ function movingArrow1() {
 }
 
 function movingArrow2() {
+    // --- Pg2
+    const form1 = document.getElementById("form1") 
+    form1.style.display = "none";
+    // --- Pg3
+    const form2 = document.getElementById("form2") 
+    form2.style.display = "flex";
+
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "46.9%";
 
@@ -52,6 +65,13 @@ function movingArrow2() {
 }
 
 function movingArrow3() {
+ // --- Pg4
+    const form2 = document.getElementById("form2") 
+    form2.style.display = "none";
+ // --- Pg5
+    const form3 = document.getElementById("form3") 
+    form3.style.display = "flex";
+
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "64.5%";
 
@@ -75,6 +95,13 @@ function movingArrow3() {
 }
 
 function movingArrow4() {
+ // --- Pg4
+    const form3 = document.getElementById("form3") 
+    form3.style.display = "none";
+// --- Pg5
+    const form4 = document.getElementById("form4") 
+    form4.style.display = "flex";
+
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "82.5%";
 
@@ -98,11 +125,18 @@ function movingArrow4() {
 }
 
 function movingArrow5() {
+
+    // --- Pg4
+    const form4 = document.getElementById("form4") 
+    form4.style.display = "none";
+// --- Pg5
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "flex";
+
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.visibility = "hidden";
 
     const catIconProgress = document.getElementById("catIconProgress")
-
     catIconProgress.style.left = "88%";
     catIconProgress.style.bottom = "52%";
 
@@ -118,3 +152,18 @@ function movingArrow5() {
     familyIcon.src = "assets/familyOrange.svg";
 
 }
+
+function movingArrow6() {
+    const progressBar = document.getElementById("progressContainer")
+    progressBar.style.display = "none";
+
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "none";
+// --- Pg5
+    const form6 = document.getElementById("form6") 
+    form6.style.display = "flex";
+    
+
+
+}
+
