@@ -11,28 +11,17 @@
     gap: 50%;
 }
 
-.steps-container-header{
+/* .steps-container-header{
     display: flex;
     align-items: baseline;
     width: 90%;
-    /* gap: 7.3%; */
     position: relative;
-    /* border: solid 2px blue; */
-}
+} */
 
-.present-img{
+/* .present-img{
     width: 48%;
     height: 70.6%;
     margin-bottom: 6%;
-    /* height: 48px;
-    width: 48px; */
-}
-
-#localImgGray{
-    /* display: none; */
-}
-#localImgSelected{
-    display: none;
 }
 
 .present{
@@ -41,47 +30,35 @@
     align-items: center;
     text-align: center;
     width: 11%;
-    /* border: solid 2px black; */
-}
+} */
 
 /* ----- Linhas e Seta------ */
 
-.catIconProgress{
+/* .catIconProgress{
     visibility: hidden;
     position: absolute;
-    /* left: 88%;
-    bottom: 52%; */
 }
 
 .arrow-start{
     font-size: 5rem;
     color: #FFB30D;
     height: 80px;
-    /* ----animação----- */
-    /* left: 400px; */
-    /* display: none; */
     position: absolute;
-    
     left: 10%;
     top: 1%;
     bottom: 1%;
-   
-    
 }
 
 .red-line{
     font-size: 5rem;
     color: red;
-    /* display: none; */
-    /* position: absolute; */
     left: 95px;
     bottom: 28px;
     
 }
 #redLine1{
      visibility: hidden;
- 
-    }
+    } */
 /* ------------------ */
 
 .profile-section-card{
@@ -101,16 +78,10 @@
     position: relative;
 }
 
-/* -----Fontes <P> <Label> etc------ */
+/* -----Fontes <P> <li> etc------ */
 
-.email-fullName, .email-name, .paragraph, .steps-label{
+.email-fullName, .email-name, .paragraph{
     font-family: inter;
-}
-
-.steps-label{
-    font-size: 1rem;
-    font-weight: 500;
-
 }
 
 .email-fullName, .email-name{
@@ -141,7 +112,7 @@
 
 .paragraph{
     width: 100%;
-    font-size: ;
+    /* font-size: ; */
 }
 
 /* ----------- BOTOES --------- */
@@ -176,16 +147,21 @@
     box-shadow: inset 500px 0 0 var(--red);
     
 }
-
+/* ---- Pagina 1 Form 0---- */
+.adoptPage1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* -----  FORM 1------ */
+
 
 #form1{
     display: flex;
     flex-direction: column;
-    /* position: absolute;
-    left: 999px;
-    top: 250px; */
+    display: none;
 }
 
 
@@ -193,15 +169,15 @@
 #form2{
     display: flex;
     flex-direction: column;
-    /* position: absolute;
-    right: 899px;
-    top: 250px; */
+    display: none;
 }
 
 /* -----FORM 3------ */
 #form3{
     display: flex;
     flex-direction: column;
+    display: none;
+    display: none;
     /* position: absolute;
     right: 899px;
     top: 250px; */
@@ -213,8 +189,16 @@
 /* -----FORM 4------ */
 #form4{
     display: flex;
-    /* flex-direction: column; */
-    /* position: absolute;
-    right: 899px;
-    top: 250px; */
+    display: none;
+    
 }
+/* -----FORM 4------ */
+#form5{
+    display: flex;
+    flex-direction: column;
+    display: none;
+    
+}
+
+/* -----AdoptPaginas----- */
+
