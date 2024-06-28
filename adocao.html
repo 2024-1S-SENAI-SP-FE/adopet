@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/adocao.css">
 
+    <script src="/script/adocao.js"></script>
+
 </head>
 
 <body>
@@ -33,6 +35,7 @@
 
         </nav>
     </header>
+    <hr>
 
     <main class="main">
 
@@ -42,42 +45,43 @@
                 <img class="present-img" src="/assets/initialSelected.svg" alt="">
                 <label class="steps-label" for="">Inicio</label>
             </section>
-            <span class="arrow-start">&#x21e2;</span>
+            <span id="arrow-start" class="arrow-start">&#x21e2;</span>
+            <span class="red-line" id="redLine1">&#x2015;</span>
 
             <section class="present">
-                <img class="present-img" src="/assets/localIcon.svg" alt="">
+                <img class="present-img" id="localImg" src="/assets/localIcon.svg" alt="">
                 <label class="steps-label" for="">Endereço</label>
             </section>
-
-            <span class="red-line">&#x2015;</span>
+            
+            <span class="red-line" id="redLine2">&#x2015;</span>
 
             <section class="present">
-                <img class="present-img" src="/assets/pawIcon.svg" alt="">
+                <img class="present-img" id="pawIcon1" src="/assets/pawIcon.svg" alt="">
                 <label class="steps-label" for="">Historico de Animais</label>
             </section>
 
-            <span class="red-line">&#x2015;</span>
+            <span class="red-line" id="redLine3">&#x2015;</span>
 
             <section class="present">
-                <img class="present-img" src="/assets/pawIcon.svg" alt="">
+                <img class="present-img" id="pawIcon2" src="/assets/pawIcon.svg" alt="">
                 <label class="steps-label" for="">Motivo da adoção</label>
             </section>
 
-            <span class="red-line">&#x2015;</span>
+            <span class="red-line" id="redLine4">&#x2015;</span>
 
             <section class="present">
-                <img class="present-img" src="/assets/familyIcon.svg" alt="">
+                <img class="present-img" id="familyIcon" src="/assets/familyIcon.svg" alt="">
                 <label class="steps-label" for="">Composição familiar</label>
             </section>
 
-            <span class="red-line">&#x2015;</span>
+            <span class="red-line" id="redLine5">&#x2015;</span>
 
             <section class="present">
-                <img class="present-img" src="/assets/checkIcon.svg" alt="">
+                <img class="present-img" id="checkIcon" src="/assets/checkIcon.svg" alt="">
                 <label class="steps-label" for="">Confirmação</label>
             </section> 
 
-        </header>
+        </header> 
 
         <section class="profile-section-card">
             <figure class="profile-pic-container">
@@ -96,9 +100,82 @@
 
         <section class="button-section">
             <p class="paragraph">Para adotar é necessário preencher um formulário.</p>
-            <button class="button" type="button">Começar</button>
+            <button onclick="movingArrow1()" class="button" type="button">Começar</button>
         </section>
+<br>
+         <form id="form1" action="">
+            <label for="adress" name="adress">Endereço</label>
+            <input placeholder="Endereço" type="text">
 
+            <label for="cep" name="cep">Cep</label>
+            <input placeholder="Cep" type="text">
+
+            <label for="city" name="city">Cidade</label>
+            <input placeholder="Cidade" type="text">
+
+            <label for="type-of-housing" name="type-of-housing">Tipo de moradia</label>
+            <input placeholder="Casa,apartamento etc." type="text">
+
+            <section class="btn-box1">
+                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow2()" type="button">Continue</button>
+            </section>
+        </form> 
+<br>
+        <form id="form2" action="">
+            <label for="adress" name="adress">Voce ja teve outros animais?</label>
+            <input type="checkbox">
+            <label for="adress" name="adress">Tenho</label>
+            <input type="checkbox">
+            <label for="adress" name="adress">Ja tive</label>
+            <input type="checkbox">
+            <label for="adress" name="adress">Não tenho/nunca tive</label>
+
+            <label for="" name="">Possui quantos animais?</label>
+            <input placeholder="ex:4" type="text">
+
+            <label for="" name="">Tempo de posse de animais de estimação anteriores</label>
+            <input placeholder="Cidade" type="text">
+
+            <label for="" name="">Descreva seu ambiente domestico <span>*</span></label>
+            <select name="age" id="age-select">
+                <option value="">Selecione</option>
+                <option value=""></option>
+            </select>
+
+            <label for="" name="">Descreva o nivel de atividade tipico da família <span>*</span></label>
+            <select name="age" id="age-select">
+                <option value="">Selecione</option>
+                <option value=""></option>
+            </select>
+
+            <section class="btn-box2">
+                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow3()" type="button">Continue</button>
+            </section>
+        </form> 
+        <br>
+        <form id="form3">
+            <label for="">Descreva o motivo da adoção:</label>
+            <textarea class="textarea" name="" id=""></textarea>
+            
+            <section class="btn-box2">
+                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow4()" type="button">Continue</button>
+            </section>
+        </form>
+
+        <form id="form4">
+            <label for="">Número de adultos</label>
+            <input type="number">
+            <label for="">Número de crianças</label>
+            <input type="number">
+            
+            <section class="btn-box2">
+                <button onclick="" type="button">Voltar</button>
+                <button onclick="movingArrow5()" type="button">Continue</button>
+            </section>
+        </form>
     </main>
 
     <footer class="footer">
