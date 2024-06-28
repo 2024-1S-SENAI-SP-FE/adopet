@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="/style/modal.css">
     <link rel="shortcut icon" href="assets/award (1).png" type="image/x-icon">
     <script type="module" src="/script/login/firebaseAuth.js"></script>
-    <script type="module" src="/script/login/firebaseAuth.js"></script>
+    <script type="module" src="/script/login/logged.js"></script>
+    <script type="module" src="/script/register/register.js"></script>
     <title>ADOPET</title>
 </head>
 
@@ -28,13 +29,18 @@
                 <li><a href="sobre-nos.html">Sobre nós</a></li>
             </ul>
 
-            <section class="section-login">
+            <section class="section-login" id="user-select">
 
                 <button id="loginUser">Login</button>
-                <section class="linha"></section>
+                <section class="linha" id="line"></section>
                 <button id="registerUser">Cadastro</button>
 
             </section>
+
+            <section name="user-config" class="section-login config bt1" id="user-config" style="display: none;">
+
+            </section>
+
 
         </nav>
     </header>
@@ -99,6 +105,8 @@
 
 
                     <form class="modal-form-login" id="login">
+
+                        <section id="signInMessage" class="messageDiv" style="display:none;"></section>
     
                         <section class="input-container">
                             <i class="icon">&#9993;</i>
@@ -116,15 +124,12 @@
     
                         <button class="btn1" type="button" id="login-btn">
                             Save
-                        </button>
-    
+                        </button>    
     
                     </footer>
                 </section>
     
             </div>
-    
-
 
     </main>
 

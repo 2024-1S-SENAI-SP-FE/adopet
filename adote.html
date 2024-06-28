@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="style/paginate.css">
     <link rel="stylesheet" href="style/description.css">
     <link rel="stylesheet" href="style/modal.css">
-    <!-- <script src="/script/favorite.js"></script> -->
     <script src="/script/script.js"></script>
     <script src="/script/filter.js"></script> 
     <script src="/script/pagination.js"></script>
     <script src="/script/getPet.js"></script>
     <script type="module" src="/script/login/firebaseAuth.js"></script>
+    <script type="module" src="/script/login/logged.js"></script>
+    <script type="module" src="/script/register/register.js"></script>
     <title>Document</title>
 </head>
 <body class="body">
@@ -33,11 +34,15 @@
                 <li><a href="/sobre-nos.html">Sobre nós</a></li>
             </ul>
 
-            <section class="section-login">
+            <section class="section-login" id="user-select">
 
                 <button id="loginUser">Login</button>
-                <section class="linha"></section>
+                <section class="linha" id="line"></section>
                 <button id="registerUser">Cadastro</button>
+
+            </section>
+
+            <section name="user-config" class="section-login config" id="user-config" style="display: none;">
 
             </section>
 
