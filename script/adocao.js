@@ -6,6 +6,12 @@
 function movingArrow1() {
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "28.6%";
+
+    const catIconProgress = document.getElementById("catIconProgress")
+
+    catIconProgress.style.visibility = "visible";
+    catIconProgress.style.left = "17%";
+    catIconProgress.style.bottom = "52%";
     
     const redLine1 = document.getElementById("redLine1")
     redLine1.style.visibility = "visible"
@@ -23,6 +29,11 @@ function movingArrow1() {
 function movingArrow2() {
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "46.9%";
+
+    const catIconProgress = document.getElementById("catIconProgress")
+
+    catIconProgress.style.left = "35%";
+    catIconProgress.style.bottom = "52%";
     
     const redLine3 = document.getElementById("redLine3")
     redLine3.style.visibility = "hidden"
@@ -43,6 +54,11 @@ function movingArrow2() {
 function movingArrow3() {
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "64.5%";
+
+    const catIconProgress = document.getElementById("catIconProgress")
+
+    catIconProgress.style.left = "53%";
+    catIconProgress.style.bottom = "52%";
     
     const redLine4 = document.getElementById("redLine4")
     redLine4.style.visibility = "hidden";
@@ -62,6 +78,11 @@ function movingArrow4() {
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "82.5%";
 
+    const catIconProgress = document.getElementById("catIconProgress")
+
+    catIconProgress.style.left = "71%";
+    catIconProgress.style.bottom = "52%";
+
     const redLine5 = document.getElementById("redLine5")
     redLine5.style.visibility = "hidden";
 
@@ -79,6 +100,11 @@ function movingArrow4() {
 function movingArrow5() {
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.visibility = "hidden";
+
+    const catIconProgress = document.getElementById("catIconProgress")
+
+    catIconProgress.style.left = "88%";
+    catIconProgress.style.bottom = "52%";
 
     const redLine5 = document.getElementById("redLine5")
     redLine5.style.visibility = "visible";
