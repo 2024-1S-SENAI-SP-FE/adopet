@@ -142,3 +142,36 @@
     animation:fadeOut 15s forwards;
 
 }
+
+.btn1 {
+    border: solid var(--dark-red) 1.5px;
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
+.btn1 {
+    background-color: #ffff;
+}
+
+.btn1 a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.btn1:hover {
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
+.config{
+    width: 14%;
+    position: absolute;
+    margin-left: 74vw;
+    margin-top: 8%;
+}
