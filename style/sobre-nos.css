@@ -4,8 +4,9 @@
     justify-content: center;
     width: 90%;
     margin: auto;
-    margin-top: 90px;
-    margin-bottom: 110px;
+    margin-top: 30px;
+    margin-bottom: 84px;
+    padding-bottom: 20px;
     /* border: solid green; */
 }
 
@@ -14,41 +15,43 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 52%;
+    width: 50%;
     height: 480px;
     margin-left: 40px;
     margin-right: 20px;
+    border-left: solid var(--red);
     /* border: solid green; */
 }
 
 .sec1txt h1 {
     font-family: 'inter';
     font-weight: bold;
-    font-size: 46px;
-    margin: 30px;
-    margin-bottom: 50px;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-bottom: 36px;
     justify-content: flex-start;
     /* border: solid green; */
 }
 
 .sec1txt p {
     font-family: 'inter';
-    font-size: 30px;
+    font-size: 24px;
     margin-left: 30px;
 }
 
 .sec1img{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     /* border: solid green; */
     width: 50%;
     margin-left: 30px;
     margin-right: 30px;
+    border-right: solid var(--red);
 }
 
 .sec1img img{
-    width: 610px;
+    width: 480px;
 }
 
 /* segunda pt */
@@ -59,7 +62,7 @@
     justify-content: center;
     width: 90%;
     margin: auto;
-    margin-top: 106px;
+    margin-top: 60px;
     /* border: solid green; */
 }
 
@@ -67,18 +70,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 480px;
+    width: 50%;
+    height: 410px;
     background-color: var(--yellow);
     /* border: solid #aeaeae; */
     border-radius: 70px;
     margin-right: 30px;
+    margin-left: 40px;
 }
 
 .sec-texto p{
     font-family: 'inter';
     font-weight: bold;
-    font-size: 43px;
+    font-size: 38px;
     width: 90%;
     /* padding-left: 100px; */
 }
@@ -87,20 +91,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 480px;
+    width: 50%;
+    height: 410px;
     background-color: var(--dark-red);
     /* border: solid #aeaeae; */
     border-radius: 70px;
     margin-left: 30px;
+    margin-right: 40px;
 }
-
-
 
 .sec-texto2 p{
     font-family: 'inter';
     font-weight: bold;
-    font-size: 43px;
+    font-size: 38px;
     width: 90%;
 }
 
@@ -126,16 +129,16 @@ h1{
     justify-content: center;
     font-family: 'inter';
     font-weight: bold;
-    font-size: 46px;
+    font-size: 38px;
     width: 100%;
 }
 
-.sec1{
+.sec1, .sec2, .sec3{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 89px;
-    gap: 187px;
+    margin-top: 63px;
+    gap: 30px;
 }
 
 .sec1 div{
@@ -158,14 +161,6 @@ h1{
     transform: scale(1.2)
 }
 
-.sec2{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 79px;
-    gap: 187px;
-}
-
 .sec2 div{
     display: flex;
     justify-content: center;
@@ -184,13 +179,6 @@ h1{
 
 .sec2 div:hover{
     transform: scale(1.2)
-}
-
-.sec3{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 79px;
 }
 
 .sec3 div{
@@ -221,7 +209,7 @@ h1{
     justify-content: center;
     width: 90%;
     margin: auto;
-    margin-top: 110px;
+    margin-top: 60px;
     margin-bottom: 70px;
     /* border: solid green; */
 }
@@ -232,39 +220,39 @@ h1{
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    margin-left: 100px;
+    margin-left: 50px;
     /* border: solid pink; */
 }
 
 .secmapa h1{
     font-family: 'inter';
     font-weight: bold;
-    font-size: 46px;
-    margin: 30px;
-    margin-left: 30px;
+    font-size: 38px;
     margin-bottom: 50px;
     justify-content: flex-start;
     /* border: solid red; */
 }
 
 .mapa{
-    width: 700px;
-    height: 600px;
+    width: 600px;
+    height: 500px;
+    border-radius: 3%;
+    margin-left: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .secdog{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     /* border: solid blue; */
     width: 50%;
     margin: auto;
-    margin-top: 170px;
-    margin-left: 90px;
-    margin-right: 30px;
+    margin-top: 95px;
+    margin-left: 75px;
+    margin-right: 50px;
 }
 
 .secdog img{
-    width: 400px;
+    width: 370px;
 }

@@ -9,6 +9,18 @@
     z-index: -1;
 }
 
+.figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20%;
+}
+
+.figure img{
+    width: 34vh;
+}
+
 .modal.active{
     opacity: 1;
     z-index: 1;
@@ -17,13 +29,13 @@
 .modal-content{
     display: flex;
     flex-direction: column;
-    margin-top: 30vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 90vh;
     /* margin-bottom: auto; */
     gap: 20px;
-    width: 35vw;
-    height: 50vh;
+    width: 47vw;
+    height: 70vh;
     padding-bottom: 20px;
     background-color: white;
     box-shadow: 1px 1px 10px black;
@@ -31,14 +43,18 @@
 }
 
 .modal-header{
-    margin-top: 20px;
     display: flex;
     position: relative;
-    justify-content: center;
+    justify-content: space-around;
     height: 40px;
     line-height: 40px;
     font-size: 1rem;
     border-radius: 10px;
+    width: 100%;
+}
+
+.newuser{
+    padding-top: 20px;
 }
 
 .modal-close{
@@ -46,15 +62,19 @@
     position: absolute;
     display: block;
     width: 40px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     height: 40px;
     text-align: center;
     user-select: none;
+    padding-left: 10px;
     right: 0;
 }
 
 .modal-close:hover{
     background-color: #ff4949;
     color: white;
+    border-radius: 0 10px 0 10px  ;
 }
 
 .modal-form-register{
@@ -71,29 +91,16 @@
 
 .modal-form-login{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px;
+    text-align: center;
+    gap: 50px;
+    /* padding: 20px; */
     height: 40%;
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
-
-/* .modal-field{
-    width: calc(50% - 10px);
-    border-radius: 5px;
-    height: 30px;
-    outline-style: none;
-    border-bottom: 2px solid black;
-    padding: 0 10px;
-    font-size: 1rem;
-}
-
-.modal-field:focus{
-    border-bottom: 1px solid var(--dark-red);
-} */
 
 .modal-footer{
     margin: auto;
@@ -105,15 +112,18 @@
 }
 
 .input-container {
+    margin: auto;
+    align-items: center;
     position: relative;
     margin-bottom: 15px;
     height: 2%;
+    width: 70%;
 }
 
 .input-container .icon {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 29px;
     transform: translateY(50%);
     font-size: 18px;
     color: #888;
