@@ -46,6 +46,13 @@
 
 /* ----- Linhas e Seta------ */
 
+.catIconProgress{
+    visibility: hidden;
+    position: absolute;
+    /* left: 88%;
+    bottom: 52%; */
+}
+
 .arrow-start{
     font-size: 5rem;
     color: #FFB30D;
@@ -73,33 +80,8 @@
 }
 #redLine1{
      visibility: hidden;
-    /*
-     left: 95px;
-    bottom: 28px; */
-    
+ 
     }
-    
-/* 
-#redLine2{
-    position: absolute;
-    left: 275px;
-    bottom: 28px;
-
-}
-
-#redLine3{
-    position: absolute;
-    left: 377px;
-    bottom: 28px;
-
-}
-
-#redLine4{
-    position: absolute;
-    left: 479px;
-    bottom: 28px;
-
-} */
 /* ------------------ */
 
 .profile-section-card{
