@@ -11,55 +11,6 @@
     gap: 50%;
 }
 
-/* .steps-container-header{
-    display: flex;
-    align-items: baseline;
-    width: 90%;
-    position: relative;
-} */
-
-/* .present-img{
-    width: 48%;
-    height: 70.6%;
-    margin-bottom: 6%;
-}
-
-.present{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 11%;
-} */
-
-/* ----- Linhas e Seta------ */
-
-/* .catIconProgress{
-    visibility: hidden;
-    position: absolute;
-}
-
-.arrow-start{
-    font-size: 5rem;
-    color: #FFB30D;
-    height: 80px;
-    position: absolute;
-    left: 10%;
-    top: 1%;
-    bottom: 1%;
-}
-
-.red-line{
-    font-size: 5rem;
-    color: red;
-    left: 95px;
-    bottom: 28px;
-    
-}
-#redLine1{
-     visibility: hidden;
-    } */
-/* ------------------ */
 
 .profile-section-card{
     display: flex;
@@ -78,7 +29,7 @@
     position: relative;
 }
 
-/* -----Fontes <P> <li> etc------ */
+/* -----Fontes e tamanhos <P> <li> etc------ */
 
 .email-fullName, .email-name, .paragraph{
     font-family: inter;
@@ -178,9 +129,6 @@
     flex-direction: column;
     display: none;
     display: none;
-    /* position: absolute;
-    right: 899px;
-    top: 250px; */
 }
 .textarea {
     resize: none;
@@ -200,5 +148,4 @@
     
 }
 
-/* -----AdoptPaginas----- */
 
