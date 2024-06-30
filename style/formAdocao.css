@@ -1,0 +1,132 @@
+.adoptPage2{
+    display: flex;
+    width: 90%;
+    margin-top: 60px;
+}
+form input{
+    margin-top: 5px;
+    width: 50%;
+    height: 3vh;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form label{
+    margin-top: 10px;
+}
+
+.house-info-form{
+    width: 90%;
+}
+.house-info-form input{
+    width: 30%;
+}
+.house-info-form-input-radio{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.house-info-form-input-radio input{
+    width: 7%;
+
+}
+.house-info-form-input-text{
+    width: 70%;
+    display: inline-block;
+}
+.house-info-form-input-text input{
+   margin-left: 20px;
+}
+.house-info-form-input-select{
+    height: 10vh;
+    width: 100%;
+    margin-top: 10px;
+}
+.house-info-form-input-select label{
+    margin-right: 20px;
+    margin-top: 90px
+}
+.house-info-form-input-select select{
+    width: 20%;
+    height: 4vh;
+    border-radius: 16px;
+}
+
+.form-description{
+    margin-top: 50px;
+    width: 90%;
+}
+.form-description textarea{
+    width: 80%;
+    height: 40vh;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form-description label{
+    margin-left: 100px;
+}
+
+.form-living{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+/* .form-living-peoples{
+    display: flex;
+} */
+.form-living-peoples {
+    width: 30%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    align-items: flex-start; /* Alinha os itens no início da linha */
+  }
+  
+.btn-box{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6vh;
+}
+
+.prev-page-btn{
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 35px;
+    padding-left: 35px;
+    align-items: center;
+    background-color: white;
+    color: var(--dark-red);
+    border: solid var(--dark-red);
+    width: 150px;
+    border-radius: 5px;
+}
+.prev-page-btn:hover{
+    background-color: var(--red);
+    border: solid var(--red);
+    color: white;
+}
+.go-page-btn{
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 35px;
+    padding-left: 35px;
+    align-items: center;
+    background-color: var(--dark-red);
+    color: white;
+    border: solid var(--dark-red);
+    width: 150px;
+    border-radius: 5px;
+}
+
+.go-page-btn:hover{
+    background-color: white;
+    border: solid var(--red);
+    color: var(--dark-red);
+}
