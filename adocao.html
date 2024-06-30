@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/adocao.css">
     <link rel="stylesheet" href="/style/progressBarAdopt.css">
-
-    <script src="/script/progressBarAdopt.js"></script>
+    <link rel="stylesheet" href="/style/formAdocao.css".css">
+    <script src="/script/formAdopt/progressBarAdopt.js"></script>
 
 </head>
 
@@ -108,7 +108,9 @@
             </section>
         </section>
 
+
          <form id="form1" class="adoptPage2" action="">
+
             <label for="adress" name="adress">Endereço</label>
             <input placeholder="Endereço" type="text">
 
@@ -121,64 +123,77 @@
             <label for="type-of-housing" name="type-of-housing">Tipo de moradia</label>
             <input placeholder="Casa,apartamento etc." type="text">
 
-            <section class="btn-box1">
-                <button onclick=" " type="button">Voltar</button>
-                <button onclick="movingArrow2()" type="button">Continue</button>
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingArrow()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow2()" type="button">Continue <span> &#62;</span></button>
             </section>
+
         </form>
 
-        <form id="form2" action="">
+        <form id="form2" class="house-info-form" action="">
+
+            <section class="house-info-form-input-radio">
             <label for="adress" name="adress">Voce ja teve outros animais?</label>
-            <input type="checkbox">
+
+            <input type="radio" name="info-pets">
             <label for="adress" name="adress">Tenho</label>
-            <input type="checkbox">
+            <input type="radio" name="info-pets">
             <label for="adress" name="adress">Ja tive</label>
-            <input type="checkbox">
+            <input type="radio" name="info-pets">
             <label for="adress" name="adress">Não tenho/nunca tive</label>
+        </section>
 
-            <label for="" name="">Possui quantos animais?</label>
-            <input placeholder="ex:4" type="text">
-
+        <section class="house-info-form-input-text">
+            <label for="qtd-pet" name="qtd-pet">Possui quantos animais?</label>
+            <input placeholder="ex:4" type="text" name="qtd-pet">
+            <br>
             <label for="" name="">Tempo de posse de animais de estimação anteriores</label>
-            <input placeholder="Cidade" type="text">
+            <input placeholder="ex: 1 ano" type="text">
+        </section>
 
-            <label for="" name="">Descreva seu ambiente domestico <span>*</span></label>
+        <section class="house-info-form-input-select">
+            <label for="" name="">Como é seu ambiente domestico</label>
             <select name="age" id="age-select">
                 <option value="">Selecione</option>
                 <option value=""></option>
             </select>
-
-            <label for="" name="">Descreva o nivel de atividade tipico da família <span>*</span></label>
+            <br>
+            <label for="" name="">Como é o nivel de atividade tipico da família</label>
             <select name="age" id="age-select">
                 <option value="">Selecione</option>
                 <option value=""></option>
             </select>
+        </section>
 
-            <section class="btn-box2">
-                <button onclick="movingArrow1()" type="button">Voltar</button>
-                <button onclick="movingArrow3()" type="button">Continue</button>
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingArrow1()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow3()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form> 
 
-        <form id="form3">
+        <form id="form3" class="form-description">
             <label for="">Descreva o motivo da adoção:</label>
             <textarea class="textarea" name="" id=""></textarea>
             
-            <section class="btn-box2">
-                <button onclick="movingArrow2()" type="button">Voltar</button>
-                <button onclick="movingArrow4()" type="button">Continue</button>
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingArrow2()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow4()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form>
 
-        <form id="form4">
+        <form id="form4" class="form-living">
+
+            <section class="form-living-peoples">
             <label for="">Número de adultos</label>
             <input type="number">
+            <!-- <br> -->
             <label for="">Número de crianças</label>
             <input type="number">
+        </section>
             
-            <section class="btn-box2">
-                <button onclick="movingArrow3()" type="button">Voltar</button>
-                <button onclick="movingArrow5()" type="button">Continue</button>
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingArrow3()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow5()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form>
 
@@ -191,10 +206,10 @@
                 
                 Assumo a responsabilidade de cuidar deste animal pelo resto de sua vida e prometo tratá-lo como parte integrante de minha família. Estou ciente de que a adoção de um animal de estimação é uma decisão séria e estou totalmente comprometido(a) em fornecer-lhe um lar seguro.</p>
             
-            <section class="btn-box2">
-                <button onclick="movingArrow4()" type="button" type="button">Voltar</button>
-                <button onclick="movingArrow6()" type="button">Continue</button>
-            </section>
+                <section class="btn-box">
+                    <button class="prev-page-btn" onclick="movingArrow4()" type="button"><span>&#60; </span> Voltar</button>
+                    <button class="go-page-btn" onclick="movingArrow6()" type="button">Continue <span> &#62;</span></button>
+                </section>
             
         </form>
         <!-- <form id="form6" action="">
