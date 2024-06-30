@@ -4,41 +4,121 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-/* .acme-regular {
-    font-family: "Acme", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  } */
-
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    /* background-color:#FFC027; */
 }
 
 
-
-/* ----------------BODY-------------------------- */
-
-/* body{
-    max-width: 1126px;
-    margin-right: 100px;
-    margin-left: 78px;
-
-    background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444);
-    } */
 header, main{
     max-width: 1126px;
     margin-right: 100px;
     margin-left: 78px;
+}
 
-    /* background: linear-gradient(to top, rgba(202, 202, 82, 0), #ad4444); */
-    }
+:root{
+    --yellow: #FFB30D;
+    --red: #F82C10;
+    --dark-red: #BF1501;
+}
 
-/* ----------------BODY-------------------------- */
 
 
 
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+} */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.foto {
+    width: 100%;
+    text-align: center;
+
+}
+
+.foto img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.informacoes {
+    width: 90%;
+    padding: 20px;
+}
+
+.informacoes h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.informacoes ul {
+    display: flex;
+    list-style: none;
+    /* padding: 0; */
+}
+
+.informacoes li {
+    /* margin-bottom: 10px; */
+}
+
+.informacoes p {
+    line-height: 1.6;
+}
+#section-pet{
+    display: flex;
+    justify-content: space-around;
+    border: solid blue;
+    width: 80vw;
+    margin: auto;
+}
+
+.more-info{
+    width: 90%;
+}
+.father{
+    display: flex;
+
+    margin: auto;
+    width: 90%;
+    /* margin: auto; */
+    border: solid black;
+}
+.test{
+    border: solid black;
+}
+.foto img{
+    height: 100px;
+}
+/* footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+ */
 
 
 

@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/reset.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <!-- <link rel="stylesheet" href="/style/style.css"> -->
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
-    <link rel="stylesheet" href="/style/hover.css">
-    <!-- <link rel="stylesheet" href="style/section.css"> -->
+    <link rel="stylesheet" href="/style/section.css">
+    <link rel="stylesheet" href="/style/form.css">
+    <link rel="shortcut icon" href="assets/award (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="style/paginate.css">
+    <link rel="stylesheet" href="style/description.css">
+    <!-- <script src="/script/favorite.js"></script> -->
+    <script src="/script/script.js"></script>
+    <script src="/script/filter.js"></script> 
+    <script src="/script/pagination.js"></script>
+    <script src="/script/getPet.js"></script>
     <title>Document</title>
     
     
 </head>
-<body>
+<body class="body">
     <header>
         <nav class="nav-header">
             <ul class="ul-ancoras">
 
                 <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
-               <li><a href="/adote.html">Adote</a></li>
-               <li><a href="">Doe</a></li>
-               <li><a href="">Contato</a></li>
-               <li><a href="">Sobre nós</a></li>
+                <li><a href="/adote.html">Adote</a></li>
+                <li><a href="">Doe</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="sobre-nos.html">Sobre nós</a></li>
             </ul>
 
             <section class="section-login">
@@ -31,71 +40,410 @@
                 <section class="linha"></section>
                 <button>Cadastro</button>
             </section>
-            
+
         </nav>
     </header>
 
 
 
-    <main>
-        <table >
-          <thead  >
-            
-            <tr>
-              <th colspan="5" ><img src="assets\adote\dogpic.png" alt="foto de um">
-                
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr class="tbody-tr">
-    
-              <th colspan="4" class="th-lola">Lola</th>
-    
-              <td colspan="4">
-                <img src="assets\adote\heart.svg" alt="">
-              </td>
-    
-            </tr>
-            <tr>
-              
-              <th >Gender</th>
-              <td colspan="4" class="td-cor-female">Female</td>
-            </tr>
-            
-            <tr>
-              
-              <th style="width: 3px;" colspan="4">Age</th>
-              <td colspan="4" class="td-cor-months">14 months</td>
-              
-              
-              
-                <th colspan="4">Size</th>
-    
-                <td colspan="4" class="td-cor-medium">Medium</td>
-            </tr>
-            <tfoot >
-              <tr>
-                <td colspan="6">Lola is a friendly, playfull smart male dog, only adopted to a house with fee...</td>
-              </tr>
-              <tr >
-                <td colspan="3"><button type="button"  >More info</button></td>
-              </tr>
-            </tfoot>
-          </tbody>
-          
-        </table>
-        
-        
-      </main>
-      
+    <!-- <form id="petForm" onsubmit="RegisterPet(event)" enctype="multipart/form-data" method="post">
+        <input type="file" name="photopet" id="photopet">
+        <input type="text" id="name" placeholder="name:">
+        <input type="text" id="specie" placeholder="specie">
+        <input type="text" id="age" placeholder="age:">
+        <input type="text" id="size" placeholder="size">
+        <input type="text" id="gender" placeholder="gender">
+        <input type="text" name="situantion" id="situation" placeholder="situantion">
+        <button type="submit">enviar</button>
+    </form> -->
+
+    <hr class="hr-class-main">
+
+    <main class="main" >
+
+        <header class="header-main" id="header-m">
+            <section>
+                <form class="form-filter-pet" id="form">
+                    <fieldset class="control-form-options">
+                        <!-- <legend>Idade</legend> -->
+                        <select name="age" id="age-select">
+                            <option value="todos">Idade</option>
+                            <option value="filhote">Filhote (3 a 5 meses)</option>
+                            <option value="adulto">Adulto (1 a 7 anos)</option>
+                            <option value="idoso">Idoso (a partir dos 12)</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="control-form-options">
+                        <!-- <legend>Ordenar</legend> -->
+                        <select name="order" id="order-select">
+                            <option value="todos">ordenar</option>
+                            <option value="A-Z">ordenar de A a Z</option>
+                            <option value="Z-A">ordenar de Z a A</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="control-form-options">
+                        <!-- <legend>Gênero</legend> -->
+                        <select name="gender" id="gender-select">
+                            <option value="todos" selected>gênero</option>
+                            <option value="MACHO">Macho</option>
+                            <option value="FÊMEA">Fêmea</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="control-form-range">
+                        <!-- <legend>Tamanho</legend> -->
+                        <p id="display">Porte</p>
+                        <input type="range" name="size" id="size" value="1" min="1" max="4" 
+                        oninput="updateDisplay(this.value)">
+                        <div class="control-form-range-img">
+                            <img id="small" src="/assets/paw-print.png" alt="porte pequeno">
+                            <img id="medium" src="/assets/paw-print.png" alt="porte médio">
+                            <img id="large" src="/assets/paw-print.png" alt="porte grande">
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="control-form-checkbox">
+                        <!-- <legend>Tipos de Animal</legend> -->
+                        <input type="checkbox" name="cachorro" id="cachorro">
+                        <label for="cachorro" class="cachorro"></label>
+                        <input type="checkbox" name="gato" id="gato">
+                        <label for="gato" class="gato"></label>
+                    </fieldset>
+                    <fieldset class="control-form-buttons">
+                        <button type="reset" class="btn1">Limpar Filtros</button>
+                        <button type="submit" onclick="FilterPet(event)" class="btn2">Buscar</button>
+                    </fieldset>
+                </form>
+            </section>
+        </header>
+
+        <hr class="hr-class-father" id="hr-class">
 
 
-    <footer>
+            <section class="father" id="father">
+
+
+                <!-- <section class="son">
+                    <header class="header-section" >
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <br>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <br>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section>
+
+                <section class="son">
+                    <header class="header-section">
+                        <img src="assets/filhote-de-cachorro-frances-bulldog.png" alt="foto de um cachorro" class="pet-pic">
+                        <span class="itens-top">
+                        <h2>Lola</h2>
+                        <img src="assets/icon_heart.png" alt="favorite" class="icon_heart">
+                    </span>
+                    </header>
+                    <div class="dog-details">
+
+                        <div id="div-gender">
+                            <span>Gender:</span>
+                            <span class="td-gender">Female</span>
+                        </div>
+
+                        <div class="div-others">
+                            <span>Age:</span>
+                            <span class="td-months">14 months</span>
+                    
+                            <span>Size:</span>
+                            <span class="td-size">Medium</span>
+
+                        </div>
+
+                    </div>
+                    <footer class="footer-section">
+                        <p class="info-text">Lola is a friendly, playful, smart female dog, ready to be adopted into a loving home.</p>
+                        <div>
+                            <button type="button">More info</button>
+                        </div>
+                    </footer>
+                </section> -->
+
+            </section>
+
+            <footer id="paginate">
+            <section class="controls">
+                    <article class="first">&#171;</article>
+                    <article class="prev">Anterior</article>
+                    <article class="numbers">
+                        <article>1</article>
+                    </article>
+                    <article class="next">Próximo</article>
+                    <article class="last">&#187;</article>
+                </section>
+            </footer>
+
+    </main>
+
+    <footer class="footer">
         <article class="article1">
             <nav>
-                <h1 > Como Podemos Ajudar?</h1>
+                <h1> Como Podemos Ajudar?</h1>
                 <ul>
                     <li><a href="/adote.html">Adote</a></li>
                     <li><a href="#">Doe</a></li>
@@ -103,17 +451,17 @@
                     <li><a href="#">Sobre nós</a></li>
                 </ul>
             </nav>
-        
+
 
             <nav>
                 <h1> Entre em contato</h1>
                 <ul class="contato-ul">
-                    
+
                     <li><img src="/assets/location_on.svg" alt=""> Rua Moreira de Godoi n° 226<br />
                         Ipiranga - Sao Paulo - SP<br />
                         CEP : 04256-060</li>
-                        <li><img src="/assets/call.svg" alt=""> + 55 (11) 1234-5678</li>
-                        
+                    <li><img src="/assets/call.svg" alt=""> + 55 (11) 1234-5678</li>
+
                     <li><img src="/assets/email.svg" alt=""><a href="#">email: adopet.com</a></li>
                 </ul>
             </nav>
@@ -123,11 +471,13 @@
             <p>&copy;2024 adopet.com</p>
             <nav>
                 <ul>
-                    <li><img src="/assets/Instagram.svg" alt=""></li>
-                    <li><img src="/assets/facebok.svg" alt=""></li>
+                    <li><a href="https://www.instagram.com"><img src="/assets/Instagram.svg" alt="Link para o Instagram"></li>
+                    <li><a href="https://www.facebook.com"><img src="/assets/facebok.svg" alt="Link para o Facebook"></li>
                 </ul>
             </nav>
         </article>
     </footer>
+
 </body>
+
 </html>

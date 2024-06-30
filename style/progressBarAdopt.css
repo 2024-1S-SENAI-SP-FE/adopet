@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+.steps-container-header{
+    display: flex;
+    align-items: baseline;
+    width: 90%;
+    /* gap: 7.3%; */
+    position: relative;
+    /* border: solid 2px blue; */
+}
+
+.present-img{
+    width: 48%;
+    height: 70.6%;
+    margin-bottom: 6%;
+    /* height: 48px;
+    width: 48px; */
+}
+
+.present{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 11%;
+    /* border: solid 2px black; */
+}
+
+/* ----- Linhas e Seta------ */
+
+.catIconProgress{
+    visibility: hidden;
+    position: absolute;
+    /* left: 88%;
+    bottom: 52%; */
+}
+
+.arrow-start{
+    font-size: 5rem;
+    color: #FFB30D;
+    height: 80px;
+    /* ----animação----- */
+    /* left: 400px; */
+    /* display: none; */
+    position: absolute;
+    
+    left: 10%;
+    top: 1%;
+    bottom: 1%;
+   
+    
+}
+
+.red-line{
+    font-size: 5rem;
+    color: red;
+    /* display: none; */
+    /* position: absolute; */
+    left: 95px;
+    bottom: 28px;
+    
+}
+#redLine1{
+     visibility: hidden;
+ 
+}
+
+/* -----Fontes <P> <Label> etc------ */
+
+.steps-label{
+    font-family: inter;
+}
+
+.steps-label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+

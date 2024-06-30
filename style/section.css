@@ -1,109 +1,215 @@
-
-body{
-    /* border: solid 3px darkorange; */
-  }
-  
-
-  table th {
-    font-size: 16px;
-  
-  
-}
-  
- main table{
-   border: solid 1.7px #aeaeae;
-   border-radius: 16px;
-   border-collapse:separate;
-   width: 330px;
-   height: 159px;
-
+.body {
+    margin: auto;
 }
 
-
-tbody{
-    display:initial;
-    border-spacing: 15px;   
-    /* padding: 5px;  */
-    width: 100%;
+.father {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
 }
-
-tfoot{
+.main{
     display: block;
-    border-spacing: 15px; 
-    /* padding: 15px; */
+}
+
+.hr-class-main{
+    width: 95%;
+    margin-top: 30px;
 
 }
 
-tbody img{
-  height: 20px;
+.hr-class-father{
+    margin-top: 30px;
+    margin-bottom: 90px;
 }
 
-.tbody-tr{
-  /* background-color: hotpink; */
-}
-
-th{
-  font-weight: bold;
-  text-align: left;
-}
-
-tbody td{
-  font-size: 12px;
-  text-align: right;
-  
-}
-
-
-
-
-  
-  thead th>img{
+.main:not(:header-main) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+}
+
+.main section {
+    border-radius: 16px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.father .son {
+    border: solid 1.7px #aeaeae;
+    width: 25%;
+    width: 25%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    /* padding: 20px; */
+
+    /* padding: 20px; */
+
+}
+
+.header-section {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30vh; 
+    text-align: center;
+    padding: 0;
+    /* margin-bottom: 20px; */
+    width: 100%;
+    height: 30vh; 
+}
+
+.header-section h2{
+    font-family: 'inter';
+}
+.header-section h2 {
+    display: flex;
+    justify-content: flex-start;
+    color: #FFB30D;
+}
+
+.pet-pic {
+    width: 100%;
+    height: 80%;
+    width: 100%;
+    height: 80%;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
+}
 
-  }
-  
-  tfoot button{
-    width: 100%
-  }
+.dog-details {
+    margin: 20px;
+    margin-bottom: 20px;
+    margin: 20px;
+    margin-bottom: 20px;
+}
 
+.dog-details article {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    margin-bottom: 8px;
+}
 
-
-  .th-lola{
-    font-size: 18px;
+.dog-details span {
+    font-family: 'inter';
     font-weight: bold;
-  }
-  .td-cor, .th-lola{
     color: #FFB30D;
+}
 
-  }
+.info-text {
+    font-family: 'inter';
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
 
-  .td-cor-female{
-    background-color: #EAE8F7;
-    border-radius: 8px;
-    width: 40px;
-    /* text-align: center; */
-    
-  }
-  .td-cor-months{
-    background-color: #EAE8F7;
-    border-radius: 8px;
-    width: 80px;
-    padding: 2px;
-  }
-  .td-cor-medium{
-    background-color: #EAE8F7;
-    border-radius: 8px;
-    width: 80PX;
-    padding: 2px;
-  }
+.footer-article {
+    margin: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-  table button{
+.footer-article button {
     color: red;
-    border: solid 2px red;
+    border: 2px solid red;
     background-color: transparent;
-    width: 220px;
+    width: 100%;
+    width: 100%;
     height: 48px;
     border-radius: 8px;
-  }
+}
+
+.footer-article button:hover {
+    background-color: var(--yellow);
+    border: var(--yellow);
+    color: white;
+}
+
+#gender-info {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+#gender-info span:first-child {
+    color: #000000;
+}
+
+.additional-details span:nth-child(odd) {
+    color: #000000;
+}
+
+.td-gender {
+    margin-left: 2vw;
+}
+
+
+.td-gender,
+.td-months,
+.td-size {
+    background-color: #EAE8F7;
+    border-radius: 8px;
+    padding: 5px 12px;
+    padding: 5px 12px;
+    font-size: 13px;
+}
+
+.icon_heart {
+    width: 15px;
+}
+.itens-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+
+}
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+}
+
+.not-found h3{
+    font-size: 2.5rem;
+}
+.not-found h4{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.not-found img{
+    width: 50%;
+
+}
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+}
+
+.not-found h3{
+    font-size: 2.5rem;
+}
+.not-found h4{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.not-found img{
+    width: 50%;
+
+}

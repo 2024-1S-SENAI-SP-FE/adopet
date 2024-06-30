@@ -1,0 +1,131 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+.main-contato{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+    padding-top: 71px;
+    margin: auto;
+   
+
+}
+
+.main-contato p, h1, label, textarea{
+    font-family: 'Inter';
+}
+
+.image-figure{
+    background-color: #BCFBFF;
+    border-radius: 50%;
+    height: 90%;
+    width: 100% ;
+    overflow: hidden;
+}
+.image-figure img{
+    height: 100%;
+    width: 100%;
+}
+
+.card-img{
+    /* border: solid 2px orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.card-img p{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 50px;
+}
+
+/* ----------------- FORMS------------------- */
+.section-form{
+    width: 50%;
+}
+.form{
+    /* border: solid 2px black; */
+    width: 100%;
+    /* height: 774px; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.form h1{
+    font-size: 24px;
+    font-weight: 460;
+    margin-bottom: 40px;
+}
+
+
+.form label {
+    font-weight: 500;
+    font-size: 16px;
+    
+}
+
+.other-input{
+    margin-bottom: 14px;
+    margin-top: 14px;
+    height: 40px;
+    width: 496px;
+    border-radius: 8px;
+    border: solid 2px #606060;
+
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.textarea-message::placeholder, .other-input::placeholder{
+    padding-top: 10px;
+    padding-left: 7px;
+
+}
+
+.textarea-message{
+    margin-bottom: 14px;
+    margin-top: 14px;
+    height: 108px;
+    width: 496px;
+    border-radius: 8px;
+    border: solid 2px #606060;
+
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* ----------- BOTOES --------- */
+.form button{
+    border: solid var(--dark-red) 1.5px;
+    height: 48px;
+    width: 172px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+    margin-top: 14px;
+    margin-left: 324px;
+    
+}
+
+.form button {
+    background-color: #ffff;
+}
+
+.form button:hover{
+    /* background-color: var(--red); */
+    border: var(--red);
+    color: white;
+    box-shadow: inset 500px 0 0 var(--red);
+    
+}
