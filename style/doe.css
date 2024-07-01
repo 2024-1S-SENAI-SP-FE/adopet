@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
 .main{
     margin-left: 6%;
     margin-right: 6%;
@@ -10,7 +11,8 @@
     margin-bottom: 7%;
     gap: 50%;
 
-    /* height: 100vh; */
+
+    height: 100%;
 }
 
 
@@ -74,7 +76,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: solid black; */
     width: 53%;
 }
 
@@ -91,10 +92,10 @@
 
 .button {
     background-color: #ffff;
-}
+} */
 
-.button:hover{
-    /* background-color: var(--red); */
+/* .button:hover{
+    background-color: var(--red);
     border: var(--red);
     color: white;
     box-shadow: inset 500px 0 0 var(--red);
@@ -125,25 +126,50 @@
     flex-direction: column;
     display: none;
 
-    border: solid 2px black;
+    /* border: solid 2px rgb(241, 65, 65); */
     width: 80%;
     height: 100%;
 }
 
-/* .section-pictures{
-    border: dashed 4px gray;
+.section-pictures{
+    border: dashed 1px gray;
+    border-width: 3px;
+    border-radius: 12px;
     display: flex;
-    height: 500px;
-    width: 95%;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 
+}
+
+.article-pictures{
+    text-align: left;
+    height: 5%;
+    padding-left: 2%;
+    padding-top: 2%;
+    /* border: solid orange; */
+    /* justify-content: center;
+    align-items: center; */
+    
+}
+
+.button-cam-container{
+    width: 100%;
+    height: 100%;
+    /* border: solid 2px blue; */
+    display: flex;
     justify-content: center;
-    align-items: center;
-} */
+    /* padding: 10%; */
+    padding-top: 15%;
+    padding-bottom: 20%;
+    /* background-color: transparent; */
+
+}
 
 .cam-img{
-    border: solid 2px black;
     /* width: ; */
-    height: 8%;
+    height: 6%;
+    width: 6%;
 }
 
 /* -----FORM 3------ */
