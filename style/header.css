@@ -22,7 +22,6 @@
 }
 
 .header ul>li>a{
-.header ul>li>a{
     color: #BF1501;
     font-size: 16px;
 
@@ -79,6 +78,7 @@
     border: 1.32px solid black;
     height: 20px;
 }
+
 :root{
     --yellow: #FFB30D;
     --red: #F82C10;
