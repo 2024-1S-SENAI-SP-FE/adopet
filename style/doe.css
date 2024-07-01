@@ -106,7 +106,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
+    /* display: none; */
 }
 
 /* -----  FORM 1------ */
@@ -123,14 +123,14 @@
 #form2{
     display: flex;
     flex-direction: column;
-    /* display: none; */
+    display: none;
 
     border: solid 2px black;
     width: 80%;
     height: 100%;
 }
 
-.section-pictures{
+/* .section-pictures{
     border: dashed 4px gray;
     display: flex;
     height: 500px;
@@ -138,11 +138,11 @@
 
     justify-content: center;
     align-items: center;
-}
+} */
 
 .cam-img{
     border: solid 2px black;
-    width: ;
+    /* width: ; */
     height: 8%;
 }
 
@@ -171,6 +171,9 @@
     
 }
 
-
-
-
+#form6{
+    display: flex;
+    flex-direction: column;
+    display: none;
+    
+}
