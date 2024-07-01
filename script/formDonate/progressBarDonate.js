@@ -395,17 +395,17 @@ function movingBack6() {
 
 // de confirmação para a proxima pagina, so tirar a barra de progresso e deixar vazio
 // ainda não terminei o codigo
-function movingArrow6() {
-    const progressBar = document.getElementById("progressContainer")
-    progressBar.style.display = "none";
+// function movingArrow6() {
+//     const progressBar = document.getElementById("progressContainer")
+//     progressBar.style.display = "none";
 
-    const form5 = document.getElementById("form5") 
-    form5.style.display = "none";
+//     const form5 = document.getElementById("form5") 
+//     form5.style.display = "none";
 
-    const form6 = document.getElementById("form6") 
-    form6.style.display = "flex";
+//     const form6 = document.getElementById("form6") 
+//     form6.style.display = "flex";
     
 
 
-}
+// }
 
