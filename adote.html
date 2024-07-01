@@ -31,7 +31,7 @@
 
                 <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
                 <li><a href="/adote.html">Adote</a></li>
-                <li><a href="">Doe</a></li>
+                <li><a id="doe">Doe</a></li>
                 <li><a href="/contato.html">Contato</a></li>
                 <li><a href="/sobre-nos.html">Sobre nós</a></li>
             </ul>
@@ -132,24 +132,31 @@
 
             <div class="modal" id="modal">
 
+                <figure class="figure"><img src="assets/gatolaranja.png" alt=""></figure>
+
                 <section class="modal-content">
-    
-                    <header class="modal-header">
-    
-                        <h2 id="title-modal">New User</h2>
-    
+
+
+                    <section class="modal-header">
+
+                        <h2 id="title-modal" class="newuser">New User</h2>
+
                         <span class="modal-close" id="modalClose">&#10006</span>
-    
-                    </header>
-    
+
+                    </section>
+
                     <form class="modal-form-register" id="register">
 
                         <section id="signUpMessage" class="messageDiv" style="display:none;"></section>
 
-    
+
                         <section class="input-container">
                             <i class="icon">&#128100;</i>
-                            <input type="text" id="register-name" placeholder="Nome completo">
+                            <input type="text" id="register-name" placeholder="Nome">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#128100;</i>
+                            <input type="text" id="register-surname" placeholder="Sobrenome">
                         </section>
                         <section class="input-container">
                             <i class="icon">&#9993;</i>
@@ -159,20 +166,34 @@
                             <i class="icon">&#128273;</i>
                             <input type="password" id="register-password" placeholder="Senha">
                         </section>
-        
+
                     </form>
 
-                    <footer class="modal-footer" id="footer-register">
-    
+                    <footer class="modal-footer" id="footer-register" style="padding-top: 30px;">
+
                         <button class="btn1" type="button" id="register-btn">
                             Save
                         </button>
+
+                        <section class="alternative-register">
+                            <hr class="right">
+                            <p>ou cadastre-se com</p>
+                            <hr class="left">
+                        </section>
+
+                        <img src="assets/google.png" alt="">
+
+                        <section class="ownaccount">
+                            <span>Já tem uma conta? Faça</span><a id="register-anchor"> login</a>
+                        </section>
 
                     </footer>
 
 
                     <form class="modal-form-login" id="login">
-    
+
+                        <section id="signInMessage" class="messageDiv" style="display:none;"></section>
+
                         <section class="input-container">
                             <i class="icon">&#9993;</i>
                             <input type="email" id="login-email" placeholder="E-mail">
@@ -181,22 +202,37 @@
                             <i class="icon">&#128273;</i>
                             <input type="password" id="login-password" placeholder="Senha">
                         </section>
-        
+
+                        <section class="forget-password">
+                            <a href="">Esqueceu a senha?</a>
+                        </section>
+
                     </form>
 
-    
+
                     <footer class="modal-footer" id="footer-login">
-    
+
                         <button class="btn1" type="button" id="login-btn">
                             Save
                         </button>
-    
-    
+
+                        <section class="alternative-login">
+                            <hr class="right">
+                            <p>ou entre com</p>
+                            <hr class="left">
+                        </section>
+
+
+                        <img src="assets/google.png" alt="">
+
+                        <section class="firstregister">
+                            <span>Não tem uma conta?</span><a id="register-anchor"> Cadastre-se</a>
+                        </section>
+
                     </footer>
                 </section>
-    
+
             </div>
-    
 
 
             <footer id="paginate">
