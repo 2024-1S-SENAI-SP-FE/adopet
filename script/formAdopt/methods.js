@@ -1,6 +1,16 @@
+let termsCheckbox = document.getElementById('terms').checked
+const submitButton = document.getElementById("submit-btn");
+
+if(termsCheckbox){
+submitButton.disabled = false
+}else{
+    alert('você deve aceitar os termos e condições')
+    submitButton.disabled = true
+}
 async function submitAdoptionForm() {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const PetData = JSON.parse(localStorage.getItem('PetId'));
+    console.log(PetData)
     const radioButtons = document.getElementsByName('info-pets');
     let selectedValue;
     for (const radioButton of radioButtons) {
@@ -12,21 +22,33 @@ async function submitAdoptionForm() {
 
     const formData = new URLSearchParams();
 
-    const name = userData.name;
+    const name = userData.Name;
     const email = userData.email;
     const address = document.getElementById("address").value;
     const cep = document.getElementById("cep").value;
     const city = document.getElementById("city").value;
     const houseType = document.getElementById("houseType").value;
     const petLivingHouse = selectedValue;
-    const numberPets = 4; // Replace with dynamic value
-    const petOwnership = "Tenho"; // Replace with dynamic value
-    const homeEnvironment = "Calmo"; // Replace with dynamic value
-    const familyActivity = "Moderado"; // Replace with dynamic value
-    const reasonsAdoption = "Amor aos animais"; // Replace with dynamic value
-    const numberChild = 2; // Replace with dynamic value
-    const numberAdults = 2; // Replace with dynamic value
-    const termsAndConditions = "Concordo"; // Replace with dynamic value
+    const numberPets = document.getElementById('qtd-pet').value; 
+    const petOwnership = document.getElementById('petOwnership').value; 
+    const homeEnvironment = document.getElementById('home-enviroment').value; 
+    const familyActivity = document.getElementById('family-activity').value; 
+    const reasonsAdoption = document.getElementById('reasons-adoption').value; 
+    const numberChild = document.getElementById('number-child').value 
+    const numberAdults = document.getElementById('number-adults').value;
+    const termsCheckbox = "concordo"
+
+//     console.log(termsCheckbox)
+//     if(termsCheckbox){
+//     submitButton.disabled = false
+//     termsCheckbox = "concordo"
+//     }else{
+//     alert('você deve aceitar os termos e condições')
+//     termsCheckbox = "discordo"
+//     console.log(termsCheckbox)
+//     submitButton.disabled = true
+//     return "você não aceitou os termos"
+// }
 
     formData.append('name', name);
     formData.append('email', email);
@@ -42,8 +64,8 @@ async function submitAdoptionForm() {
     formData.append('reasons_adoption', reasonsAdoption);
     formData.append('number_child', numberChild);
     formData.append('number_adults', numberAdults);
-    formData.append('terms_and_conditions', termsAndConditions);
-    formData.append('Pet', JSON.stringify(PetData));
+    formData.append('terms_and_conditions', termsCheckbox);
+    formData.append('pet', JSON.stringify(PetData));
 
     try {
         const response = await fetch('http://localhost:8090/adoption', {
