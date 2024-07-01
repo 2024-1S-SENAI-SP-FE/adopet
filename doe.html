@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/formAdocao.css">
+    <link rel="stylesheet" href="/style/doe.css">
+    <link rel="stylesheet" href="/style/progressBarAdopt.css">
+    
+
+    <script src="/script/formDonate/progressBarDonate.js"></script>
+
+    <script src="/script/script.js"></script>
+    <script src="/script/filter.js"></script> 
+    <script src="/script/pagination.js"></script>
+    <script src="/script/getPet.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-header">
+            <ul class="ul-ancoras">
+
+                <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
+                <li><a href="/adote.html">Adote</a></li>
+                <li><a href="#">Doe</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+                <li><a href="/sobre-nos.html">Sobre nós</a></li>
+            </ul>
+
+            <section class="section-login">
+
+                <button>Login</button>
+                <section class="linha"></section>
+                <button>Cadastro</button>
+            </section>
+
+        </nav>
+    </header>
+    <hr>
+
+    <main class="main">
+
+        <header id="progressContainer" class="steps-container-header">
+
+            <section class="present">
+                <img id="catIconProgress" class="catIconProgress" src="/assets/catIcon.svg" alt="foto de um gato pulando">
+                <img class="present-img" src="/assets/initialSelected.svg" alt="imagem inicial do progresso">
+                <label class="steps-label" for="">Inicio</label>
+            </section>
+            <span id="arrow-start" class="arrow-start">&#x21e2;</span>
+            <span class="red-line" id="redLine1">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" id="localImg" src="/assets/situationIcon.svg" alt="">
+                <label class="steps-label" for="">Situação</label>
+            </section>
+            
+            <span class="red-line" id="redLine2">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" id="pawIcon1" src="/assets/pictureIcon.svg" alt="">
+                <label class="steps-label" for="">Fotos do Pet</label>
+            </section>
+
+            <span class="red-line" id="redLine3">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" id="pawIcon2" src="/assets/healthIcon.svg" alt="">
+                <label class="steps-label" for="">Saúde</label>
+            </section>
+
+            <span class="red-line" id="redLine4">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" id="familyIcon" src="/assets/contactIcon.svg" alt="">
+                <label class="steps-label" for="">Contato</label>
+            </section>
+
+            <span class="red-line" id="redLine5">&#x2015;</span>
+
+            <section class="present">
+                <img class="present-img" id="checkIcon" src="/assets/checkIcon.svg" alt="">
+                <label class="steps-label" for="">Confirmação</label>
+            </section> 
+
+        </header> 
+
+        <section id="adoptPage1" class="adoptPage1">
+
+            <section class="profile-section-card">
+                <figure class="profile-pic-container">
+                    <img class="profile-pic" src="/assets/profilePic.svg" alt="">
+                </figure>
+    
+                <ul class="email-fullName">
+                    <li class="emailUsername">Email/Username</li>
+                    <li>Full name</li>
+                </ul>
+                <ul class="email-name">
+                    <li class="registered-email">SamanthaSmith@gmail.com</li>
+                    <li class="registered-name">samantha smith</li>
+                </ul>
+            </section>
+    
+            <section class="button-section">
+                <p class="paragraph">Para adotar é necessário preencher um formulário.</p>
+                <button onclick="movingArrow1()" class="go-page-btn" type="button">Começar</button>
+            </section>
+        </section>
+
+
+        <section id="form1" class="adoptPage2" action="">
+            <header class="header-main" id="header-m">
+                <section>
+                    <form class="form-filter-pet" id="form">
+                        <fieldset class="control-form-options">
+                            <!-- <legend>Idade</legend> -->
+                            <select name="age" id="age-select">
+                                <option value="todos">Idade</option>
+                                <option value="filhote">Filhote (3 a 5 meses)</option>
+                                <option value="adulto">Adulto (1 a 7 anos)</option>
+                                <option value="idoso">Idoso (a partir dos 12)</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="control-form-options">
+                            <!-- <legend>Ordenar</legend> -->
+                            <select name="order" id="order-select">
+                                <option value="todos">ordenar</option>
+                                <option value="A-Z">ordenar de A a Z</option>
+                                <option value="Z-A">ordenar de Z a A</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="control-form-options">
+                            <!-- <legend>Gênero</legend> -->
+                            <select name="gender" id="gender-select">
+                                <option value="todos" selected>gênero</option>
+                                <option value="MACHO">Macho</option>
+                                <option value="FÊMEA">Fêmea</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="control-form-range">
+                            <!-- <legend>Tamanho</legend> -->
+                            <p id="display">Porte</p>
+                            <input type="range" name="size" id="size" value="1" min="1" max="4" 
+                            oninput="updateDisplay(this.value)">
+                            <div class="control-form-range-img">
+                                <!-- <img id="small" src="/assets/paw-print.png" alt="porte pequeno">
+                                <img id="medium" src="/assets/paw-print.png" alt="porte médio">
+                                <img id="large" src="/assets/paw-print.png" alt="porte grande"> -->
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset class="control-form-checkbox">
+                            <!-- <legend>Tipos de Animal</legend> -->
+                            <input type="checkbox" name="cachorro" id="cachorro">
+                            <label for="cachorro" class="cachorro"></label>
+                            <input type="checkbox" name="gato" id="gato">
+                            <label for="gato" class="gato"></label>
+                        </fieldset>
+                        <!-- ------- COR E NOME (nao tinha no filtro do adote.html) -->
+                         <fieldset>
+                             <select name="color" id="color">
+                                 <option value="">Cor predominante</option>
+                             </select>
+                             <label for="namePet">Qual o nome do pet</label>
+                             <input type="text" name="name" placeholder="">
+                         </fieldset>
+                        <!-- ------- COR E NOME (nao tinha no filtro do adote.html) -->
+                        <fieldset class="control-form-buttons">
+                            <button type="reset" class="btn1">Limpar Filtros</button>
+                            <button type="submit" onclick="FilterPet(event)" class="btn2">Buscar</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </header>
+            <section class="btn-box1">
+                <button class="prev-page-btn" onclick="movingBack1()" type="button">Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow2()" type="button">Continue</button>
+            </section>
+
+        </section>
+
+        <form action="" id="form2" class="form2">
+            <p>Adicione fotos do pet que deseja doar. <br>
+            Atenção as fotos devem mostrar somente o pet </p>
+
+            <br>
+            <!-- <textarea name="" id="">
+                1.foto
+            </textarea>
+            <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera"> -->
+             <section class="section-pictures">
+                <article class="article-pictures">
+                    <p>1.foto</p>
+                </article>
+                <button type="button" class="button-cam-container">
+                    <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera">
+                </button>
+             </section>
+
+             
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingBack3()" type="button">Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow3()" type="button">Continue</button>
+            </section>
+        </form>
+
+        <form action="" id="form3">
+            <h1>Temperamento</h1>
+
+            <section>
+                <button onclick=" " type="button">Dócil</button>
+                <button onclick=" " type="button">Agressivo</button>
+                <button onclick=" " type="button">Sociável</button>
+                <button onclick=" " type="button">Tímido</button>
+                <button onclick=" " type="button">Independente</button>
+                <button onclick=" " type="button">Agressivo</button>
+                <button onclick=" " type="button">Brincalhão</button>
+                <button onclick=" " type="button">Calmo</button>
+                <button onclick=" " type="button">Carente</button>
+
+            </section>
+            <h1>Cuidados veterinários</h1>
+            <section>
+                <button onclick=" " type="button">Vermifugado</button>
+                <button onclick=" " type="button">Necessidades especiais</button>
+                <button onclick=" " type="button">Vacinado</button>
+                <button onclick=" " type="button">Cadastro</button>
+            </section>
+
+            <h1>Adaptabilidade</h1>
+
+            <section>
+                <button onclick=" " type="button">Vive bem em apartamento</button>
+                <button onclick=" " type="button">Vive bem em casa</button>
+            </section>
+            <h1>Socialização</h1>
+
+            <section>
+                <button onclick=" " type="button">Sociável com crianças</button>
+                <button onclick=" " type="button">Sociável com gatos</button>
+                <button onclick=" " type="button">Sociável com estranhos</button>
+                <button onclick=" " type="button">Sociável com cães</button>
+            </section>
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingBack4()" type="button">Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow4()" type="button">Continue</button>
+            </section>
+        </form>
+        
+        <form action="" id="form4">
+            <section>
+                <label for="name">Nome do atual Tutor do pet:</label>
+                <input placeholder="digite seu nome" type="text">
+
+                <label for="email">email:</label>
+                <input placeholder="email@gmail.com" type="text">
+
+                <label for="telephone">Telefone:</label>
+                <input placeholder="5432-9870" type="text">
+
+                <label for="cellphone">Celular:</label>
+                <input placeholder="11 912345678" type="text">
+            </section>
+
+            <section>
+                <select name="contact" id="">
+                    <option value="">Preferência de contato</option>
+                    <option value="">Email</option>
+                    <option value="">Celular</option>
+                    <option value="">Telefone</option>
+                </select>
+            </section>
+
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingBack5()" type="button">Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow5()" type="button">Continue</button>
+            </section>
+        </form>
+
+        <form action="" id="form5">
+            <h1>Termo de Doação de Animal</h1>
+
+            <p>Eu,<span>___________</span> declaro que</p>
+
+            <ol>
+                <li>Doação do animal</li>
+                <ul>
+                    <li>Doarei um animal de estimação, cujas características serão informadas em anexo a este Termo.</li>
+                    <li>Declaro que o animal está em boas condições de saúde e comportamento, não apresentando doenças contagiosas ou comportamento agressivo.</li>
+                </ul>    
+                <li>Compromissos da RECEBEDORA:</li>
+                <ul>
+                    <li>Proporcionar ao animal:</li>
+                    <li>Alimentação adequada e de qualidade;</li>
+                    <li>Cuidado veterinário regular, incluindo vacinas, vermífugos e consultas quando necessário;</li>
+                    <li>Espaço físico seguro e confortável, compatível com a espécie, porte e necessidades do animal;</li>
+                    <li>Oportunidades de socialização e atividades físicas regulares;</li>
+                    <li>Amor, carinho e atenção.</li>
+                    <li>Não utilizar o animal para:</li>
+                    <li>Fins lucrativos ou comerciais;</li>
+                    <li>Atividades que coloquem em risco a sua saúde ou segurança;</li>
+                    <li>Experimentos científicos ou pesquisas;</li>
+                    <li>Reprodução descontrolada.</li>
+                </ul>
+            </ol>
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingBack6()" type="button">Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow6()" type="button">Continue</button>
+            </section>
+        </form>
+
+         <!-- <form id="form6" action="">
+
+            <img src="" alt="">
+            <section class="btn-box2">
+                <button onclick="" type="button">Ir para meu perfil</button>
+            </section>
+        </form> -->
+
+    </main>
+        <footer class="footer">
+            <article class="article1">
+                <nav>
+                    <h1> Como Podemos Ajudar?</h1>
+                    <ul>
+                        <li><a href="/adote.html">Adote</a></li>
+                        <li><a href="#">Doe</a></li>
+                        <li><a href="/contato.html">Contato</a></li>
+                        <li><a href="/sobre-nos.html">Sobre nós</a></li>
+                    </ul>
+                </nav>
+    
+    
+                <nav>
+                    <h1> Entre em contato</h1>
+                    <ul class="contato-ul">
+    
+                        <li><img src="/assets/location_on.svg" alt=""> Rua Moreira de Godoi n° 226<br />
+                            Ipiranga - Sao Paulo - SP<br />
+                            CEP : 04256-060</li>
+                        <li><img src="/assets/call.svg" alt=""> + 55 (11) 1234-5678</li>
+    
+                        <li><img src="/assets/email.svg" alt=""><a href="#">email: adopet.com</a></li>
+                    </ul>
+                </nav>
+            </article>
+    
+            <article class="article2">
+                <p>&copy;2024 adopet.com</p>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.instagram.com"><img src="/assets/Instagram.svg" alt="Link para o Instagram"></a></li>
+                        <li><a href="https://www.facebook.com"><img src="/assets/facebok.svg" alt="Link para o Facebook"></a></li>
+                    </ul>
+                </nav>
+            </article>
+        </footer>
+</body>
+</html>

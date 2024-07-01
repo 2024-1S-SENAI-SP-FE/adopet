@@ -15,7 +15,7 @@ function movingBack1(){
     catIconProgress.style.visibility = "hidden";
     
     const localIcon = document.getElementById("localImg")
-    localIcon.src = "assets/localIcon.svg";
+    localIcon.src = "assets/situationIcon.svg";
     
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "10.6%";
@@ -30,9 +30,7 @@ function movingBack1(){
 }
 
 
-
 function movingArrow1() {
-
     // ---- do INICIO >>> ENDEREÇO -----
     
     // ---- Tiarndo Paginas---------
@@ -73,7 +71,7 @@ function movingArrow1() {
     // ------ Comando para bota a imagem do endereço laranja c/ borda verm
      
     const localIcon = document.getElementById("localImg")
-    localIcon.src = "assets/localconPresent.svg";
+    localIcon.src = "assets/situationIconSelected.svg";
     
 }
 
@@ -107,6 +105,7 @@ function movingArrow2() {
     orangeArrow.style.left = "46.9%";
 
     const catIconProgress = document.getElementById("catIconProgress")
+    catIconProgress.style.visibility = "visible";
 
     catIconProgress.style.left = "35%";
     catIconProgress.style.bottom = "52%";
@@ -118,17 +117,22 @@ function movingArrow2() {
     redLine2.style.visibility = "visible";
     redLine2.style.color = "#FFB30D";
 
+    const redLine1 = document.getElementById("redLine1")
+    redLine1.style.visibility = "visible"
+    redLine1.style.color = "#FFB30D"
+
+
     // ------ Trocando endereço para laranja e Histórico para selecionado
 
     const localIcon = document.getElementById("localImg")
-    localIcon.src = "assets/localIconOrange.svg";
+    localIcon.src = "assets/situationIconOrange.svg";
     
     const pawIcon1 = document.getElementById("pawIcon1")
-    pawIcon1.src = "assets/pawIconSelected.svg";
+    pawIcon1.src = "assets/pictureIconSelected.svg";
     
     
 }
-
+// ---------------------------MOVING BACK e NEXT 3-------------------------------------------------------
 function movingBack3(){
     // ---- Tiarndo Paginas---------
     const adoptPage1 = document.getElementById("adoptPage1")
@@ -168,16 +172,13 @@ function movingBack3(){
 
     // --------------------------------------------------------
     const pawIcon1 = document.getElementById("pawIcon1")
-    pawIcon1.src = "assets/pawIcon.svg";
-    // pawIcon1.src = "assets/pictureIcon.svg";
+    pawIcon1.src = "assets/pictureIcon.svg";
 
     const localIcon = document.getElementById("localImg")
-    localIcon.src = "assets/localconPresent.svg";
+    localIcon.src = "assets/situationIconSelected.svg";
 }
 
-
 function movingArrow3() {
-
 
  // --- de Historico de Anim. >>>> Motivo da adoção
 // ---- Tiarndo Paginas---------
@@ -213,12 +214,14 @@ function movingArrow3() {
 
     // ------ Trocando historico animais para laranja e motido de adoçao para selecionado
     const pawIcon1 = document.getElementById("pawIcon1")
-    pawIcon1.src = "assets/pawOrange.svg";
+    pawIcon1.src = "assets/pictureIconOrange.svg";
 
     const pawIcon2 = document.getElementById("pawIcon2")
-    pawIcon2.src = "assets/pawIconSelected.svg";
+    pawIcon2.src = "assets/healthIconSelected.svg";
 
 }
+
+// --------------------------------------------------------------------------------------------------------------
 
 function movingBack4() {
     
@@ -248,13 +251,12 @@ function movingBack4() {
     
 
     const pawIcon2 = document.getElementById("pawIcon2")
-    pawIcon2.src = "assets/pawIcon.svg";
+    pawIcon2.src = "assets/healthIcon.svg";
 
     const pawIcon1 = document.getElementById("pawIcon1")
-    pawIcon1.src = "assets/pawIconSelected.svg";
+    pawIcon1.src = "assets/pictureIconSelected.svg";
     
 }
-
 
 function movingArrow4() {
  // --- de Motivação de adoção >>> Composição familiar
@@ -273,7 +275,6 @@ function movingArrow4() {
     orangeArrow.style.left = "82.5%";
 
     const catIconProgress = document.getElementById("catIconProgress")
-
     catIconProgress.style.left = "71%";
     catIconProgress.style.bottom = "52%";
 
@@ -287,12 +288,13 @@ function movingArrow4() {
     // ------ Trocando  motido de adoçao para laranja e Composição familiar p/ selecionado
 
     const pawIcon2 = document.getElementById("pawIcon2")
-    pawIcon2.src = "assets/pawOrange.svg";
+    pawIcon2.src = "assets/healthIconOrange.svg";
     
     const familyIcon = document.getElementById("familyIcon")
-    familyIcon.src = "assets/familySelected.svg";
+    familyIcon.src = "assets/contactIconSelected.svg";
     
 }
+
 
 function movingBack5() {
 
@@ -320,17 +322,16 @@ function movingBack5() {
     redLine5.style.color = "rgb(255, 0, 0)";
 
     const familyIcon = document.getElementById("familyIcon")
-    familyIcon.src = "assets/familyIcon.svg";
+    familyIcon.src = "assets/contactIcon.svg";
 
     const pawIcon2 = document.getElementById("pawIcon2")
-    pawIcon2.src = "assets/pawIconSelected.svg";
+    pawIcon2.src = "assets/healthIconSelected.svg";
 
     
 }
 
 
 function movingArrow5() {
-
     // --- de Composição familiar >>>> Confirmação
 
 // ---- Tirando Paginas---------
@@ -354,7 +355,7 @@ const form4 = document.getElementById("form4")
 // ------ Trocando Composição familiar para laranja e Confirmação p/ selecionado
 
     const familyIcon = document.getElementById("familyIcon")
-    familyIcon.src = "assets/familyOrange.svg";
+    familyIcon.src = "assets/contactIconOrange.svg";
     
     const checkIcon = document.getElementById("checkIcon")
     checkIcon.src = "assets/checkSelected.svg";
@@ -381,11 +382,14 @@ function movingBack6() {
     redLine5.style.visibility = "hidden";
 
     const familyIcon = document.getElementById("familyIcon")
-    familyIcon.src = "assets/familySelected.svg";
+    familyIcon.src = "assets/contactIconSelected.svg";
 
     const checkIcon = document.getElementById("checkIcon")
     checkIcon.src = "assets/checkIcon.svg";
-  
+
+
+
+    
 }
 
 
@@ -404,5 +408,4 @@ function movingBack6() {
 
 
 // }
-
 
