@@ -118,3 +118,4 @@ const RegisterPet = async (event) => {
         console.log('Error: ' + error.message);
     }
 };
+
