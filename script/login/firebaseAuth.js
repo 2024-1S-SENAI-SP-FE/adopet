@@ -105,9 +105,6 @@ const openModalLogin = () => {
     })
 }
 
-
-
-
 const UrlAdote = () => {
     const auth = getAuth();
 
