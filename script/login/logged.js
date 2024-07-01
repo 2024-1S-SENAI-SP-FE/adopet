@@ -17,6 +17,8 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
 
+    
+
 onAuthStateChanged(auth, (user) => {
     const loggedInUserId = localStorage.getItem('loggedInUserId');
     if (loggedInUserId) {
@@ -26,12 +28,14 @@ onAuthStateChanged(auth, (user) => {
             .then((docSnap) => {
                 if (docSnap.exists()) {
                     const userData = docSnap.data();
+                    document.getElementById('user-select').innerHTML = `<button id="user-selected"> ${userData.Name}                        
+                    </button>`
+                document.getElementById('user-selected').addEventListener('click', userOptions)
+                    // document.getElementById('user-select').innerHTML = `<button>${userData.Name}</button>`
                     localStorage.setItem('userData', JSON.stringify(userData));
                     document.getElementById('email').innerText = userData.email
                     document.getElementById('name').innerText = userData.Name
-                    document.getElementById('user-select').innerHTML = `<button id="user-select"> ${userData.Name}                        
-                        </button>`
-                    document.getElementById('user-select').addEventListener('click', userOptions)
+                  
 
                 }
                 else {
