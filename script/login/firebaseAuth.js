@@ -107,6 +107,22 @@ const openModalLogin = () => {
     })
 }
 
+const UrlAdote = () => {
+    const auth = getAuth();
+
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+    openModalLogin()
+    showMessage('Você deve fazer um login para poder ir para a página de adoção', 'signInMessage');
+      }else{
+        window.location.href = 'adocao.html'
+      }
+})
+}
+
+document.getElementById('doe').addEventListener('click', UrlAdote);
+
+
 const closeModal = () => {
     document.getElementById('modal').classList.remove('active')
 }
