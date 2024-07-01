@@ -1,4 +1,6 @@
+const Adoption = () => {
 
+}
 async function submitAdoptionForm() {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const radioButtons = document.getElementsByName('info-pets');
