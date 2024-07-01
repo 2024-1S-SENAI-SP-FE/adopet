@@ -1,3 +1,4 @@
+// let myPet = []
 function Petequals() {
     let listPet = [];
 
@@ -17,6 +18,7 @@ const FilterRequest = new Request(ApiPet, {
         })
         .catch(error => console.error('Error:', error));
 }
+
 
 const GetById = (id) => {
 
@@ -44,13 +46,13 @@ const GetById = (id) => {
         .then(response => response.json())
         .then(response => {
             Pet = response
+
             let infoAge;
 
             let section = document.getElementById('father');
 
             let template = ""
 
-            console.log(Pet)
             if(Pet.age == "FILHOTE"){
                 infoAge = "0 a 2 anos"
             }else if(Pet.age == "ADULTO"){
@@ -76,7 +78,7 @@ const GetById = (id) => {
 
                         <figure class="big-profile-section">
 
-                            <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto de um shiba">
+                            <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto do ${Pet.name}">
 
                         </figure>
 
@@ -122,7 +124,7 @@ const GetById = (id) => {
                     </ul>
 
                     <ul class="list-button">
-                        <li><button class="button-adote" type="button">Adote</button></li>
+                        <li><button class="button-adote" type="button" onclick="Adoption(${Pet.id})">Adote</button></li>
                     </ul>
 
                 </section>
@@ -157,8 +159,17 @@ const GetById = (id) => {
                 let similar = "";
 
                 petFilter.forEach(similarPet => {
+
+                    if(similarPet.age == "FILHOTE"){
+                        Petsize = "0 a 2 anos"
+                    }else if(similarPet.age == "ADULTO"){
+                        Petsize = "3 a 9 anos"
+                    }else if(similarPet.age == "IDOSO"){
+                        Petsize = "10 anos pra cima"
+                    }
+                   
                     similar += `
-                  <section class="son">
+                  <section class="son-description">
                         <header class="header-section">
                             <img src="http://localhost:8080${similarPet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
@@ -166,15 +177,15 @@ const GetById = (id) => {
                                 <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
                             </span>
                         </header>
-                        <section class="dog-details">
-                            <article id="gender-info">
-                                <span>Gender:</span>
-                                <span class="td-gender">${similarPet.gender.toLowerCase()}</span>
+                       <section class="dog-details">
+                            <article id="months-info">
+                             <span>Idade:</span>
+                                <span class="td-months">${similarPet.age.toLowerCase()} (${Petsize})</span>
                             </article>
                             <article class="additional-details">
-                                <span>Age:</span>
-                                <span class="td-months">${similarPet.age.toLowerCase()}</span>
-                                <span>Size:</span>
+                                <span>Gênero:</span>
+                                <span class="td-gender">${similarPet.gender.toLowerCase()}</span>
+                                <span>Tamanho:</span>
                                 <span class="td-size">${similarPet.size.toLowerCase()}</span>
                             </article>
                         </section>
@@ -196,3 +207,23 @@ const GetById = (id) => {
         .catch(error => console.error('Error:', error));
 }
 
+const Adoption = (id) => {
+    const UrlApiGetById = `http://localhost:8080/pet/${id}`;
+    let Pet;
+
+    const requests = new Request(UrlApiGetById, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    fetch(requests)
+        .then(response => response.json())
+        .then(response => {
+            Pet = response
+            localStorage.setItem('PetId', JSON.stringify(Pet));
+            window.location.href = 'adocao.html'
+        })
+
+}

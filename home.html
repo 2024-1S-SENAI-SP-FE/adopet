@@ -9,28 +9,38 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/modal.css">
     <link rel="shortcut icon" href="assets/award (1).png" type="image/x-icon">
+    <script type="module" src="/script/login/firebaseAuth.js"></script>
+    <script type="module" src="/script/login/logged.js"></script>
+    <script type="module" src="/script/register/register.js"></script>
     <title>ADOPET</title>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav class="nav-header">
             <ul class="ul-ancoras">
 
                 <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
                 <li><a href="/adote.html">Adote</a></li>
-                <li><a href="">Doe</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a id="doe">Doe</a></li>
+                <li><a href="/contato.html">Contato</a></li>
                 <li><a href="sobre-nos.html">Sobre nós</a></li>
             </ul>
 
-            <section class="section-login">
+            <section class="section-login" id="user-select">
 
-                <button>Login</button>
-                <section class="linha"></section>
-                <button>Cadastro</button>
+                <button id="loginUser">Login</button>
+                <section class="linha" id="line"></section>
+                <button id="registerUser">Cadastro</button>
+
             </section>
+
+            <section name="user-config" class="section-login config bt1" id="user-config" style="display: none;">
+
+            </section>
+
 
         </nav>
     </header>
@@ -52,6 +62,78 @@
             <section class="sec-home2">
                 <img src="/assets/Group 19.png" alt="foto de um cachorrinho">
             </section>
+
+            <div class="modal" id="modal">
+
+               <figure class="figure"><img src="assets/gatolaranja.png" alt=""></figure>
+                
+                <section class="modal-content">
+                    
+    
+                    <section class="modal-header">
+    
+                        <h2 id="title-modal" class="newuser">New User</h2>
+    
+                        <span class="modal-close" id="modalClose">&#10006</span>
+    
+                    </section>
+    
+                    <form class="modal-form-register" id="register">
+
+                        <section id="signUpMessage" class="messageDiv" style="display:none;"></section>
+
+    
+                        <section class="input-container">
+                            <i class="icon">&#128100;</i>
+                            <input type="text" id="register-name" placeholder="Nome completo">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#9993;</i>
+                            <input type="email" id="register-email" placeholder="E-mail">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#128273;</i>
+                            <input type="password" id="register-password" placeholder="Senha">
+                        </section>
+        
+                    </form>
+
+                    <footer class="modal-footer" id="footer-register">
+    
+                        <button class="btn1" type="button" id="register-btn">
+                            Save
+                        </button>
+
+                    </footer>
+
+
+                    <form class="modal-form-login" id="login">
+
+                        <section id="signInMessage" class="messageDiv" style="display:none;"></section>
+    
+                        <section class="input-container">
+                            <i class="icon">&#9993;</i>
+                            <input type="email" id="login-email" placeholder="E-mail">
+                        </section>
+                        <section class="input-container">
+                            <i class="icon">&#128273;</i>
+                            <input type="password" id="login-password" placeholder="Senha">
+                        </section>
+        
+                    </form>
+
+    
+                    <footer class="modal-footer" id="footer-login">
+    
+                        <button class="btn1" type="button" id="login-btn">
+                            Save
+                        </button>    
+    
+                    </footer>
+                </section>
+    
+            </div>
+
     </main>
 
     </section>

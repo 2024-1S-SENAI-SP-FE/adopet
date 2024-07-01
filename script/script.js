@@ -94,7 +94,6 @@ const RegisterPet = async (event) => {
     });
     formData.append('veterinarycare', JSON.stringify(veterinaryCare)); 
 
-    // Obtém a foto do pet, se fornecida
     const fileInput = document.getElementById('photopet');
     if (fileInput.files.length > 0) {
         formData.append('photopet_url', fileInput.files[0], fileInput.files[0].name); 
@@ -119,3 +118,4 @@ const RegisterPet = async (event) => {
         console.log('Error: ' + error.message);
     }
 };
+

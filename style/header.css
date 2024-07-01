@@ -1,3 +1,12 @@
+/* ------------------------TESTE--------------------------- */
+/* header{
+    max-width: 1126px;
+    margin-right: 100px;
+    margin-left: 78px;
+    } */
+
+/* ------------------------TESTE--------------------------- */
+
 .header{
     margin-top: 13px;
     margin: auto;
@@ -69,6 +78,7 @@
     border: 1.32px solid black;
     height: 20px;
 }
+
 :root{
     --yellow: #FFB30D;
     --red: #F82C10;
