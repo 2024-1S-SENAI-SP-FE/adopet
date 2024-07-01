@@ -188,6 +188,7 @@ function movingArrow4() {
 }
 
 function movingArrow5() {
+
     // --- de Composição familiar >>>> Confirmação
 
 // ---- Tirando Paginas---------
