@@ -1,3 +1,4 @@
+// let myPet = []
 function Petequals() {
     let listPet = [];
 
@@ -17,6 +18,7 @@ const FilterRequest = new Request(ApiPet, {
         })
         .catch(error => console.error('Error:', error));
 }
+
 
 const GetById = (id) => {
 
@@ -44,13 +46,13 @@ const GetById = (id) => {
         .then(response => response.json())
         .then(response => {
             Pet = response
+
             let infoAge;
 
             let section = document.getElementById('father');
 
             let template = ""
 
-            console.log(Pet)
             if(Pet.age == "FILHOTE"){
                 infoAge = "0 a 2 anos"
             }else if(Pet.age == "ADULTO"){
@@ -205,3 +207,23 @@ const GetById = (id) => {
         .catch(error => console.error('Error:', error));
 }
 
+const Adoption = (id) => {
+    const UrlApiGetById = `http://localhost:8080/pet/${id}`;
+    let Pet;
+
+    const requests = new Request(UrlApiGetById, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    fetch(requests)
+        .then(response => response.json())
+        .then(response => {
+            Pet = response
+            localStorage.setItem('PetId', JSON.stringify(Pet));
+            window.location.href = 'adocao.html'
+        })
+
+}
