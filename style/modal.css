@@ -14,11 +14,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 20%;
+    height: 15%;
 }
 
 .figure img{
-    width: 34vh;
+    width: 28vh;
 }
 
 .modal.active{
@@ -35,7 +35,7 @@
     /* margin-bottom: auto; */
     gap: 20px;
     width: 47vw;
-    height: 70vh;
+    height: 80vh;
     padding-bottom: 20px;
     background-color: white;
     box-shadow: 1px 1px 10px black;
@@ -48,9 +48,11 @@
     justify-content: space-around;
     height: 40px;
     line-height: 40px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: 10px;
     width: 100%;
+    font-family: 'inter';
 }
 
 .newuser{
@@ -79,13 +81,14 @@
 
 .modal-form-register{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px;
+    text-align: center;
+    gap: 40px;
+    /* padding: 20px; */
     height: 40%;
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 
@@ -95,7 +98,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 50px;
+    gap: 40px;
     /* padding: 20px; */
     height: 40%;
     width: 100%;
@@ -106,32 +109,91 @@
     margin: auto;
     display: flex;
     align-items: center;
+    flex-direction: column;
     background-color: inherit;
-    text-align: right;
     padding: 0 20px;
+    margin-bottom: 30px;
+}
+.modal-footer img{
+    width: 10%;
+    margin: 2px;
 }
 
-.input-container {
+.firstregister a{
+    text-decoration: none;
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.firstregister{
     margin: auto;
+    margin-bottom: 20px;
+}
+
+.ownaccount a{
+    text-decoration: none;
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.ownaccount{
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.alternative-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.forget-password a{
+    justify-content: flex-start;
+    margin-right: 150px;
+    text-decoration: none;
+    color: var(--yellow);
+    cursor: pointer;
+    /* border: solid black; */
+}
+.alternative-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.right{
+    border-width: 30%;
+    width: 30%;
+    height: 1px;
+}
+.left{
+    border-width: 30%;
+    width: 30%;
+    height: 1px;
+
+}
+.input-container {
+    /* margin: auto; */
     align-items: center;
     position: relative;
-    margin-bottom: 15px;
-    height: 2%;
-    width: 70%;
+    margin-bottom: 10px;
+    height: 1%;
+    width: 55%;
 }
 
 .input-container .icon {
     position: absolute;
     top: 50%;
-    left: 29px;
+    left: 2%;
     transform: translateY(50%);
-    font-size: 18px;
+    font-size: 15px;
     color: #888;
 }
 
 .input-container input {
-    width: 90%;
-    padding: 10px 10px 10px 35px;
+    width: 100%;
+    padding: 7px 7px 7px 35px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -163,6 +225,7 @@
     cursor: pointer;
     transition: box-shadow .6s ease;
     border-radius: 5px;
+    margin-bottom: 34px;
 }
 
 .btn1 {

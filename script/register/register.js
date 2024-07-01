@@ -91,6 +91,8 @@ const closeModal = () => {
     document.getElementById('modal').classList.remove('active')
 }
 
+document.getElementById('register-anchor').addEventListener('click', openModalRegister)
+
 document.getElementById('registerUser').addEventListener('click', openModalRegister);
 
 document.getElementById('modalClose').addEventListener('click', closeModal);
