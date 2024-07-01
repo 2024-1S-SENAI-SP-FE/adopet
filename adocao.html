@@ -51,7 +51,8 @@
         <header id="progressContainer" class="steps-container-header">
 
             <section class="present">
-                <img id="catIconProgress" class="catIconProgress" src="/assets/catIcon.svg" alt="foto de um gato pulando">
+                <img id="catIconProgress" class="catIconProgress" src="/assets/catIcon.svg"
+                    alt="foto de um gato pulando">
                 <img class="present-img" src="/assets/initialSelected.svg" alt="imagem inicial do progresso">
                 <label class="steps-label" for="">Inicio</label>
             </section>
@@ -62,7 +63,7 @@
                 <img class="present-img" id="localImg" src="/assets/localIcon.svg" alt="">
                 <label class="steps-label" for="">Endereço</label>
             </section>
-            
+
             <span class="red-line" id="redLine2">&#x2015;</span>
 
             <section class="present">
@@ -89,9 +90,9 @@
             <section class="present">
                 <img class="present-img" id="checkIcon" src="/assets/checkIcon.svg" alt="">
                 <label class="steps-label" for="">Confirmação</label>
-            </section> 
+            </section>
 
-        </header> 
+        </header>
 
         <section id="adoptPage1" class="adoptPage1">
 
@@ -99,7 +100,7 @@
                 <figure class="profile-pic-container">
                     <img class="profile-pic" src="/assets/profilePic.svg" alt="">
                 </figure>
-    
+
                 <ul class="email-fullName">
                     <li class="emailUsername">Email/Username</li>
                     <li>Full name</li>
@@ -109,7 +110,7 @@
                     <li class="registered-name" id="name"></li>
                 </ul>
             </section>
-    
+
             <section class="button-section">
                 <p class="paragraph">Para adotar é necessário preencher um formulário.</p>
                 <button onclick="movingArrow1()" class="button" type="button">Começar</button>
@@ -117,7 +118,7 @@
         </section>
 
 
-         <form id="form1" class="adoptPage2" action="">
+        <form id="form1" class="adoptPage2" action="">
 
             <label for="address" name="adress">Endereço</label>
             <input placeholder="Endereço" type="text" id="address">
@@ -141,49 +142,54 @@
         <form id="form2" class="house-info-form" action="">
 
             <section class="house-info-form-input-radio">
-            <label for="adress" name="adress">Voce ja teve outros animais?</label>
+                <label for="adress" name="adress">Voce ja teve outros animais?</label>
 
-            <label for="info-pets1">Voce ja teve outros animais?</label>
-            <input type="radio" id="info-pets" name="info-pets" value="TENHO">
-            <label for="info-pets1">Tenho</label>
-            <input type="radio" id="info-pets" name="info-pets" value="TIVE">
-            <label for="info-pets2">Ja tive</label>
-            <input type="radio" id="info-pets" name="info-pets" value="NÃO_TENHO">
-            <label for="info-pets3">Não tenho/nunca tive</label>
-        </section>
+                <label for="info-pets1">Voce ja teve outros animais?</label>
+                <input type="radio" id="info-pets" name="info-pets" value="TENHO">
+                <label for="info-pets1">Tenho</label>
+                <input type="radio" id="info-pets" name="info-pets" value="TIVE">
+                <label for="info-pets2">Ja tive</label>
+                <input type="radio" id="info-pets" name="info-pets" value="NÃO_TENHO">
+                <label for="info-pets3">Não tenho/nunca tive</label>
+            </section>
 
-        <section class="house-info-form-input-text">
-            <label for="qtd-pet" name="qtd-pet">Possui quantos animais?</label>
-            <input placeholder="ex:4" type="text" name="qtd-pet" id="number-pet">
-            <br>
-            <label for="" name="">Tempo de posse de animais de estimação anteriores</label>
-            <input placeholder="ex: 1 ano" type="text" id="petOwnership">
-        </section>
+            <section class="house-info-form-input-text">
+                <label for="qtd-pet" name="qtd-pet">Possui quantos animais?</label>
+                <input placeholder="ex:4" type="number" name="qtd-pet" id="qtd-pet">
+                <br>
+                <label for="" name="">Tempo de posse de animais de estimação anteriores</label>
+                <input placeholder="ex: 1 ano" type="text" id="petOwnership">
+            </section>
 
-        <section class="house-info-form-input-select">
-            <label for="" name="">Como é seu ambiente domestico</label>
-            <select name="age" id="age-select">
-                <option value="">Selecione</option>
-                <option value=""></option>
-            </select>
-            <br>
-            <label for="" name="">Como é o nivel de atividade tipico da família</label>
-            <select name="age" id="age-select">
-                <option value="">Selecione</option>
-                <option value=""></option>
-            </select>
-        </section>
+            <section class="house-info-form-input-select">
+                <label for="home-enviroment" name="home-enviroment">Como é seu ambiente domestico</label>
+                <select name="home-enviroment" id="home-enviroment">
+                    <option value="null">Selecione</option>
+                    <option value="calmo">calmo</option>
+                    <option value="agitado">agitado</option>
+                    <option value="moderado">moderado</option>
+                </select>
+                <br>
+                <label for="" name="">Como é o nivel de atividade tipico da família</label>
+                <select name="family-activity" id="family-activity">
+                    <option value="null">Selecione</option>
+                    <option value="ninguem_em_horario comercial">ninguém em horario comercial</option>
+                    <option value="uma_pessoa_em horario_comercial">pelo menos uma pessoa em horário comercial</option>
+                    <option value="pelo_menos_duas_pessoas">pelo menos duas ou mais pessoas me horário comercial
+                    </option>
+                </select>
+            </section>
 
             <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingArrow1()" type="button"><span>&#60; </span> Voltar</button>
                 <button class="go-page-btn" onclick="movingArrow3()" type="button">Continue <span> &#62;</span></button>
             </section>
-        </form> 
+        </form>
 
         <form id="form3" class="form-description">
             <label for="">Descreva o motivo da adoção:</label>
-            <textarea class="textarea" name="" id=""></textarea>
-            
+            <textarea class="textarea" name="reasons-adoption" id="reasons-adoption"></textarea>
+
             <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingArrow2()" type="button"><span>&#60; </span> Voltar</button>
                 <button class="go-page-btn" onclick="movingArrow4()" type="button">Continue <span> &#62;</span></button>
@@ -193,13 +199,13 @@
         <form id="form4" class="form-living">
 
             <section class="form-living-peoples">
-            <label for="">Número de adultos</label>
-            <input type="number">
-            <!-- <br> -->
-            <label for="">Número de crianças</label>
-            <input type="number">
-        </section>
-            
+                <label for="number-adults">Número de adultos</label>
+                <input type="number" id="number-adults">
+                <!-- <br> -->
+                <label for="number-child">Número de crianças</label>
+                <input type="number" id="number-child">
+            </section>
+
             <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingArrow3()" type="button"><span>&#60; </span> Voltar</button>
                 <button class="go-page-btn" onclick="movingArrow5()" type="button">Continue <span> &#62;</span></button>
@@ -207,19 +213,35 @@
         </form>
 
         <form id="form5">
-            <p>Eu,<span id="name"></span>, declaro que compreendo e aceito os compromissos e responsabilidades associados à adoção de um animal de estimação. Ao assinar este documento, concordo em seguir as políticas e procedimentos estabelecidos pela organização “ADOPET”.
-                Declaro que possuo experiência prévia com animais de estimação e que meu lar oferece um ambiente adequado para um novo membro da família.
-                Entendo a importância dos cuidados veterinários regulares e me comprometo a fornecer ao novo animal todas as vacinas e tratamentos de saúde necessários. Além disso, estou ciente das despesas financeiras associadas à manutenção de um animal de estimação e me comprometo a prover recursos adequados para suas necessidades.
-                
-                Como futuro guardião do animal, estou disposto(a) a dedicar tempo e esforço para seu treinamento, socialização e bem-estar geral. Comprometo-me a fornecer exercícios físicos e mentais adequados, assim como amor, carinho e cuidado constantes.
-                
-                Assumo a responsabilidade de cuidar deste animal pelo resto de sua vida e prometo tratá-lo como parte integrante de minha família. Estou ciente de que a adoção de um animal de estimação é uma decisão séria e estou totalmente comprometido(a) em fornecer-lhe um lar seguro.</p>
-            
-                <section class="btn-box">
-                    <button class="prev-page-btn" onclick="movingArrow4()" type="button"><span>&#60; </span> Voltar</button>
-                    <button class="go-page-btn" onclick="submitAdoptionForm()" type="button">Continue <span> &#62;</span></button>
-                </section>
-            
+            <p>Eu <span id="name-input"></span>, declaro que compreendo e aceito os compromissos e responsabilidades
+                associados à adoção de um animal de estimação. Ao assinar este documento, concordo em seguir as
+                políticas e procedimentos estabelecidos pela organização “ADOPET”.
+                Declaro que possuo experiência prévia com animais de estimação e que meu lar oferece um ambiente
+                adequado para um novo membro da família.
+                Entendo a importância dos cuidados veterinários regulares e me comprometo a fornecer ao novo animal
+                todas as vacinas e tratamentos de saúde necessários. Além disso, estou ciente das despesas financeiras
+                associadas à manutenção de um animal de estimação e me comprometo a prover recursos adequados para suas
+                necessidades.
+
+                Como futuro guardião do animal, estou disposto(a) a dedicar tempo e esforço para seu treinamento,
+                socialização e bem-estar geral. Comprometo-me a fornecer exercícios físicos e mentais adequados, assim
+                como amor, carinho e cuidado constantes.
+
+                Assumo a responsabilidade de cuidar deste animal pelo resto de sua vida e prometo tratá-lo como parte
+                integrante de minha família. Estou ciente de que a adoção de um animal de estimação é uma decisão séria
+                e estou totalmente comprometido(a) em fornecer-lhe um lar seguro.</p>
+
+            <section class="terms-and-conditions">
+                <input type="checkbox" id="terms">
+                <label for="terms">Eu, declaro que li e concordo com os termos e condições acima.</label>
+            </section>
+
+            <section class="btn-box">
+                <button class="prev-page-btn" onclick="movingArrow4()" type="button"><span>&#60; </span> Voltar</button>
+                <button id="submit-btn" class="go-page-btn" onclick="submitAdoptionForm()" type="button">Continue <span>
+                        &#62;</span></button>
+            </section>
+
         </form>
         <!-- <form id="form6" action="">
 
@@ -261,8 +283,10 @@
             <p>&copy;2024 adopet.com</p>
             <nav>
                 <ul>
-                    <li><a href="https://www.instagram.com"><img src="/assets/Instagram.svg" alt="Link para o Instagram"></a></li>
-                    <li><a href="https://www.facebook.com"><img src="/assets/facebok.svg" alt="Link para o Facebook"></a></li>
+                    <li><a href="https://www.instagram.com"><img src="/assets/Instagram.svg"
+                                alt="Link para o Instagram"></a></li>
+                    <li><a href="https://www.facebook.com"><img src="/assets/facebok.svg"
+                                alt="Link para o Facebook"></a></li>
                 </ul>
             </nav>
         </article>
