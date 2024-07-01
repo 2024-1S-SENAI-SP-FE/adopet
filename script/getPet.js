@@ -76,7 +76,7 @@ const GetById = (id) => {
 
                         <figure class="big-profile-section">
 
-                            <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto de um shiba">
+                            <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto do ${Pet.name}">
 
                         </figure>
 
@@ -122,7 +122,7 @@ const GetById = (id) => {
                     </ul>
 
                     <ul class="list-button">
-                        <li><button class="button-adote" type="button">Adote</button></li>
+                        <li><button class="button-adote" type="button" onclick="Adoption(${Pet.id})">Adote</button></li>
                     </ul>
 
                 </section>
