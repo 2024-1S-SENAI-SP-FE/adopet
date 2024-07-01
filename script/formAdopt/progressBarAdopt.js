@@ -5,7 +5,9 @@
 // }
 
 
+
 function movingArrow1() {
+
     // ---- do INICIO >>> ENDEREÇO -----
     
     // ---- Tiarndo Paginas---------
@@ -104,6 +106,7 @@ function movingArrow2() {
 
 
 function movingArrow3() {
+
 
  // --- de Historico de Anim. >>>> Motivo da adoção
 // ---- Tiarndo Paginas---------
