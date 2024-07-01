@@ -17,11 +17,22 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
 
-    
+const messageNotLogged = () => {
+    const auth = getAuth();
+
+onAuthStateChanged(auth, (user) => {
+    if (!user) {
+    alert('Você deve fazer um login para poder ir para a página de adoção', 'signInMessage');
+      }else{
+        window.location.href = 'adocao.html'
+      }
+})
+}
 
 onAuthStateChanged(auth, (user) => {
     const loggedInUserId = localStorage.getItem('loggedInUserId');
     if (!user) {
+        messageNotLogged()
         window.location.replace("home.html");
       }
     if (loggedInUserId) {
@@ -51,6 +62,7 @@ onAuthStateChanged(auth, (user) => {
         console.log("User Id not Found in Local storage")
     }
 })
+
 
 const userOptions = (event) => {
     event.preventDefault()
