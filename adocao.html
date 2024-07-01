@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/adocao.css">
     <link rel="stylesheet" href="/style/progressBarAdopt.css">
-    <link rel="stylesheet" href="/style/formAdocao.css".css">
+    <link rel="stylesheet" href="/style/formAdocao.css">
     <script src="/script/formAdopt/progressBarAdopt.js"></script>
+    <script src="/script/formAdopt/methods.js"></script>
+    <script type="module" src="/script/login/logged.js"></script>
 
 </head>
 
@@ -27,11 +29,16 @@
                 <li><a href="/sobre-nos.html">Sobre nós</a></li>
             </ul>
 
-            <section class="section-login">
+            <section class="section-login" id="user-select">
 
-                <button>Login</button>
-                <section class="linha"></section>
-                <button>Cadastro</button>
+                <button id="loginUser">Login</button>
+                <section class="linha" id="line"></section>
+                <button id="registerUser">Cadastro</button>
+
+            </section>
+
+            <section name="user-config" class="section-login config bt1" id="user-config" style="display: none;">
+
             </section>
 
         </nav>
@@ -97,8 +104,8 @@
                     <li>Full name</li>
                 </ul>
                 <ul class="email-name">
-                    <li class="registered-email">SamanthaSmith@gmail.com</li>
-                    <li class="registered-name">samantha smith</li>
+                    <li class="registered-email" id="email"></li>
+                    <li class="registered-name" id="name"></li>
                 </ul>
             </section>
     
@@ -111,17 +118,17 @@
 
          <form id="form1" class="adoptPage2" action="">
 
-            <label for="adress" name="adress">Endereço</label>
-            <input placeholder="Endereço" type="text">
+            <label for="address" name="adress">Endereço</label>
+            <input placeholder="Endereço" type="text" id="address">
 
             <label for="cep" name="cep">Cep</label>
-            <input placeholder="Cep" type="text">
+            <input placeholder="Cep" type="text" id="cep">
 
             <label for="city" name="city">Cidade</label>
-            <input placeholder="Cidade" type="text">
+            <input placeholder="Cidade" type="text" id="city">
 
             <label for="type-of-housing" name="type-of-housing">Tipo de moradia</label>
-            <input placeholder="Casa,apartamento etc." type="text">
+            <input placeholder="Casa,apartamento etc." type="text" id="houseType">
 
             <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingArrow()" type="button"><span>&#60; </span> Voltar</button>
@@ -135,20 +142,21 @@
             <section class="house-info-form-input-radio">
             <label for="adress" name="adress">Voce ja teve outros animais?</label>
 
-            <input type="radio" name="info-pets">
-            <label for="adress" name="adress">Tenho</label>
-            <input type="radio" name="info-pets">
-            <label for="adress" name="adress">Ja tive</label>
-            <input type="radio" name="info-pets">
-            <label for="adress" name="adress">Não tenho/nunca tive</label>
+            <label for="info-pets1">Voce ja teve outros animais?</label>
+            <input type="radio" id="info-pets" name="info-pets" value="TENHO">
+            <label for="info-pets1">Tenho</label>
+            <input type="radio" id="info-pets" name="info-pets" value="TIVE">
+            <label for="info-pets2">Ja tive</label>
+            <input type="radio" id="info-pets" name="info-pets" value="NÃO_TENHO">
+            <label for="info-pets3">Não tenho/nunca tive</label>
         </section>
 
         <section class="house-info-form-input-text">
             <label for="qtd-pet" name="qtd-pet">Possui quantos animais?</label>
-            <input placeholder="ex:4" type="text" name="qtd-pet">
+            <input placeholder="ex:4" type="text" name="qtd-pet" id="number-pet">
             <br>
             <label for="" name="">Tempo de posse de animais de estimação anteriores</label>
-            <input placeholder="ex: 1 ano" type="text">
+            <input placeholder="ex: 1 ano" type="text" id="petOwnership">
         </section>
 
         <section class="house-info-form-input-select">
@@ -198,7 +206,7 @@
         </form>
 
         <form id="form5">
-            <p>Eu,<span>nome completo</span>, declaro que compreendo e aceito os compromissos e responsabilidades associados à adoção de um animal de estimação. Ao assinar este documento, concordo em seguir as políticas e procedimentos estabelecidos pela organização “ADOPET”.
+            <p>Eu,<span id="name"></span>, declaro que compreendo e aceito os compromissos e responsabilidades associados à adoção de um animal de estimação. Ao assinar este documento, concordo em seguir as políticas e procedimentos estabelecidos pela organização “ADOPET”.
                 Declaro que possuo experiência prévia com animais de estimação e que meu lar oferece um ambiente adequado para um novo membro da família.
                 Entendo a importância dos cuidados veterinários regulares e me comprometo a fornecer ao novo animal todas as vacinas e tratamentos de saúde necessários. Além disso, estou ciente das despesas financeiras associadas à manutenção de um animal de estimação e me comprometo a prover recursos adequados para suas necessidades.
                 
@@ -208,7 +216,7 @@
             
                 <section class="btn-box">
                     <button class="prev-page-btn" onclick="movingArrow4()" type="button"><span>&#60; </span> Voltar</button>
-                    <button class="go-page-btn" onclick="movingArrow6()" type="button">Continue <span> &#62;</span></button>
+                    <button class="go-page-btn" onclick="submitAdoptionForm()" type="button">Continue <span> &#62;</span></button>
                 </section>
             
         </form>
