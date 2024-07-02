@@ -29,12 +29,19 @@ const openModalRegister = () => {
     let login = document.getElementById('login')
     login.style.display = "none"
     document.getElementById('footer-login').style.display = "none"
+
     let register = document.getElementById('register')
     register.style.display = "flex"
     document.getElementById('footer-register').style.display = "flex"
 
+    let resetPassword = document.getElementById('form-reset-password')
+    resetPassword.style.display = "none"
+    document.getElementById('footer-reset-password').style.display = "none"
+
     document.getElementById('title-modal').innerText = "Novo usuario"
     document.getElementById('register-btn').innerText = "Cadastrar"
+    document.querySelector('.modal-content').style.height = "84vh"
+    document.querySelector('.figure').style.height = "15%"
 
 
     const signUp = document.getElementById('register-btn');
@@ -43,6 +50,7 @@ const openModalRegister = () => {
         const email = document.getElementById('register-email').value;
         const password = document.getElementById('register-password').value;
         const name = document.getElementById('register-name').value;
+        const surName = document.getElementById('register-surname').value;
 
         const auth = getAuth();
         const db = getFirestore();
@@ -53,34 +61,37 @@ const openModalRegister = () => {
                 const userData = {
                     email: email,
                     Name: name,
+                    surName: surName
                 };
 
                 // showMessage('Account Created Successfully', 'signUpMessage');
 
                 sendEmailVerification(user)
                     .then(() => {
-                        showMessage('Verification email sent. Please check your inbox.', 'signUpMessage');
+                        showMessage('Email de verificação enviado. Porfavor verifique sua caixa de entrada.', 'signUpMessage');
                     })
                     .catch((error) => {
-                        console.error("Error sending email verification", error);
-                        showMessage('Error sending verification email', 'signUpMessage');
+                        console.error("Erro ao enviar email de verificação", error);
+                        showMessage('Erro ao enviar email de verificação', 'signUpMessage');
                     });
 
                 const docRef = doc(db, "users", user.uid);
                 setDoc(docRef, userData)
                     .then(() => {
+                        setTimeout(function () {      
                         window.location.href = '/adote.html';
+                    }, 10000);
                     })
                     .catch((error) => {
-                        console.error("Error writing document", error);
+                        console.error("Erro ao salvar dados", error);
                     });
             })
             .catch((error) => {
                 const errorCode = error.code;
                 if (errorCode == 'auth/email-already-in-use') {
-                    showMessage('Email Address Already Exists !!!', 'signUpMessage');
+                    showMessage('Endereço de email já está em uso, volte e faça login !!!', 'signUpMessage');
                 } else {
-                    showMessage('Unable to create User', 'signUpMessage');
+                    showMessage('Erro ao criar o usúario, tente novamente mais tarde', 'signUpMessage');
                 }
             });
     });
