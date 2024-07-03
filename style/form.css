@@ -1,3 +1,7 @@
+*{
+    font-family: 'inter';
+}
+
 .form-filter-pet {
     width: 90%;
     display: flex;
@@ -209,9 +213,9 @@ input[type="checkbox"]:checked+label.cachorro::after {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-radius: 10%;
+    border-radius: 40px;
     background-color: var(--yellow);
-    width: 30%;
+    width: 40%;
 }
 .control-form-radio input[type="radio"] + label::before {
     background-color: transparent;
@@ -268,11 +272,14 @@ input[type="checkbox"]:checked+label.cachorro::after {
 
 .control-form-info{
     display: flex;
+    
     flex-direction: column;
 }
 .control-form-info select{
     width: 100%;
     height: 30px;
+    border-radius: 10px;
+    padding: 7px;
     margin-top: 30px;
     margin-bottom: 30px;
     

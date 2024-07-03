@@ -6,6 +6,7 @@
 form input{
     margin-top: 5px;
     width: 50%;
+    border: solid black 0.01rem;
     height: 3vh;
     padding: 5px;
     border-radius: 5px;
