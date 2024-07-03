@@ -14,6 +14,11 @@
    margin-bottom: 50px;
 }
 
+.hr-class-main-contact{
+    width: 95%;
+    margin-top: 30px;
+}
+
 .main-contato p, h1, label, textarea{
     font-family: 'Inter';
 }

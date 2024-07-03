@@ -15,6 +15,11 @@
     height: 100%;
 }
 
+.hr-class-main-donate{
+    width: 95%;
+    margin-top: 30px;
+}
+
 
 .profile-section-card {
     display: flex;
