@@ -4,6 +4,30 @@
     
 // }
 
+const updateDisplay = (value) => {
+    var display = document.getElementById('display');
+    var small = document.getElementById('small')
+    var medium = document.getElementById('medium')
+    var large = document.getElementById('large')
+    if (value == 1) {
+        display.innerHTML = 'pequeno';
+        small.src = '../assets/paw-print (1).png'
+        medium.src = '../assets/paw-print.png'
+        large.src = '../assets/paw-print.png'
+    } else if (value == 2) {
+        display.innerHTML = 'médio';
+        small.src = '../assets/paw-print.png'
+        medium.src = '../assets/paw-print (1).png'
+        large.src = '../assets/paw-print.png'
+       
+    } else if (value == 3) {
+        display.innerHTML = 'grande';
+        small.src = '../assets/paw-print.png'
+        medium.src = '../assets/paw-print.png'
+        large.src = '../assets/paw-print (1).png'
+    }
+}
+
 function movingBack1(){
     const form1 = document.getElementById("form1") 
     form1.style.display = "none";

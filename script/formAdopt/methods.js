@@ -1,12 +1,26 @@
 let termsCheckbox = document.getElementById('terms').checked
 const submitButton = document.getElementById("submit-btn");
 
-if(termsCheckbox){
-submitButton.disabled = false
-}else{
+
+console.log(termsCheckbox)
+if (termsCheckbox) {
+    submitButton.disabled = false
+    termsCheckbox = "concordo"
+} else {
     alert('você deve aceitar os termos e condições')
+    termsCheckbox = "discordo"
+    console.log(termsCheckbox)
     submitButton.disabled = true
+    return "você não aceitou os termos"
 }
+console.log(termsCheckbox)
+
+// if(termsCheckbox){
+// submitButton.disabled = false
+// }else{
+//     alert('você deve aceitar os termos e condições')
+//     submitButton.disabled = true
+// }
 async function submitAdoptionForm() {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const PetData = JSON.parse(localStorage.getItem('PetId'));
@@ -29,26 +43,16 @@ async function submitAdoptionForm() {
     const city = document.getElementById("city").value;
     const houseType = document.getElementById("houseType").value;
     const petLivingHouse = selectedValue;
-    const numberPets = document.getElementById('qtd-pet').value; 
-    const petOwnership = document.getElementById('petOwnership').value; 
-    const homeEnvironment = document.getElementById('home-enviroment').value; 
-    const familyActivity = document.getElementById('family-activity').value; 
-    const reasonsAdoption = document.getElementById('reasons-adoption').value; 
-    const numberChild = document.getElementById('number-child').value 
+    const numberPets = document.getElementById('qtd-pet').value;
+    const petOwnership = document.getElementById('petOwnership').value;
+    const homeEnvironment = document.getElementById('home-enviroment').value;
+    const familyActivity = document.getElementById('family-activity').value;
+    const reasonsAdoption = document.getElementById('reasons-adoption').value;
+    const numberChild = document.getElementById('number-child').value
     const numberAdults = document.getElementById('number-adults').value;
     const termsCheckbox = "concordo"
 
-//     console.log(termsCheckbox)
-//     if(termsCheckbox){
-//     submitButton.disabled = false
-//     termsCheckbox = "concordo"
-//     }else{
-//     alert('você deve aceitar os termos e condições')
-//     termsCheckbox = "discordo"
-//     console.log(termsCheckbox)
-//     submitButton.disabled = true
-//     return "você não aceitou os termos"
-// }
+
 
     formData.append('name', name);
     formData.append('email', email);
