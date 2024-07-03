@@ -66,7 +66,7 @@ const userOptions = (event) => {
         localStorage.removeItem('userData');
         signOut(auth)
             .then(() => {
-                window.location.href = 'home.html';
+                window.location.href = 'index.html';
             })
             .catch((error) => {
                 console.error('Error Signing out:', error);

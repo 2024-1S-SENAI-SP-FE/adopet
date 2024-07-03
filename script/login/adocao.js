@@ -33,7 +33,7 @@ onAuthStateChanged(auth, (user) => {
     const loggedInUserId = localStorage.getItem('loggedInUserId');
     if (!user) {
         messageNotLogged()
-        window.location.replace("home.html");
+        window.location.replace("index.html");
       }
     if (loggedInUserId) {
         // console.log(user);
@@ -79,7 +79,7 @@ const userOptions = (event) => {
         localStorage.removeItem('userData');
         signOut(auth)
             .then(() => {
-                window.location.href = 'home.html';
+                window.location.href = 'index.html';
             })
             .catch((error) => {
                 console.error('Error Signing out:', error);

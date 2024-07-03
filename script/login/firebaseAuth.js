@@ -114,14 +114,13 @@ const openModalLogin = () => {
     .then((userCredential) => {
         const user = userCredential.user;
         
-        // Verificar o estado de autenticação e o estado de verificação do email
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 if (user.emailVerified) {
                     showMessage('Logado com sucesso', 'signInMessage');
                     console.log("User is logged in and email is verified");
                     localStorage.setItem('loggedInUserId', user.uid);
-                    window.location.href = 'home.html';
+                    window.location.href = 'index.html';
                 } else {
                     console.log("User is logged in but email is not verified");
                     showMessage('email não verificado, verifique a sua caixa de entrada', 'signInMessage');
@@ -131,7 +130,6 @@ const openModalLogin = () => {
             }
         });
         
-        // Mensagem de sucesso de login
     })
     .catch((error) => {
         console.error("Error logging in:", error);
@@ -160,7 +158,7 @@ const urlAtual = window.location.href;
 
 console.log(urlAtual)
 
-if (urlAtual === 'http://127.0.0.1:5500/home.html') {
+if (urlAtual === 'https://2024-1s-senai-sp-fe.github.io/adopet/') {
         idBtn.addEventListener('click', UrlAdote);
 }
 

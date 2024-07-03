@@ -79,7 +79,7 @@ const openModalRegister = () => {
                 setDoc(docRef, userData)
                     .then(() => {
                         setTimeout(function () {      
-                        window.location.href = '/adote.html';
+                        window.location.href = 'adote.html';
                     }, 10000);
                     })
                     .catch((error) => {

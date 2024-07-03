@@ -56,7 +56,7 @@ document.getElementById('resetPasswordBtn').addEventListener('click', (event) =>
         .then(() => {
             showMessage('Email de redefinição de senha enviado!', 'resetPasswordMessage');
             setTimeout(function () {      
-                window.location.href = '/home.html';
+                window.location.href = 'index.html';
             }, 10000);
         })
         .catch((error) => {
