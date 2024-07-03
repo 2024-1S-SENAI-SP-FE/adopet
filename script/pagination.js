@@ -93,7 +93,7 @@ function initializePagination(datas) {
                             <img src="http://localhost:8080${list.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
                                 <h2>${list.name.toLowerCase()}</h2>
-                                <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()">
+                                <!-- <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()"> -->
                             </span>
                         </header>
                         <section class="dog-details">
