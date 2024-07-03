@@ -250,11 +250,11 @@ input[type="checkbox"]:checked+label.cachorro::after {
     border-radius: 50%; 
 }
 
-#cachorro + label {
+#cachorro-pet + label {
     background-image: url("../assets/image\ 168.svg"); 
 }
 
-#gato + label {
+#gato-pet + label {
     background-image: url("../assets/cat\ 1.svg"); 
 }
 

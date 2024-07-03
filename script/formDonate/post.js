@@ -1,26 +1,7 @@
 
 const userData = JSON.parse(localStorage.getItem('userData'));
-document.getElementById('name-terms').innerText = userData.Name
-const inputFile = document.getElementById('img-input');
-const previewImage = document.getElementById('previewImage');
+// document.getElementById('name-terms').innerText = userData.Name
 
-// Adicionar um ouvinte para o evento de mudança no input file
-inputFile.addEventListener('change', function(event) {
-    if (event.target.files.length > 0) {
-        const file = event.target.files[0];
-        
-        const reader = new FileReader();
-        
-        reader.onload = function(e) {
-            previewImage.src = e.target.result;
-            previewImage.style.width = "60vw"
-            previewImage.style.height = "70vh"
-
-            previewImage.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-    }
-});
 
 const RegisterPet = async (event) => {
     event.preventDefault();
@@ -32,7 +13,7 @@ const RegisterPet = async (event) => {
     const genders = document.getElementById('gender').value.toUpperCase();
     const sizePet = document.getElementById('display').innerText.toUpperCase();
     const name = document.getElementById('name').value;
-    const situation = document.getElementById('situation-select').value;
+    const situation = document.getElementById('situation-select').value.toUpperCase();
     const color =  document.getElementById('color').value;
     const story = document.getElementById('petStory').value;
     const nameTutor = document.getElementById('tutorName').value;
@@ -51,7 +32,7 @@ const RegisterPet = async (event) => {
     formData.append('color', color);
     formData.append('petstory', story);
     formData.append('lastTutorName', nameTutor);
-    formData.append('LastTutorEmail', emailTutor);
+    formData.append('lastTutorEmail', emailTutor);
     formData.append('lastTutorPhoneFix', tutorPhoneFix);
     formData.append('lastTutorPhoneCel', tutorPhoneCel);
     formData.append('lastTutorPreferences', tutorPreferences);
