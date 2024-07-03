@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/style/reset.css">
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/footer.css">
+    
+    <link rel="stylesheet" href="/style/form.css">
     <link rel="stylesheet" href="/style/formAdocao.css">
     <link rel="stylesheet" href="/style/doe.css">
     <link rel="stylesheet" href="/style/progressBarAdopt.css">
@@ -120,6 +122,15 @@
                         <fieldset class="control-form-options">
                             <!-- <legend>Idade</legend> -->
                             <select name="age" id="age-select">
+                                <option value="todos">Situacao</option>
+                                <option value="adocao">Para adoção</option>
+                                <option value="perdido">Perdido</option>
+                                <option value="tutor">Procurando tutor</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="control-form-options">
+                            <!-- <legend>Ordenar</legend> -->
+                            <select name="age" id="age-select">
                                 <option value="todos">Idade</option>
                                 <option value="filhote">Filhote (3 a 5 meses)</option>
                                 <option value="adulto">Adulto (1 a 7 anos)</option>
@@ -127,17 +138,9 @@
                             </select>
                         </fieldset>
                         <fieldset class="control-form-options">
-                            <!-- <legend>Ordenar</legend> -->
-                            <select name="order" id="order-select">
-                                <option value="todos">ordenar</option>
-                                <option value="A-Z">ordenar de A a Z</option>
-                                <option value="Z-A">ordenar de Z a A</option>
-                            </select>
-                        </fieldset>
-                        <fieldset class="control-form-options">
                             <!-- <legend>Gênero</legend> -->
                             <select name="gender" id="gender-select">
-                                <option value="todos" selected>gênero</option>
+                                <option value="sexo" selected>Sexo</option>
                                 <option value="MACHO">Macho</option>
                                 <option value="FÊMEA">Fêmea</option>
                             </select>
@@ -148,9 +151,9 @@
                             <input type="range" name="size" id="size" value="1" min="1" max="4" 
                             oninput="updateDisplay(this.value)">
                             <div class="control-form-range-img">
-                                <!-- <img id="small" src="/assets/paw-print.png" alt="porte pequeno">
+                                <img id="small" src="/assets/paw-print.png" alt="porte pequeno">
                                 <img id="medium" src="/assets/paw-print.png" alt="porte médio">
-                                <img id="large" src="/assets/paw-print.png" alt="porte grande"> -->
+                                <img id="large" src="/assets/paw-print.png" alt="porte grande">
                             </div>
                         </fieldset>
                         
@@ -166,26 +169,23 @@
                              <select name="color" id="color">
                                  <option value="">Cor predominante</option>
                              </select>
-                             <label for="namePet">Qual o nome do pet</label>
+                             <label id="namePet-form1" for="namePet">Qual o nome do pet</label>
                              <input type="text" name="name" placeholder="">
                          </fieldset>
                         <!-- ------- COR E NOME (nao tinha no filtro do adote.html) -->
-                        <fieldset class="control-form-buttons">
-                            <button type="reset" class="btn1">Limpar Filtros</button>
-                            <button type="submit" onclick="FilterPet(event)" class="btn2">Buscar</button>
-                        </fieldset>
+                       
                     </form>
                 </section>
             </header>
+            
             <section class="btn-box1">
-                <button class="prev-page-btn" onclick="movingBack1()" type="button">Voltar</button>
-                <button class="go-page-btn" onclick="movingArrow2()" type="button">Continue</button>
+                <button class="prev-page-btn" onclick="movingBack1()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow2()" type="button">Continue <span> &#62;</span></button>
             </section>
-
         </section>
 
         <form action="" id="form2" class="form2">
-            <p>Adicione fotos do pet que deseja doar. <br>
+            <p class="paragraph">Adicione fotos do pet que deseja doar. <br>
             Atenção as fotos devem mostrar somente o pet </p>
 
             <br>
@@ -194,79 +194,130 @@
             </textarea>
             <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera"> -->
              <section class="section-pictures">
-                <article class="article-pictures">
-                    <p>1.foto</p>
-                </article>
-                <input type="image" class="button-cam-container" src="/assets/camPicture.svg">
+
+                 <!-- <article class="article-pictures">
+                </article> -->
+                
+                <input id="img-input" type="file" class="input-cam-container"> </input>
+                <label class="label-form-class" for="img-input">
+                    <h1 class="h1-form2">1.Foto</h1>
+
                     <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera">
+
+                </label>
+               
              </section>
 
              
             <section class="btn-box">
-                <button class="prev-page-btn" onclick="movingBack3()" type="button">Voltar</button>
-                <button class="go-page-btn" onclick="movingArrow3()" type="button">Continue</button>
+                <button class="prev-page-btn" onclick="movingBack3()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow3()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form>
 
-        <form action="" id="form3">
+        <form action="" id="form3" class="form3">
             <h1>Temperamento</h1>
 
-            <section>
-                <button onclick=" " type="button">Dócil</button>
-                <button onclick=" " type="button">Agressivo</button>
-                <button onclick=" " type="button">Sociável</button>
-                <button onclick=" " type="button">Tímido</button>
-                <button onclick=" " type="button">Independente</button>
-                <button onclick=" " type="button">Agressivo</button>
-                <button onclick=" " type="button">Brincalhão</button>
-                <button onclick=" " type="button">Calmo</button>
-                <button onclick=" " type="button">Carente</button>
+                <section class="label-form3-container1">
 
-            </section>
+                    <label class="label-form3-flex" for="docil"> <input type="checkbox" id="docil">Dócil</label>
+
+                    <label class="label-form3-flex" for="agressivo"> <input type="checkbox" id="agressivo"></input>Agressivo</label>
+                   
+
+                    <label class="label-form3-flex" for="sociavel" ><input type="checkbox" id="sociavel"></input>Sociável</label>
+                    
+
+                    <label class="label-form3-flex" for="timido"><input type="checkbox" id="timido"></input>Tímido</label>
+                    
+
+                    <label class="label-form3-flex" for="independente"><input type="checkbox" id="independente"></input>Independente</label>
+                    
+
+                    <label class="label-form3-flex" for="brincalhao"><input type="checkbox" id="brincalhao"></input>Brincalhão</label>
+                    
+
+                    <label class="label-form3-flex" for="calmo"><input type="checkbox" id="calmo"></input>Calmo</label>
+                    
+
+                    <label class="label-form3-flex" for="carente"> <input type="checkbox" id="carente"></input>Carente</label>
+
+                </section>
+
+            </section class="label-form3-container1">
+
             <h1>Cuidados veterinários</h1>
-            <section>
-                <button onclick=" " type="button">Vermifugado</button>
-                <button onclick=" " type="button">Necessidades especiais</button>
-                <button onclick=" " type="button">Vacinado</button>
-                <button onclick=" " type="button">Cadastro</button>
+            <section class="label-form3-container2">
+                <label class="label-form3-flex" for="vermifugado"> <input type="checkbox" id="vermifugado">Vermifugado</label>
+
+                <label class="label-form3-flex" for="necessidades"> <input type="checkbox" id="necessidades">Necessidades especiais</label>
+                
+                <label class="label-form3-flex" for="vacinado"> <input type="checkbox" id="vacinado">Vacinado</label>
+                
+                <label class="label-form3-flex" for="castrado"> <input type="checkbox" id="castrado">Castrado</label>
+                
             </section>
 
             <h1>Adaptabilidade</h1>
 
-            <section>
-                <button onclick=" " type="button">Vive bem em apartamento</button>
-                <button onclick=" " type="button">Vive bem em casa</button>
+            <section class="label-form3-container3">
+                <label class="label-form3-flex" for="apartamento"> <input type="checkbox" id="apartamento">Vive em apartamento</label>
+                
+                <label class="label-form3-flex" for="casa"> <input type="checkbox" id="casa">Vive bem em casa</label>
+                
             </section>
             <h1>Socialização</h1>
 
-            <section>
-                <button onclick=" " type="button">Sociável com crianças</button>
-                <button onclick=" " type="button">Sociável com gatos</button>
-                <button onclick=" " type="button">Sociável com estranhos</button>
-                <button onclick=" " type="button">Sociável com cães</button>
+            <section class="label-form3-container4">
+
+                <label class="label-form3-flex" for="criancas"> <input type="checkbox" id="criancas">Sociável com crianças</label>
+                
+                <label class="label-form3-flex" for="gatos"> <input type="checkbox" id="gatos">Sociável com gatos</label>
+                
+                <label class="label-form3-flex" for="estranhos"> <input type="checkbox" id="estranhos">Sociável com estranhos</label>
+                
+                <label class="label-form3-flex" for="caes"> <input type="checkbox" id="caes">Sociável com caes</label>
             </section>
             <section class="btn-box">
-                <button class="prev-page-btn" onclick="movingBack4()" type="button">Voltar</button>
-                <button class="go-page-btn" onclick="movingArrow4()" type="button">Continue</button>
+                <button class="prev-page-btn" onclick="movingBack4()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow4()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form>
         
         <form action="" id="form4">
-            <section>
-                <label for="name">Nome do atual Tutor do pet:</label>
-                <input placeholder="digite seu nome" type="text">
+            <section class="section-form4-input-container1">
 
-                <label for="email">email:</label>
-                <input placeholder="email@gmail.com" type="text">
+                <section class="section-form3-firstname  label-container">
+                    <label for="name">Nome do atual Tutor do pet:</label>
+                    <input placeholder="Digite seu nome" type="text">
+                </section>
 
-                <label for="telephone">Telefone:</label>
-                <input placeholder="5432-9870" type="text">
+                <!-- <section class="section-form3-secondname  label-container">
+                    <label for="name">Sobrenome do Tutor do pet:</label>
+                    <input placeholder="digite seu nome" type="text">
+                </section> -->
 
-                <label for="cellphone">Celular:</label>
-                <input placeholder="11 912345678" type="text">
+
+                <section class="section-form3-email label-container">
+
+                    <label for="email">Email:</label>
+                    <input placeholder="Email@gmail.com" type="text">
+                </section>
+
+                <section class="section-form3-telephone label-container">
+
+                    <label for="telephone">Telefone:</label>
+                    <input placeholder="5432-9870" type="text">
+                </section>
+
+                <section class="section-form3-cellphone label-container">
+
+                    <label for="cellphone">Celular:</label>
+                    <input placeholder="11 912345678" type="text">
+                </section>
             </section>
 
-            <section>
+            <section class="section-form3-container">
                 <select name="contact" id="">
                     <option value="">Preferência de contato</option>
                     <option value="">Email</option>
@@ -276,8 +327,8 @@
             </section>
 
             <section class="btn-box">
-                <button class="prev-page-btn" onclick="movingBack5()" type="button">Voltar</button>
-                <button class="go-page-btn" onclick="movingArrow5()" type="button">Continue</button>
+                <button class="prev-page-btn" onclick="movingBack5()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow5()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form>
 
@@ -287,13 +338,14 @@
             <p>Eu,<span>___________</span> declaro que</p>
 
             <ol>
-                <li>Doação do animal</li>
+                <li>Doação do Animal:</li>
                 <ul>
                     <li>Doarei um animal de estimação, cujas características serão informadas em anexo a este Termo.</li>
                     <li>Declaro que o animal está em boas condições de saúde e comportamento, não apresentando doenças contagiosas ou comportamento agressivo.</li>
                 </ul>    
                 <li>Compromissos da RECEBEDORA:</li>
-                <ul>
+                <ul class="ul-form5-container">
+                    <li>A RECEBEDORA se compromete a:</li>
                     <li>Proporcionar ao animal:</li>
                     <li>Alimentação adequada e de qualidade;</li>
                     <li>Cuidado veterinário regular, incluindo vacinas, vermífugos e consultas quando necessário;</li>
@@ -308,8 +360,8 @@
                 </ul>
             </ol>
             <section class="btn-box">
-                <button class="prev-page-btn" onclick="movingBack6()" type="button">Voltar</button>
-                <button class="go-page-btn" onclick="movingArrow6()" type="button">Continue</button>
+                <button class="prev-page-btn" onclick="movingBack6()" type="button"><span>&#60; </span> Voltar</button>
+                <button class="go-page-btn" onclick="movingArrow6()" type="button">Continue <span> &#62;</span></button>
             </section>
         </form>
 

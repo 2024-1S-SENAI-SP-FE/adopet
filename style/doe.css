@@ -21,9 +21,11 @@
     justify-content: center;
     align-items: center;
     background-color: #F9F9F9;
-    width: 55%;
+    width: 100%;
     height: 25%;
     padding: 3.2%;
+    padding-left: 8%;
+    padding-right: 8%;
     border-radius: 16px;
     border: solid 2px #DFDFDF;
     margin-top: 6%;
@@ -31,6 +33,18 @@
     gap: 6%;
 
     position: relative;
+}
+
+.adoptPage1{
+    width: 60%;
+}
+
+.button-section{
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    /* border: solid black; */
 }
 
 /* -----Fontes e tamanhos <P> <li> etc------ */
@@ -72,53 +86,43 @@
 
 /* ----------- BOTOES --------- */
 
-.button-section{
+.input-section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 53%;
+    width: 120%;
 }
 
-.button{
+.go-page-btn{
+    /* padding-bottom: 30%; */
     border: solid var(--dark-red) 1.5px;
     height: 48px;
-    width: 198px;
-    background-color: #000000;
-    color: rgb(0, 0, 0);
+    /* width: 198px; */
+    width: 32.8%;
     cursor: pointer;
-    transition: box-shadow .6s ease;
     border-radius: 5px;
 }
 
-.button {
+.input {
     background-color: #ffff;
 } */
 
-/* .button:hover{
-    background-color: var(--red);
-    border: var(--red);
-    color: white;
-    box-shadow: inset 500px 0 0 var(--red);
-    
-}
 /* ---- Pagina 1 Form 0---- */
 .adoptPage1{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: none; */
+    display: none;
+    border: solid #000000;
 }
 
 /* -----  FORM 1------ */
 
 
 #form1{
-    display: flex;
-    flex-direction: column;
-    display: none;
+    /* display: none; */
 }
-
 
 /* -----FORM 2------ */
 #form2{
@@ -129,18 +133,21 @@
     /* border: solid 2px rgb(241, 65, 65); */
     width: 80%;
     height: 100%;
+    margin-top: 2%;
 }
 
 .section-pictures{
-    border: dashed 1px gray;
+    /* border: dashed 1px gray;
     border-width: 3px;
-    border-radius: 12px;
+    border-radius: 12px; */
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100%;
     width: 100%;
-
 }
+
+
 
 .article-pictures{
     text-align: left;
@@ -153,7 +160,7 @@
     
 }
 
-.button-cam-container{
+.input-cam-container{
     width: 100%;
     height: 100%;
     /* border: solid 2px blue; */
@@ -162,14 +169,57 @@
     /* padding: 10%; */
     padding-top: 15%;
     padding-bottom: 20%;
-    /* background-color: transparent; */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
+}
+
+.h1-form2{
+    position: absolute;
+    top: 5%;
+    left: 3%;
 }
 
 .cam-img{
     /* width: ; */
-    height: 6%;
-    width: 6%;
+    height: 7%;
+    width: 7%;
+}
+
+.input-cam-container{
+    border: solid red;
+}
+
+.input-cam-container[type="file"]{
+    display: none;
+}
+
+.label-form-class{
+    display: flex;
+    justify-content: center;
+    padding-top: 18%;
+    padding-bottom: 18%;
+    border: solid purple;
+    width: 85%;
+    height: 100%;
+    border: dashed 1px #868686;
+    border-width: 3px;
+    border-radius: 12px;
+    /* padding: 40%; */
+    position: relative;
+
+
+}
+
+.paragraph, .form2{
+    font-family: inter;
+    font-weight: 450;
+}
+.h1-form2{
+    color: gray;
+    font-family: Inter;
+    font-weight: 450;
 }
 
 /* -----FORM 3------ */
@@ -177,29 +227,326 @@
     display: flex;
     flex-direction: column;
     display: none;
+    width: 85%;
+    /* border: solid blue; */
+    margin-top: 4%;
+
+    
+}
+
+.form3 input,
+.form3 h1{
+    font-family: Inter;
+    font-weight: 450;
+    font-size: 1.5rem;
+}
+
+.form3 label{
+    font-family: Inter;
+    font-weight: 500;
+
+}
+
+
+.form3 input[type="checkbox"]  {
+    display:block;
+    /* visibility: hidden; */
+    border: white;
+}
+
+.form3 input{
+    border: white;
+}
+
+.form3 label{
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+ /* .form3 input[type="checkbox"]{
     display: none;
+} */
+.form3 input[type="checkbox"] {
+    /* Fazer a caixa invisivel */
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px; /* Fix for older browsers */
 }
-.textarea {
-    resize: none;
+
+.form3 input[type="checkbox"]:checked {
+    /* Voltar a ser visivel */
+    opacity: 1;
+    position: static; 
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+  }
+
+.label-form3-container1{
+    display: flex;
+    /* border: solid black; */
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.3%;
+    margin-bottom: 5%;
+    gap: 1.5%;
 }
+
+.label-form3-container1 label{
+    margin-bottom: 1%;
+}
+
+
+.label-form3-container2{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.3%;
+    margin-bottom: 5%;
+}
+.label-form3-container3{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin-bottom: 5%;
+    margin-top: 2.6%;
+    gap: 5%;
+}
+
+.label-form3-container4{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.3%;
+}
+
+.label-form3-container4 label:nth-child(4){
+    width: 20%;
+}
+.label-form3-container4 label:nth-child(2),
+.label-form3-container4 label:nth-child(1)
+{
+    width: 23%;
+}
+
+
+.label-form3-flex{
+    display: flex;
+    width: 20%;
+
+    border: solid gray;
+    border-width: 1.8px;
+    border-radius: 4px;
+    padding-top: 0.6%;
+    padding-bottom: 0.6%;
+    padding-left: 0.6%;
+    gap: 2%;
+    margin-top: 0%;
+}
+
+
+/* .input-form3-container1 label,
+.input-form3-container2 label,
+.input-form3-container3 label,
+.input-form3-container4 label{
+    border: solid rgb(182, 182, 182);
+    margin-top: 0%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 6px;
+    border-width: 1.6px;
+    width: 100%;
+    
+} */
+
+
+/* 
+
+.input-form3-container1 input{
+    width: 2%;
+}
+*/
+
+.input-form3-container1{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 2%;
+} 
+
+/* 
+
+.input-form3-container4 input{
+    width: 25%;
+}
+.input-form3-container4 input:nth-child(4){
+    width: 22%;
+}
+.input-form3-container4 input:nth-child(3){
+    width: 25%;
+}
+.input-form3-container4 input:nth-child(1){
+    width: 27%;
+} */
+
 
 /* -----FORM 4------ */
 #form4{
     display: flex;
+    flex-direction: column;
     display: none;
+    align-items: center;
+    /* border:solid #000000; */
+    width: 85%;
+    margin-top: 4%;
     
 }
-/* -----FORM 4------ */
+
+.section-form4-input-container1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.section-form4-input-container1 input{
+    width: 30%;
+}
+
+.label-container{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    height: 100%;
+}
+
+.label-container input{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-width: 1.7px;
+    padding: 2%;
+
+}
+
+.label-container label{
+    font-family: Inter;
+    font-weight: 500;
+}
+.label-container input{
+    margin-top: 2%;
+    margin-bottom: 9%;
+}
+.label-container input::placeholder{
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.section-form3-container{
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10%;
+}
+.section-form3-container select{
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 0.2%;
+    border-radius: 8px;
+    width: 48.8%;
+
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 0.875;
+
+}
+
+/* -----FORM 5------ */
 #form5{
     display: flex;
     flex-direction: column;
     display: none;
+    gap: 1rem;
+    width: 89%;
+    margin-top: 2%;    
+}
+
+#form5 h1, li, p{
+    font-family: Inter;
+    font-weight: 400;
     
 }
 
-#form6{
+/* #form5 ul{
+    list-style:initial;
+} */
+#form5 ol{
+    list-style:upper;
+}
+#form5 ul{
+    display: flex;
+    flex-direction: column;
+    list-style:initial;
+    width: 80%;
+}
+
+.ul-form5-container li:nth-child(2),
+.ul-form5-container li:nth-child(8)
+{
+    margin-left: 2%;
+
+}
+.ul-form5-container li:nth-child(3),
+.ul-form5-container li:nth-child(4),
+.ul-form5-container li:nth-child(5),
+.ul-form5-container li:nth-child(6),
+.ul-form5-container li:nth-child(7),
+.ul-form5-container li:nth-child(9),
+.ul-form5-container li:nth-child(10),
+.ul-form5-container li:nth-child(11),
+.ul-form5-container li:nth-child(12)
+{
+    margin-left: 4%;
+
+}
+
+
+/* :nth-child(3) */
+/* -----FORM 6------ */
+
+/* #form6{
     display: flex;
     flex-direction: column;
     display: none;
     
+} */
+
+/* -------------- Botoes */
+.btn-box{
+    height: 48px;
 }
+
+.go-page-btn{
+    width:150px;
+}
+
+.steps-label::before,
+ .label-container label:before,
+ #namePet-form1::before,
+ .form3 label:before,
+ .form2 label:before
+ {
+    display: none;
+    /* background-color: transparent; */
+}
+
