@@ -1,3 +1,6 @@
+*{
+    font-family: 'inter';
+}
 .modal{
     position: fixed;
     top: 0;
