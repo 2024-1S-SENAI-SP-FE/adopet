@@ -122,7 +122,7 @@
                     <form class="form-filter-pet" id="form">
                         <fieldset class="control-form-options">
                             <!-- <legend>Idade</legend> -->
-                            <select name="age" id="age-select">
+                            <select name="age" id="situation-select">
                                 <option value="todos">Situacao</option>
                                 <option value="adocao">Para adoção</option>
                                 <option value="perdido">Perdido</option>
@@ -131,7 +131,7 @@
                         </fieldset>
                         <fieldset class="control-form-options">
                             <!-- <legend>Ordenar</legend> -->
-                            <select name="age" id="age-select">
+                            <select name="age" id="age">
                                 <option value="todos">Idade</option>
                                 <option value="filhote">Filhote (3 a 5 meses)</option>
                                 <option value="adulto">Adulto (1 a 7 anos)</option>
@@ -140,7 +140,7 @@
                         </fieldset>
                         <fieldset class="control-form-options">
                             <!-- <legend>Gênero</legend> -->
-                            <select name="gender" id="gender-select">
+                            <select name="gender" id="gender">
                                 <option value="sexo" selected>Sexo</option>
                                 <option value="MACHO">Macho</option>
                                 <option value="FÊMEA">Fêmea</option>
@@ -148,7 +148,7 @@
                         </fieldset>
                         <fieldset class="control-form-range">
                             <!-- <legend>Tamanho</legend> -->
-                            <p id="display">Porte</p>
+                            <p id="display">Filtrar por porte</p>
                             <input type="range" name="size" id="size" value="1" min="1" max="3" 
                             oninput="updateDisplay(this.value)">
                             <div class="control-form-range-img">
@@ -180,7 +180,7 @@
                                  <option value="cinza">cinza</option>
                              </select>
                              <label id="namePet-form1" for="namePet">Qual o nome do pet:</label>
-                             <input type="text" name="name" placeholder="">
+                             <input type="text" name="name" placeholder="" id="name">
                          </fieldset>
                        
                     </form>
@@ -223,27 +223,27 @@
 
                 <section class="label-form3-container1">
 
-                    <label class="label-form3-flex" for="docil"> <input type="checkbox" id="docil">Dócil</label>
+                    <label class="label-form3-flex" for="docil"> <input type="checkbox" name="temperament" id="docil" value="docil">Dócil</label>
 
-                    <label class="label-form3-flex" for="agressivo"> <input type="checkbox" id="agressivo">Agressivo</label>
+                    <label class="label-form3-flex" for="agressivo"> <input type="checkbox" name="temperament" id="agressivo" value="agressivo">Agressivo</label>
                    
 
-                    <label class="label-form3-flex" for="sociavel" ><input type="checkbox" id="sociavel">Sociável</label>
+                    <label class="label-form3-flex" for="sociavel" ><input type="checkbox" name="temperament" id="sociavel" value="sociavel">Sociável</label>
                     
 
-                    <label class="label-form3-flex" for="timido"><input type="checkbox" id="timido">Tímido</label>
+                    <label class="label-form3-flex" for="timido"><input type="checkbox" name="temperament" id="timido" value="timido">Tímido</label>
                     
 
-                    <label class="label-form3-flex" for="independente"><input type="checkbox" id="independente">Independente</label>
+                    <label class="label-form3-flex" for="independente"><input type="checkbox" name="temperament" id="independente" value="independente">Independente</label>
                     
 
-                    <label class="label-form3-flex" for="brincalhao"><input type="checkbox" id="brincalhao">Brincalhão</label>
+                    <label class="label-form3-flex" for="brincalhao"><input type="checkbox" name="temperament" id="brincalhao" value="brincalhão">Brincalhão</label>
                     
 
-                    <label class="label-form3-flex" for="calmo"><input type="checkbox" id="calmo">Calmo</label>
+                    <label class="label-form3-flex" for="calmo"><input type="checkbox" name="temperament" id="calmo" value="calmo">Calmo</label>
                     
 
-                    <label class="label-form3-flex" for="carente"> <input type="checkbox" id="carente">Carente</label>
+                    <label class="label-form3-flex" for="carente"> <input type="checkbox" name="temperament" id="carente" value="carente">Carente</label>
 
                 </section>
 
@@ -251,35 +251,35 @@
 
             <h1>Cuidados veterinários</h1>
             <section class="label-form3-container2">
-                <label class="label-form3-flex" for="vermifugado"> <input type="checkbox" id="vermifugado">Vermifugado</label>
+                <label class="label-form3-flex" for="vermifugado"> <input type="checkbox" name="care" id="vermifugado" value="vermifugado">Vermifugado</label>
 
-                <label class="label-form3-flex" for="necessidades"> <input type="checkbox" id="necessidades">Necessidades especiais</label>
+                <label class="label-form3-flex" for="necessidades"> <input type="checkbox" name="care" id="necessidades" value="necessidades">Necessidades especiais</label>
                 
-                <label class="label-form3-flex" for="vacinado"> <input type="checkbox" id="vacinado">Vacinado</label>
+                <label class="label-form3-flex" for="vacinado"> <input type="checkbox" name="care" id="vacinado" value="vacinado">Vacinado</label>
                 
-                <label class="label-form3-flex" for="castrado"> <input type="checkbox" id="castrado">Castrado</label>
+                <label class="label-form3-flex" for="castrado"> <input type="checkbox" name="care" id="castrado" value="castrado">Castrado</label>
                 
             </section>
 
             <h1>Adaptabilidade</h1>
 
             <section class="label-form3-container3">
-                <label class="label-form3-flex" for="apartamento"> <input type="checkbox" id="apartamento">Vive em apartamento</label>
+                <label class="label-form3-flex" for="apartamento"> <input type="checkbox" name="adaptability" id="apartamento" value="casa">Vive bem em apartamento</label>
                 
-                <label class="label-form3-flex" for="casa"> <input type="checkbox" id="casa">Vive bem em casa</label>
+                <label class="label-form3-flex" for="casa"> <input type="checkbox" name="adaptability" id="casa" value="apartamento">Vive bem em casa</label>
                 
             </section>
             <h1>Socialização</h1>
 
             <section class="label-form3-container4">
 
-                <label class="label-form3-flex" for="criancas"> <input type="checkbox" id="criancas">Sociável com crianças</label>
+                <label class="label-form3-flex" for="criancas"> <input type="checkbox" name="sociability" id="criancas" value="sociavél com crianças">Sociável com crianças</label>
                 
-                <label class="label-form3-flex" for="gatos"> <input type="checkbox" id="gatos">Sociável com gatos</label>
+                <label class="label-form3-flex" for="gatos"> <input type="checkbox" name="sociability" id="gatos" value="sociável com gatos">Sociável com gatos</label>
                 
-                <label class="label-form3-flex" for="estranhos"> <input type="checkbox" id="estranhos">Sociável com estranhos</label>
+                <label class="label-form3-flex" for="estranhos"> <input type="checkbox" name="sociability" id="estranhos" value="sociável com estranhos">Sociável com estranhos</label>
                 
-                <label class="label-form3-flex" for="caes"> <input type="checkbox" id="caes">Sociável com caes</label>
+                <label class="label-form3-flex" for="caes"> <input type="checkbox" name="sociability" id="caes" value="sociavél com cães">Sociável com caes</label>
             </section>
             <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingBack4()" type="button"><span>&#60; </span> Voltar</button>
@@ -292,40 +292,35 @@
 
                 <section class="section-form3-firstname  label-container">
                     <label for="name">Nome seu nome:</label>
-                    <input placeholder="Digite seu nome" type="text">
+                    <input placeholder="Digite seu nome" type="text" id="tutorName">
                 </section>
-
-                <!-- <section class="section-form3-secondname  label-container">
-                    <label for="name">Sobrenome do Tutor do pet:</label>
-                    <input placeholder="digite seu nome" type="text">
-                </section> -->
 
 
                 <section class="section-form3-email label-container">
 
                     <label for="email">Email:</label>
-                    <input placeholder="Email@gmail.com" type="text">
+                    <input placeholder="Email@gmail.com" type="text" id="tutorEmail">
                 </section>
 
                 <section class="section-form3-telephone label-container">
 
                     <label for="telephone">Telefone:</label>
-                    <input placeholder="5432-9870" type="text">
+                    <input placeholder="5432-9870" type="text" id="phone-fix">
                 </section>
 
                 <section class="section-form3-cellphone label-container">
 
                     <label for="cellphone">Celular:</label>
-                    <input placeholder="11 912345678" type="text">
+                    <input placeholder="11 912345678" type="text" id="phone-cel">
                 </section>
             </section>
 
             <section class="section-form3-container">
-                <select name="contact" id="">
-                    <option value="">Preferência de contato</option>
-                    <option value="">Email</option>
-                    <option value="">Celular</option>
-                    <option value="">Telefone</option>
+                <select name="contact" id="tutorPreferences">
+                    <option value="null">Preferência de contato</option>
+                    <option value="email">Email</option>
+                    <option value="celular">Celular</option>
+                    <option value="telefone">Telefone</option>
                 </select>
             </section>
 
@@ -414,28 +409,5 @@
             </nav>
         </article>
     </footer>
-
-    <script>
-        const inputFile = document.getElementById('img-input');
-    const previewImage = document.getElementById('previewImage');
-
-    // Adicionar um ouvinte para o evento de mudança no input file
-    inputFile.addEventListener('change', function(event) {
-        if (event.target.files.length > 0) {
-            const file = event.target.files[0];
-            
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                previewImage.src = e.target.result;
-                previewImage.style.width = "60vw"
-                previewImage.style.height = "70vh"
-
-                previewImage.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-    </script>
 </body>
 </html>
