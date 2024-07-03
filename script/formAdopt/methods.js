@@ -68,7 +68,7 @@ async function submitAdoptionForm() {
     formData.append('pet', JSON.stringify(PetData));
 
     try {
-        const response = await fetch('http://localhost:8090/adoption', {
+        const response = await fetch('http://localhost:8080/adopter', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
