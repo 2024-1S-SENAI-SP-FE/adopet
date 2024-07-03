@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="style/progressBarAdopt.css">
     <script src="script/formDonate/progressBarDonate.js"></script>
     <script src="script/script.js"></script>
-    <script src="script/filter.js"></script> 
     <script src="script/pagination.js"></script>
     <script src="script/getPet.js"></script>
+    <script src="script/formAdopt/progressBarAdopt.js"></script>
+    <script type="module" src="script/login/firebaseAuth.js"></script>
+    <script type="module" src="script/login/logged.js"></script>
+    <script type="module" src="script/register/register.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -29,11 +33,12 @@
                 <li><a href="sobre-nos.html">Sobre nós</a></li>
             </ul>
 
-            <section class="section-login">
+            <section class="section-login" id="user-select">
 
-                <button>Login</button>
-                <section class="linha"></section>
-                <button>Cadastro</button>
+            </section>
+
+            <section name="user-config" class="section-login config bt1" id="user-config" style="display: none;">
+
             </section>
 
         </nav>
@@ -99,8 +104,8 @@
                     <li>Full name</li>
                 </ul>
                 <ul class="email-name">
-                    <li class="registered-email">SamanthaSmith@gmail.com</li>
-                    <li class="registered-name">samantha smith</li>
+                    <li class="registered-email" id="email"></li>
+                    <li class="registered-name" id="name"></li>
                 </ul>
             </section>
     
@@ -144,7 +149,7 @@
                         <fieldset class="control-form-range">
                             <!-- <legend>Tamanho</legend> -->
                             <p id="display">Porte</p>
-                            <input type="range" name="size" id="size" value="1" min="1" max="4" 
+                            <input type="range" name="size" id="size" value="1" min="1" max="3" 
                             oninput="updateDisplay(this.value)">
                             <div class="control-form-range-img">
                                 <img id="small" src="assets/paw-print.png" alt="porte pequeno">
@@ -153,28 +158,36 @@
                             </div>
                         </fieldset>
                         
-                        <fieldset class="control-form-checkbox">
-                            <!-- <legend>Tipos de Animal</legend> -->
-                            <input type="checkbox" name="cachorro" id="cachorro">
-                            <label for="cachorro" class="cachorro"></label>
-                            <input type="checkbox" name="gato" id="gato">
-                            <label for="gato" class="gato"></label>
+                        <fieldset class="control-form-radio">
+                            <input type="radio" name="specie" id="cachorro" value="CACHORRO">
+                            <label for="cachorro">
+                                <div class="input-image"></div>
+                            </label>
+                            
+                            <input type="radio" name="specie" id="gato" value="GATO">
+                            <label for="gato">
+                                <div class="input-image"></div>
+                            </label>
                         </fieldset>
-                        <!-- ------- COR E NOME (nao tinha no filtro do adote.html) -->
-                         <fieldset>
+                         <fieldset class="control-form-info">
                              <select name="color" id="color">
                                  <option value="">Cor predominante</option>
+                                 <option value="desconhecida">outra</option>
+                                 <option value="preto">preto</option>
+                                 <option value="caramelo">caramelo</option>
+                                 <option value="branco">branco</option>
+                                 <option value="marrom">marrom</option>
+                                 <option value="cinza">cinza</option>
                              </select>
-                             <label id="namePet-form1" for="namePet">Qual o nome do pet</label>
+                             <label id="namePet-form1" for="namePet">Qual o nome do pet:</label>
                              <input type="text" name="name" placeholder="">
                          </fieldset>
-                        <!-- ------- COR E NOME (nao tinha no filtro do adote.html) -->
                        
                     </form>
                 </section>
             </section>
             
-            <section class="btn-box1">
+            <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingBack1()" type="button"><span>&#60; </span> Voltar</button>
                 <button class="go-page-btn" onclick="movingArrow2()" type="button">Continue <span> &#62;</span></button>
             </section>
@@ -185,20 +198,14 @@
             Atenção as fotos devem mostrar somente o pet </p>
 
             <br>
-            <!-- <textarea name="" id="">
-                1.foto
-            </textarea>
-            <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera"> -->
+           
              <section class="section-pictures">
-
-                 <!-- <article class="article-pictures">
-                </article> -->
                 
-                <input id="img-input" type="file" class="input-cam-container"> </input>
+                <input id="img-input" type="file" class="input-cam-container" >
                 <label class="label-form-class" for="img-input">
                     <h1 class="h1-form2">1.Foto</h1>
 
-                    <img class="cam-img" src="assets/camPicture.svg" alt="foto de uma camera">
+                    <img class="cam-img" id="previewImage" src="assets/camPicture.svg" alt="foto de uma camera">
 
                 </label>
                
@@ -218,25 +225,25 @@
 
                     <label class="label-form3-flex" for="docil"> <input type="checkbox" id="docil">Dócil</label>
 
-                    <label class="label-form3-flex" for="agressivo"> <input type="checkbox" id="agressivo"></input>Agressivo</label>
+                    <label class="label-form3-flex" for="agressivo"> <input type="checkbox" id="agressivo">Agressivo</label>
                    
 
-                    <label class="label-form3-flex" for="sociavel" ><input type="checkbox" id="sociavel"></input>Sociável</label>
+                    <label class="label-form3-flex" for="sociavel" ><input type="checkbox" id="sociavel">Sociável</label>
                     
 
-                    <label class="label-form3-flex" for="timido"><input type="checkbox" id="timido"></input>Tímido</label>
+                    <label class="label-form3-flex" for="timido"><input type="checkbox" id="timido">Tímido</label>
                     
 
-                    <label class="label-form3-flex" for="independente"><input type="checkbox" id="independente"></input>Independente</label>
+                    <label class="label-form3-flex" for="independente"><input type="checkbox" id="independente">Independente</label>
                     
 
-                    <label class="label-form3-flex" for="brincalhao"><input type="checkbox" id="brincalhao"></input>Brincalhão</label>
+                    <label class="label-form3-flex" for="brincalhao"><input type="checkbox" id="brincalhao">Brincalhão</label>
                     
 
-                    <label class="label-form3-flex" for="calmo"><input type="checkbox" id="calmo"></input>Calmo</label>
+                    <label class="label-form3-flex" for="calmo"><input type="checkbox" id="calmo">Calmo</label>
                     
 
-                    <label class="label-form3-flex" for="carente"> <input type="checkbox" id="carente"></input>Carente</label>
+                    <label class="label-form3-flex" for="carente"> <input type="checkbox" id="carente">Carente</label>
 
                 </section>
 
@@ -284,7 +291,7 @@
             <section class="section-form4-input-container1">
 
                 <section class="section-form3-firstname  label-container">
-                    <label for="name">Nome do atual Tutor do pet:</label>
+                    <label for="name">Nome seu nome:</label>
                     <input placeholder="Digite seu nome" type="text">
                 </section>
 
@@ -331,7 +338,7 @@
         <form action="" id="form5">
             <h1>Termo de Doação de Animal</h1>
 
-            <p>Eu,<span>___________</span> declaro que</p>
+            <p>Eu,<span id="name-terms">___________</span> declaro que</p>
 
             <ol>
                 <li>Doação do Animal:</li>
@@ -407,5 +414,28 @@
             </nav>
         </article>
     </footer>
+
+    <script>
+        const inputFile = document.getElementById('img-input');
+    const previewImage = document.getElementById('previewImage');
+
+    // Adicionar um ouvinte para o evento de mudança no input file
+    inputFile.addEventListener('change', function(event) {
+        if (event.target.files.length > 0) {
+            const file = event.target.files[0];
+            
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+                previewImage.style.width = "60vw"
+                previewImage.style.height = "70vh"
+
+                previewImage.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
 </body>
 </html>
