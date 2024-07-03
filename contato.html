@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/section.css">
     <link rel="stylesheet" href="/style/contact.css">
-
+    <link rel="stylesheet" href="/style/modal.css">
+    <script src="/script/formAdopt/progressBarAdopt.js"></script>
+    <script type="module" src="/script/login/firebaseAuth.js"></script>
+    <script type="module" src="/script/login/logged.js"></script>
+    <script type="module" src="/script/register/register.js"></script>
+    <script type="module" src="/script/resetPassword/reset.js"></script>
 </head>
 <body>
     <header class="header">
@@ -18,18 +23,23 @@
 
                 <li><a href="/home.html"><img src="/assets/ADOPET.svg" alt=""></a></li>
                 <li><a href="/adote.html">Adote</a></li>
-                <li><a href="">Doe</a></li>
+                <li><a id="doe">Doe</a></li>
                 <li><a href="/contato.html">Contato</a></li>
                 <li><a href="/sobre-nos.html">Sobre nós</a></li>
             </ul>
 
-            <section class="section-login">
+            <section class="section-login" id="user-select">
 
-                <button>Login</button>
-                <section class="linha"></section>
-                <button>Cadastro</button>
+                <button id="loginUser">Login</button>
+                <section class="linha" id="line"></section>
+                <button id="registerUser">Cadastro</button>
 
             </section>
+
+            <section name="user-config" class="section-login config bt1" id="user-config" style="display: none;">
+
+            </section>
+
 
         </nav>
     </header>
@@ -45,7 +55,9 @@
 
         <section class="section-form">
 
-            <form name="form" id="form" class="form" action="">
+            <form name="form" id="form" class="form" action="https://formsubmit.co/ajax/ericsouza94895@gmail.com"
+            method="POST"
+            data-form>
 
                 <h1>Formulário de Contato</h1>
 
@@ -53,25 +65,150 @@
                 <input class="other-input" placeholder="Nome e Sobrenome" id="name" name="name" type="text">
 
                 <label  for="telefone" id="name" name="phone" type="text">Telefone</label>
-                <input class="other-input" placeholder="Telefone com DDD" type="text">
+                <input class="other-input" placeholder="Telefone com DDD" id="phone" type="text">
 
                 <label  for="email" id="email" name="email" type="text">Email</label>
-                <input class="other-input" placeholder="Email" type="text">
+                <input class="other-input" placeholder="Email" type="text" id="email" required>
 
                 <label  for="title" id="title" name="title" type="text">Título</label>
-                <input class="other-input" placeholder="Assunto da mensagem" type="text">
+                <input class="other-input" placeholder="Assunto da mensagem" type="text" id="title">
 
               
                 <label for="message" id="message" name="message" type="text">Mensagem</label>
-                <textarea class="textarea-message" placeholder="Mensagem" type="text"></textarea>
+                <textarea class="textarea-message" id="message" placeholder="Mensagem" type="text"></textarea>
              
                 <section class="botao">
-                    <button type="button">Enviar</button>
+                    <button type="submit" data-button>Enviar</button>
                 </section>
             
             </form>
 
         </section>
+
+        <div class="modal" id="modal">
+
+            <figure class="figure"><img src="assets/gatolaranja.png" alt=""></figure>
+
+            <section class="modal-content">
+
+
+                <section class="modal-header">
+
+                    <h2 id="title-modal" class="newuser">New User</h2>
+
+                    <span class="modal-close" id="modalClose">&#10006</span>
+
+                </section>
+
+                <form class="modal-form-register" id="register">
+
+                    <section id="signUpMessage" class="messageDiv" style="display:none;"></section>
+
+
+                    <section class="input-container">
+                        <i class="icon">&#128100;</i>
+                        <input type="text" id="register-name" placeholder="Nome">
+                    </section>
+                    <section class="input-container">
+                        <i class="icon">&#128100;</i>
+                        <input type="text" id="register-surname" placeholder="Sobrenome">
+                    </section>
+                    <section class="input-container">
+                        <i class="icon">&#9993;</i>
+                        <input type="email" id="register-email" placeholder="E-mail">
+                    </section>
+                    <section class="input-container">
+                        <i class="icon">&#128273;</i>
+                        <input type="password" id="register-password" placeholder="Senha">
+                    </section>
+
+                </form>
+
+                <footer class="modal-footer" id="footer-register" style="padding-top: 30px;">
+
+                    <button class="btn1" type="button" id="register-btn">
+                        Save
+                    </button>
+
+                    <section class="alternative-register">
+                        <hr class="right">
+                        <p>ou cadastre-se com</p>
+                        <hr class="left">
+                    </section>
+
+                    <img src="assets/google.png" alt="">
+
+                    <section class="ownaccount">
+                        <span>Já tem uma conta? Faça</span><a id="login-anchor"> login</a>
+                    </section>
+
+                </footer>
+
+
+                <form class="modal-form-login" id="login">
+
+                    <section id="signInMessage" class="messageDiv" style="display:none;"></section>
+
+                    <section class="input-container">
+                        <i class="icon">&#9993;</i>
+                        <input type="email" id="login-email" placeholder="E-mail">
+                    </section>
+                    <section class="input-container">
+                        <i class="icon">&#128273;</i>
+                        <input type="password" id="login-password" placeholder="Senha">
+                    </section>
+
+                    <section class="forget-password">
+                        <a id="reset-password">Esqueceu a senha?</a>
+                    </section>
+
+                </form>
+
+
+                <footer class="modal-footer" id="footer-login">
+
+                    <button class="btn1" type="button" id="login-btn">
+                        Save
+                    </button>
+
+                    <section class="alternative-login">
+                        <hr class="right">
+                        <p>ou entre com</p>
+                        <hr class="left">
+                    </section>
+
+
+                    <img src="assets/google.png" alt="">
+
+                    <section class="firstregister">
+                        <span>Não tem uma conta?</span><a id="register-anchor"> Cadastre-se</a>
+                    </section>
+
+                </footer>
+
+                <form action="" class="modal-form-reset-password" id="form-reset-password">
+
+                    <section id="resetPasswordMessage" class="messageDiv" style="display:none;"></section>
+
+                    <section class="input-container">
+                        <i class="icon">&#9993;</i>
+                        <input type="email" id="resetPasswordEmail" placeholder="Enter your email">
+                    </section>
+
+                </form>
+
+                <footer class="modal-footer" id="footer-reset-password">
+
+                    <button class="btn1" type="button" id="resetPasswordBtn">
+                        Save
+                    </button>
+
+                </footer>
+
+            </section>
+
+        </div>
+
     </main>
 
     <footer class="footer">
@@ -111,5 +248,39 @@
             </nav>
         </article>
     </footer>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("YOUR_USER_ID"); // Substitua YOUR_USER_ID pelo seu User ID do EmailJS
+    })();
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // impede o envio padrão do formulário
+
+        // Captura os valores dos campos do formulário
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const title = document.getElementById('title').value;
+        const message = document.getElementById('message').value;
+
+        // Envia o email usando EmailJS
+        emailjs.send('service_po6inr1', 'YOUR_TEMPLATE_ID', {
+            name: name,
+            phone: phone,
+            email: email,
+            title: title,
+            message: message
+        })
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Email enviado com sucesso!');
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Falha ao enviar o email. Tente novamente.');
+        });
+    });
+</script>
 </body>
 </html>

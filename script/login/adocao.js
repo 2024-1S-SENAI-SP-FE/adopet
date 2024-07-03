@@ -22,7 +22,7 @@ const messageNotLogged = () => {
 
 onAuthStateChanged(auth, (user) => {
     if (!user) {
-    alert('Você deve fazer um login para poder ir para a página de adoção', 'signInMessage');
+    alert('Você deve fazer login para poder ir para a página de adoção', 'signInMessage');
       }else{
         window.location.href = 'adocao.html'
       }
