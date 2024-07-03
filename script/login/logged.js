@@ -31,10 +31,9 @@ onAuthStateChanged(auth, (user) => {
                     document.getElementById('user-select').innerHTML = `<button id="user-selected"> ${userData.Name}                        
                     </button>`
                 document.getElementById('user-selected').addEventListener('click', userOptions)
-                    // document.getElementById('user-select').innerHTML = `<button>${userData.Name}</button>`
                     localStorage.setItem('userData', JSON.stringify(userData));
                     document.getElementById('email').innerText = userData.email
-                    document.getElementById('name').innerText = userData.Name
+                    document.getElementById('name').innerText = userData.Name +" "+ userData.surName
                   
 
                 }

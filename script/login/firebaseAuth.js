@@ -145,7 +145,7 @@ const UrlAdote = () => {
 onAuthStateChanged(auth, (user) => {
     if (!user) {
     openModalLogin()
-    showMessage('Você deve fazer um login para poder ir para a página de adoção', 'signInMessage');
+    showMessage('Você deve fazer um login para poder ir para a página de doação de pets', 'signInMessage');
       }else{
         window.location.href = 'doe.html'
       }

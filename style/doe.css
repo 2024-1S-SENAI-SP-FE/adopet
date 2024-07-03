@@ -112,17 +112,17 @@
     background-color: #ffff;
 }
 
-*/
+
 
 /* ---- Pagina 1 Form 0---- */
-.adoptPage1 {
+/* .adoptPage1 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     display: none;
     border: solid #000000;
-}
+} */
 
 .adoptPage2 {
     /* display: flex; */

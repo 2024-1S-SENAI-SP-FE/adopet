@@ -1,19 +1,6 @@
-let termsCheckbox = document.getElementById('terms').checked
-const submitButton = document.getElementById("submit-btn");
 
 
-console.log(termsCheckbox)
-if (termsCheckbox) {
-    submitButton.disabled = false
-    termsCheckbox = "concordo"
-} else {
-    alert('você deve aceitar os termos e condições')
-    termsCheckbox = "discordo"
-    console.log(termsCheckbox)
-    submitButton.disabled = true
-    return "você não aceitou os termos"
-}
-console.log(termsCheckbox)
+
 
 // if(termsCheckbox){
 // submitButton.disabled = false
@@ -36,7 +23,7 @@ async function submitAdoptionForm() {
 
     const formData = new URLSearchParams();
 
-    const name = userData.Name;
+    const name = userData.Name +" "+ userData.surName;
     const email = userData.email;
     const address = document.getElementById("address").value;
     const cep = document.getElementById("cep").value;
@@ -50,7 +37,21 @@ async function submitAdoptionForm() {
     const reasonsAdoption = document.getElementById('reasons-adoption').value;
     const numberChild = document.getElementById('number-child').value
     const numberAdults = document.getElementById('number-adults').value;
-    const termsCheckbox = "concordo"
+    let termsCheckbox = document.getElementById('terms-conditions').checked;
+    // const submitButton = document.getElementById("submit-btn");
+
+
+        console.log(termsCheckbox)
+        if (termsCheckbox) {
+            termsCheckbox = "concordo"
+            console.log(termsCheckbox)
+        } else {
+            alert('você deve aceitar os termos e condições')
+            termsCheckbox = "discordo"
+            console.log(termsCheckbox)
+            return;
+        }
+        console.log(termsCheckbox)
 
 
 

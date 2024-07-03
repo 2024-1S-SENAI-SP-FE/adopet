@@ -12,10 +12,7 @@
     <link rel="stylesheet" href="style/doe.css">
     <link rel="stylesheet" href="style/progressBarAdopt.css">
     <script src="script/formDonate/progressBarDonate.js"></script>
-    <script src="script/formAdopt/progressBarAdopt.js"></script>
-    <script type="module" src="script/login/firebaseAuth.js"></script>
     <script type="module" src="script/login/logged.js"></script>
-    <script type="module" src="script/register/register.js"></script>
     <script src="script/formDonate/post.js"></script>
 
 </head>
@@ -122,7 +119,7 @@
                             <!-- <legend>Idade</legend> -->
                             <select name="age" id="situation-select">
                                 <option value="todos">Situacao</option>
-                                <option value="adoçao">Para adoção</option>
+                                <option value="adoção">Para adoção</option>
                                 <option value="perdido">Perdido</option>
                                 <option value="tutor">Procurando tutor</option>
                             </select>
@@ -336,7 +333,7 @@
         <form action="" id="form5">
             <h1>Termo de Doação de Animal</h1>
 
-            <p>Eu,<span id="name-terms">___________</span> declaro que</p>
+            <p>Eu <span id="name-terms"></span> <span id="surName"></span>, declaro que</p>
 
             <ol>
                 <li>Doação do Animal:</li>
@@ -414,6 +411,12 @@
     </footer>
 
     <script>
+        
+const userData = JSON.parse(localStorage.getItem('userData'));
+ document.getElementById('name-terms').innerText = userData.Name +" "+userData.surName
+
+
+
         const inputFile = document.getElementById('img-input');
 const previewImage = document.getElementById('previewImage');
 

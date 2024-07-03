@@ -217,7 +217,7 @@ input[type="checkbox"]:checked+label.cachorro::after {
     background-color: transparent;
     width: 70px;
     height: 70px;
-    transform: translate(-55%, -55%) ; /
+    transform: translate(-50%, -50%) ; 
 }
 
 .control-form-radio input[type="radio"] {
