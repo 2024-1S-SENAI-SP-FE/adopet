@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
-.main{
+.main {
     margin-left: 6%;
     margin-right: 6%;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 
-.profile-section-card{
+.profile-section-card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,67 +35,70 @@
     position: relative;
 }
 
-.adoptPage1{
+.adoptPage1 {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-.button-section{
+.button-section {
     display: flex;
     align-items: center;
-    
+
     width: 100%;
     /* border: solid black; */
 }
 
 /* -----Fontes e tamanhos <P> <li> etc------ */
 
-.email-fullName, .email-name, .paragraph{
+.email-fullName,
+.email-name,
+.paragraph {
     font-family: inter;
 }
 
-.email-fullName, .email-name{
+.email-fullName,
+.email-name {
     height: 60%;
 }
 
-.email-fullName{
+.email-fullName {
     color: #0C0C0C;
     font-size: 1.2rem;
     font-weight: bolder;
 }
 
-.registered-email{
+.registered-email {
     color: #0A453A;
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 15%;
 }
 
-.registered-name{
+.registered-name {
     font-size: 1.1rem;
     font-weight: 500;
 }
 
-.emailUsername{
+.emailUsername {
     margin-bottom: 25%;
 }
 
-.paragraph{
+.paragraph {
     width: 100%;
     /* font-size: ; */
 }
 
 /* ----------- BOTOES --------- */
 
-.input-section{
+.input-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 120%;
 }
 
-.go-page-btn{
+.go-page-btn {
     /* padding-bottom: 30%; */
     border: solid var(--dark-red) 1.5px;
     height: 48px;
@@ -107,10 +110,12 @@
 
 .input {
     background-color: #ffff;
-} */
+}
+
+*/
 
 /* ---- Pagina 1 Form 0---- */
-.adoptPage1{
+.adoptPage1 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -119,10 +124,15 @@
     border: solid #000000;
 }
 
+.adoptPage2 {
+    /* display: flex; */
+    flex-direction: column;
+}
+
 /* -----  FORM 1------ */
 
 /* -----FORM 2------ */
-#form2{
+#form2 {
     display: flex;
     flex-direction: column;
     display: none;
@@ -133,7 +143,7 @@
     margin-top: 2%;
 }
 
-.section-pictures{
+.section-pictures {
     /* border: dashed 1px gray;
     border-width: 3px;
     border-radius: 12px; */
@@ -146,7 +156,7 @@
 
 
 
-.article-pictures{
+.article-pictures {
     text-align: left;
     height: 5%;
     padding-left: 2%;
@@ -154,10 +164,10 @@
     /* border: solid orange; */
     /* justify-content: center;
     align-items: center; */
-    
+
 }
 
-.input-cam-container{
+.input-cam-container {
     width: 100%;
     height: 100%;
     /* border: solid 2px blue; */
@@ -172,34 +182,33 @@
 
 }
 
-.h1-form2{
+.h1-form2 {
     position: absolute;
     top: 5%;
     left: 3%;
 }
 
-.cam-img{
+.cam-img {
     /* width: ; */
     height: 7%;
     width: 7%;
 }
 
-.input-cam-container{
+.input-cam-container {
     border: solid red;
 }
 
-.input-cam-container[type="file"]{
+.input-cam-container[type="file"] {
     display: none;
 }
 
-.label-form-class{
+.label-form-class {
     display: flex;
     justify-content: center;
-    padding-top: 18%;
-    padding-bottom: 18%;
+    padding-top: 8%;
     border: solid purple;
-    width: 85%;
-    height: 100%;
+    width: 60vw;
+    height: 70vh;
     border: dashed 1px #868686;
     border-width: 3px;
     border-radius: 12px;
@@ -209,18 +218,20 @@
 
 }
 
-.paragraph, .form2{
+.paragraph,
+.form2 {
     font-family: inter;
     font-weight: 450;
 }
-.h1-form2{
+
+.h1-form2 {
     color: gray;
     font-family: Inter;
     font-weight: 450;
 }
 
 /* -----FORM 3------ */
-#form3{
+#form3 {
     display: flex;
     flex-direction: column;
     display: none;
@@ -228,63 +239,71 @@
     /* border: solid blue; */
     margin-top: 4%;
 
-    
+
 }
 
 .form3 input,
-.form3 h1{
+.form3 h1 {
     font-family: Inter;
     font-weight: 450;
     font-size: 1.5rem;
 }
 
-.form3 label{
+.form3 label {
     font-family: Inter;
     font-weight: 500;
 
 }
 
 
-.form3 input[type="checkbox"]  {
-    display:block;
+.form3 input[type="checkbox"] {
+    display: block;
     /* visibility: hidden; */
     border: white;
 }
 
-.form3 input{
+.form3 input {
     border: white;
+    all: unset;
+    display: inline-block;
+    width: 60px;
+    
 }
 
-.form3 label{
-    cursor: pointer; /* Change cursor to pointer on hover */
+.form3 label {
+    cursor: pointer;
 }
 
- /* .form3 input[type="checkbox"]{
-    display: none;
-} */
 .form3 input[type="checkbox"] {
-    /* Fazer a caixa invisivel */
     opacity: 0;
     position: absolute;
     width: 0;
     height: 0;
     overflow: hidden;
     clip: rect(0 0 0 0);
-    margin: -1px; /* Fix for older browsers */
+    margin: -1px;
+    
+    
+}
+.form3 input:checked{
+    background-repeat: no-repeat;
+  background-image: url("../assets/pets-allowed.png");
+  width: 100%;
+  height: 100%;
 }
 
+
 .form3 input[type="checkbox"]:checked {
-    /* Voltar a ser visivel */
     opacity: 1;
-    position: static; 
-    width: auto;
+    position: static;
+    width: 17px;
     height: auto;
     overflow: visible;
     clip: auto;
     margin: 0;
-  }
+}
 
-.label-form3-container1{
+.label-form3-container1 {
     display: flex;
     /* border: solid black; */
     width: 100%;
@@ -295,12 +314,12 @@
     gap: 1.5%;
 }
 
-.label-form3-container1 label{
+.label-form3-container1 label {
     margin-bottom: 1%;
 }
 
 
-.label-form3-container2{
+.label-form3-container2 {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -308,7 +327,8 @@
     margin-top: 1.3%;
     margin-bottom: 5%;
 }
-.label-form3-container3{
+
+.label-form3-container3 {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -317,8 +337,7 @@
     margin-top: 2.6%;
     gap: 5%;
 }
-
-.label-form3-container4{
+.label-form3-container4 {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -326,23 +345,23 @@
     margin-top: 1.3%;
 }
 
-.label-form3-container4 label:nth-child(4){
+.label-form3-container4 label:nth-child(4) {
     width: 20%;
 }
+
 .label-form3-container4 label:nth-child(2),
-.label-form3-container4 label:nth-child(1)
-{
+.label-form3-container4 label:nth-child(1) {
     width: 23%;
 }
 
 
-.label-form3-flex{
+.label-form3-flex {
     display: flex;
     width: 20%;
 
     border: solid gray;
-    border-width: 1.8px;
-    border-radius: 4px;
+    border-width: 1px;
+    border-radius: 10px;
     padding-top: 0.6%;
     padding-bottom: 0.6%;
     padding-left: 0.6%;
@@ -350,54 +369,14 @@
     margin-top: 0%;
 }
 
-
-/* .input-form3-container1 label,
-.input-form3-container2 label,
-.input-form3-container3 label,
-.input-form3-container4 label{
-    border: solid rgb(182, 182, 182);
-    margin-top: 0%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    border-radius: 6px;
-    border-width: 1.6px;
-    width: 100%;
-    
-} */
-
-
-/* 
-
-.input-form3-container1 input{
-    width: 2%;
-}
-*/
-
-.input-form3-container1{
+.input-form3-container1 {
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;
     gap: 2%;
-} 
-
-/* 
-
-.input-form3-container4 input{
-    width: 25%;
 }
-.input-form3-container4 input:nth-child(4){
-    width: 22%;
-}
-.input-form3-container4 input:nth-child(3){
-    width: 25%;
-}
-.input-form3-container4 input:nth-child(1){
-    width: 27%;
-} */
 
-
-/* -----FORM 4------ */
-#form4{
+#form4 {
     display: flex;
     flex-direction: column;
     display: none;
@@ -405,10 +384,10 @@
     /* border:solid #000000; */
     width: 85%;
     margin-top: 4%;
-    
+
 }
 
-.section-form4-input-container1{
+.section-form4-input-container1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -416,18 +395,18 @@
     width: 100%;
 }
 
-.section-form4-input-container1 input{
+.section-form4-input-container1 input {
     width: 30%;
 }
 
-.label-container{
+.label-container {
     display: flex;
     flex-direction: column;
     width: 47%;
     height: 100%;
 }
 
-.label-container input{
+.label-container input {
     display: flex;
     width: 100%;
     height: 100%;
@@ -436,25 +415,28 @@
 
 }
 
-.label-container label{
-    font-family: Inter;
-    font-weight: 500;
-}
-.label-container input{
-    margin-top: 2%;
-    margin-bottom: 9%;
-}
-.label-container input::placeholder{
+.label-container label {
     font-family: Inter;
     font-weight: 500;
 }
 
-.section-form3-container{
+.label-container input {
+    margin-top: 2%;
+    margin-bottom: 9%;
+}
+
+.label-container input::placeholder {
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.section-form3-container {
     text-align: left;
     width: 100%;
     margin-bottom: 10%;
 }
-.section-form3-container select{
+
+.section-form3-container select {
     display: flex;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -468,41 +450,39 @@
 
 }
 
-/* -----FORM 5------ */
-#form5{
+#form5 {
     display: flex;
     flex-direction: column;
     display: none;
     gap: 1rem;
     width: 89%;
-    margin-top: 2%;    
+    margin-top: 2%;
 }
 
-#form5 h1, li, p{
+#form5 h1,
+li,
+p {
     font-family: Inter;
     font-weight: 400;
-    
 }
 
-/* #form5 ul{
-    list-style:initial;
-} */
-#form5 ol{
-    list-style:upper;
+#form5 ol {
+    list-style: upper;
 }
-#form5 ul{
+
+#form5 ul {
     display: flex;
     flex-direction: column;
-    list-style:initial;
+    list-style: initial;
     width: 80%;
 }
 
 .ul-form5-container li:nth-child(2),
-.ul-form5-container li:nth-child(8)
-{
+.ul-form5-container li:nth-child(8) {
     margin-left: 2%;
 
 }
+
 .ul-form5-container li:nth-child(3),
 .ul-form5-container li:nth-child(4),
 .ul-form5-container li:nth-child(5),
@@ -511,39 +491,22 @@
 .ul-form5-container li:nth-child(9),
 .ul-form5-container li:nth-child(10),
 .ul-form5-container li:nth-child(11),
-.ul-form5-container li:nth-child(12)
-{
+.ul-form5-container li:nth-child(12) {
     margin-left: 4%;
-
 }
 
-
-/* :nth-child(3) */
-/* -----FORM 6------ */
-
-/* #form6{
-    display: flex;
-    flex-direction: column;
-    display: none;
-    
-} */
-
-/* -------------- Botoes */
-.btn-box{
+.btn-box {
     height: 48px;
 }
 
-.go-page-btn{
-    width:150px;
+.go-page-btn {
+    width: 150px;
 }
 
 .steps-label::before,
- .label-container label:before,
- #namePet-form1::before,
- .form3 label:before,
- .form2 label:before
- {
+.label-container label:before,
+#namePet-form1::before,
+.form3 label:before,
+.form2 label:before {
     display: none;
-    /* background-color: transparent; */
 }
-
