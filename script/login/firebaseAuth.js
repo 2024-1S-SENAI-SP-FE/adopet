@@ -147,7 +147,7 @@ onAuthStateChanged(auth, (user) => {
     openModalLogin()
     showMessage('Você deve fazer um login para poder ir para a página de adoção', 'signInMessage');
       }else{
-        window.location.href = 'adocao.html'
+        window.location.href = 'doe.html'
       }
 })
 }
