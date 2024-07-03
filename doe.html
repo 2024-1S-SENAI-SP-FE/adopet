@@ -122,6 +122,15 @@
                         <fieldset class="control-form-options">
                             <!-- <legend>Idade</legend> -->
                             <select name="age" id="age-select">
+                                <option value="todos">Situacao</option>
+                                <option value="adocao">Para adoção</option>
+                                <option value="perdido">Perdido</option>
+                                <option value="tutor">Procurando tutor</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="control-form-options">
+                            <!-- <legend>Ordenar</legend> -->
+                            <select name="age" id="age-select">
                                 <option value="todos">Idade</option>
                                 <option value="filhote">Filhote (3 a 5 meses)</option>
                                 <option value="adulto">Adulto (1 a 7 anos)</option>
@@ -129,17 +138,9 @@
                             </select>
                         </fieldset>
                         <fieldset class="control-form-options">
-                            <!-- <legend>Ordenar</legend> -->
-                            <select name="order" id="order-select">
-                                <option value="todos">ordenar</option>
-                                <option value="A-Z">ordenar de A a Z</option>
-                                <option value="Z-A">ordenar de Z a A</option>
-                            </select>
-                        </fieldset>
-                        <fieldset class="control-form-options">
                             <!-- <legend>Gênero</legend> -->
                             <select name="gender" id="gender-select">
-                                <option value="todos" selected>gênero</option>
+                                <option value="sexo" selected>Sexo</option>
                                 <option value="MACHO">Macho</option>
                                 <option value="FÊMEA">Fêmea</option>
                             </select>
@@ -172,18 +173,15 @@
                              <input type="text" name="name" placeholder="">
                          </fieldset>
                         <!-- ------- COR E NOME (nao tinha no filtro do adote.html) -->
-                        <fieldset class="control-form-buttons">
-                            <button type="reset" class="btn1">Limpar Filtros</button>
-                            <button type="submit" onclick="FilterPet(event)" class="btn2">Buscar</button>
-                        </fieldset>
+                       
                     </form>
                 </section>
             </header>
+            
             <section class="btn-box1">
                 <button class="prev-page-btn" onclick="movingBack1()" type="button"><span>&#60; </span> Voltar</button>
                 <button class="go-page-btn" onclick="movingArrow2()" type="button">Continue <span> &#62;</span></button>
             </section>
-
         </section>
 
         <form action="" id="form2" class="form2">
@@ -196,12 +194,18 @@
             </textarea>
             <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera"> -->
              <section class="section-pictures">
-                <article class="article-pictures">
-                    <h1 class="h1-form2">1.foto</h1>
-                </article>
-                <button type="button" class="button-cam-container">
+
+                 <!-- <article class="article-pictures">
+                </article> -->
+                
+                <input id="img-input" type="file" class="input-cam-container"> </input>
+                <label class="label-form-class" for="img-input">
+                    <h1 class="h1-form2">1.Foto</h1>
+
                     <img class="cam-img" src="/assets/camPicture.svg" alt="foto de uma camera">
-                </button>
+
+                </label>
+               
              </section>
 
              
