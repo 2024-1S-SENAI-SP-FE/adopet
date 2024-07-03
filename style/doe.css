@@ -481,8 +481,9 @@ p {
     font-weight: 400;
 }
 
-#form5 ol {
+#form5 .ol-terms {
     list-style: upper;
+    line-height: 1.7;
 }
 
 #form5 ul {
