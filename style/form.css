@@ -191,48 +191,97 @@ label::before {
 
 input[type="checkbox"]:checked+label.gato::before {
     background-color: var(--red);
-    /* content: ""; */
 }
 
 input[type="checkbox"]:checked+label.gato::after {
     opacity: 1;
-    /* background-color: var(--red); */
-    /* content: url("../assets/labrador-retriever\ \(2\).png"); */
-    /* width: 10%;height: 40%; */
-    /* display: block;
-    position: absolute;
-    top: 10%;
-    left: 19%;
-    transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px; */
 }
 
 input[type="checkbox"]:checked+label.cachorro::before {
     background-color: var(--red);
-    /* content: ""; */
 }
 
 input[type="checkbox"]:checked+label.cachorro::after {
     opacity: 1;
-    /* background-color: var(--red); */
-    /* content: url("../assets/labrador-retriever\ \(2\).png"); */
-    /* width: 10%;height: 40%; */
-    /* display: block;
-    position: absolute;
-    top: 10%;
-    left: 19%;
-    transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px; */
 }
 
+.control-form-radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10%;
+    background-color: var(--yellow);
+    width: 30%;
+}
+.control-form-radio input[type="radio"] + label::before {
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    transform: translate(-55%, -55%) ; /
+}
+
+.control-form-radio input[type="radio"] {
+    display: none;
+    background-color: white; 
+}
+
+.control-form-radio label {
+    cursor: pointer;
+    position: relative;
+    background-repeat: no-repeat;
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%; 
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.control-form-radio input[type="radio"]:checked + label {
+    background-color: var(--red); 
+}
+
+
+.control-form-radio .input-image {
+    width: 100%; 
+    height: 100%; 
+    background-size: cover;
+    display: block;
+    background-color: transparent;
+    border-radius: 50%; 
+}
+
+#cachorro + label {
+    background-image: url("../assets/image\ 168.svg"); 
+}
+
+#gato + label {
+    background-image: url("../assets/cat\ 1.svg"); 
+}
 
 .control-form-buttons {
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-right: 23px;
+}
+
+
+.control-form-info{
+    display: flex;
+    flex-direction: column;
+}
+.control-form-info select{
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.control-form-info label{
+    height: 15px;
+}
+.control-form-info input{
+    width: 100%;
 }
 
 .btn1 {
