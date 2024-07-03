@@ -158,7 +158,7 @@ const urlAtual = window.location.href;
 
 console.log(urlAtual)
 
-if (urlAtual === 'https://2024-1s-senai-sp-fe.github.io/adopet/') {
+if (urlAtual === 'https://2024-1s-senai-sp-fe.github.io/adopet/' || 'https://2024-1s-senai-sp-fe.github.io/adopet/index.html') {
         idBtn.addEventListener('click', UrlAdote);
 }
 
