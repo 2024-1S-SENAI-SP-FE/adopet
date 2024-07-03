@@ -21,9 +21,11 @@
     justify-content: center;
     align-items: center;
     background-color: #F9F9F9;
-    width: 115%;
+    width: 100%;
     height: 25%;
     padding: 3.2%;
+    padding-left: 8%;
+    padding-right: 8%;
     border-radius: 16px;
     border: solid 2px #DFDFDF;
     margin-top: 6%;
@@ -33,8 +35,16 @@
     position: relative;
 }
 
+.adoptPage1{
+    width: 60%;
+}
+
 .button-section{
     display: flex;
+    align-items: center;
+    
+    width: 100%;
+    /* border: solid black; */
 }
 
 /* -----Fontes e tamanhos <P> <li> etc------ */
@@ -97,13 +107,6 @@
     background-color: #ffff;
 } */
 
-/* .input:hover{
-    background-color: var(--red);
-    border: var(--red);
-    color: white;
-    box-shadow: inset 500px 0 0 var(--red);
-    
-}
 /* ---- Pagina 1 Form 0---- */
 .adoptPage1{
     width: 100%;
@@ -117,17 +120,6 @@
 /* -----  FORM 1------ */
 
 
-#form1{
-    display: flex;
-    flex-direction: column;
-    display: none;
-    margin-top: 4%;
-
-}
-
-.label::before{
-    background-color: transparent;
-}
 
 
 /* -----FORM 2------ */
@@ -143,15 +135,17 @@
 }
 
 .section-pictures{
-    border: dashed 1px gray;
+    /* border: dashed 1px gray;
     border-width: 3px;
-    border-radius: 12px;
+    border-radius: 12px; */
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100%;
     width: 100%;
-
 }
+
+
 
 .article-pictures{
     text-align: left;
@@ -179,10 +173,41 @@
 
 }
 
+.h1-form2{
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
 .cam-img{
     /* width: ; */
-    height: 6%;
-    width: 6%;
+    height: 7%;
+    width: 7%;
+}
+
+.input-cam-container{
+    border: solid red;
+}
+
+.input-cam-container[type="file"]{
+    display: none;
+}
+
+.label-form-class{
+    display: flex;
+    justify-content: center;
+    padding-top: 18%;
+    padding-bottom: 18%;
+    border: solid purple;
+    width: 85%;
+    height: 100%;
+    border: dashed 1px #868686;
+    border-width: 3px;
+    border-radius: 12px;
+    /* padding: 40%; */
+    position: relative;
+
+
 }
 
 .paragraph, .form2{
@@ -516,8 +541,10 @@
 .steps-label::before,
  .label-container label:before,
  #namePet-form1::before,
- .form3 label:before
+ .form3 label:before,
+ .form2 label:before
  {
     display: none;
     /* background-color: transparent; */
 }
+
