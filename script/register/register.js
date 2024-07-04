@@ -40,7 +40,7 @@ const openModalRegister = () => {
 
     document.getElementById('title-modal').innerText = "Novo usuario"
     document.getElementById('register-btn').innerText = "Cadastrar"
-    document.querySelector('.modal-content').style.height = "84vh"
+    document.querySelector('.modal-content').style.height = "83vh"
     document.querySelector('.figure').style.height = "15%"
 
 
@@ -51,6 +51,25 @@ const openModalRegister = () => {
         const password = document.getElementById('register-password').value;
         const name = document.getElementById('register-name').value;
         const surName = document.getElementById('register-surname').value;
+
+        if(email == ''){
+            showMessage('O campo de email está vazio, preencha-o para poder prosseguir com o cadastro', 'signUpMessage')
+            return;
+        }
+        if(password == ''){
+            showMessage('O campo de senha está vazio, preencha-o para poder prosseguir com o cadastro', 'signUpMessage')
+            return;
+        }
+        if(name == ''){
+            showMessage('O campo de nome está vazio, preencha-o para poder prosseguir com o cadastro', 'signUpMessage')
+            return;
+        }
+        if(surName == ''){
+            showMessage('O campo de sobrenome está vazio, preencha-o para poder prosseguir com o cadastro', 'signUpMessage')
+            return;
+        }
+
+
 
         const auth = getAuth();
         const db = getFirestore();
@@ -64,15 +83,14 @@ const openModalRegister = () => {
                     surName: surName
                 };
 
-                // showMessage('Account Created Successfully', 'signUpMessage');
-
                 sendEmailVerification(user)
                     .then(() => {
                         showMessage('Email de verificação enviado. Porfavor verifique sua caixa de entrada.', 'signUpMessage');
                     })
                     .catch((error) => {
                         console.error("Erro ao enviar email de verificação", error);
-                        showMessage('Erro ao enviar email de verificação', 'signUpMessage');
+                        showMessage('Erro ao enviar email de verificação, tente novamente', 'signUpMessage');
+                        return;
                     });
 
                 const docRef = doc(db, "users", user.uid);
@@ -88,8 +106,13 @@ const openModalRegister = () => {
             })
             .catch((error) => {
                 const errorCode = error.code;
+                console.error("Erro ao criar usúario: " +error.message)
                 if (errorCode == 'auth/email-already-in-use') {
                     showMessage('Endereço de email já está em uso, volte e faça login !!!', 'signUpMessage');
+                }else if(error.message === 'Firebase: Error (auth/invalid-email).'){
+                    showMessage('Endereço de email inválido', 'signUpMessage');
+                }else if(error.message === 'Firebase: Error (auth/network-request-failed).'){
+                    showMessage('Conecte-se a internet para cadastrar uma conta', 'signUpMessage');
                 } else {
                     showMessage('Erro ao criar o usúario, tente novamente mais tarde', 'signUpMessage');
                 }

@@ -132,34 +132,40 @@ const openModalLogin = () => {
         
     })
     .catch((error) => {
-        console.error("Error logging in:", error);
+        if(error.message === 'Firebase: Error (auth/invalid-email).'){
+            showMessage('Endereço de email inválido', 'signInMessage');
+        }else if(error.message === 'Firebase: Error (auth/network-request-failed).'){
+            showMessage('Conecte-se a internet para fazer o logincom sua conta', 'signInMessage');
+        }else{
         showMessage('Erro ao fazer login: ' + error.message, 'signInMessage');
+        }
+        console.error("Error logging in:", error.message);
     });
 
     })
 }
 
-const UrlAdote = () => {
+const UrlDoeUmPet = () => {
     const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
     if (!user) {
     openModalLogin()
-    showMessage('Você deve fazer um login para poder ir para a página de adoção', 'signInMessage');
+    showMessage('Você deve fazer um login para poder ir para a página de doação de um pet', 'signInMessage');
       }else{
         window.location.href = 'doe.html'
       }
 })
 }
 
-document.getElementById('doe').addEventListener('click', UrlAdote);
+document.getElementById('doe').addEventListener('click', UrlDoeUmPet);
 let idBtn = document.getElementById('doe-btn')
 const urlAtual = window.location.href;
 
 console.log(urlAtual)
 
 if (urlAtual === 'https://2024-1s-senai-sp-fe.github.io/adopet/' || urlAtual === 'https://2024-1s-senai-sp-fe.github.io/adopet/index.html') {
-        idBtn.addEventListener('click', UrlAdote);
+        idBtn.addEventListener('click', UrlDoeUmPet);
 }
 
 
