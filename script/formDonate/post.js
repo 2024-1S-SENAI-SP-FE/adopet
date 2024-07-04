@@ -1,8 +1,4 @@
 
-const userData = JSON.parse(localStorage.getItem('userData'));
-// document.getElementById('name-terms').innerText = userData.Name
-
-
 const RegisterPet = async (event) => {
     event.preventDefault();
 
@@ -21,6 +17,15 @@ const RegisterPet = async (event) => {
     const tutorPhoneFix = document.getElementById('phone-fix').value;
     const tutorPhoneCel = document.getElementById('phone-cel').value;
     const tutorPreferences = document.getElementById('tutorPreferences').value;
+    console.log(situation)
+    console.log(genders)
+    console.log(sizePet)
+    console.log(age)
+    console.log(selectedValue.toUpperCase())
+
+    if(age ){
+
+    }
 
     const formData = new FormData();
     formData.append('name', name);
@@ -28,7 +33,7 @@ const RegisterPet = async (event) => {
     formData.append('size', sizePet);
     formData.append('gender', genders);
     formData.append('situation', situation);
-    formData.append('species', selectedValue);
+    formData.append('species', "CACHORRO");
     formData.append('color', color);
     formData.append('petstory', story);
     formData.append('lastTutorName', nameTutor);
