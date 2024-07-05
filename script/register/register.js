@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, GoogleAuthProvider, signInWithPopup} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"
 
 // const app = initializeApp(firebaseConfig);
@@ -42,6 +42,28 @@ const openModalRegister = () => {
     document.getElementById('register-btn').innerText = "Cadastrar"
     document.querySelector('.modal-content').style.height = "84vh"
     document.querySelector('.figure').style.height = "15%"
+
+    const auth = getAuth();
+
+
+    const googleProvider = new GoogleAuthProvider();
+
+    
+    const googleLoginBtn = document.getElementById('google-login-img');
+googleLoginBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    signInWithPopup(auth, googleProvider)
+    .then((result) => {
+        const user = result.user;
+        showMessage('Login com Google bem-sucedido', 'signInMessage');
+        console.log(user);
+        localStorage.setItem('loggedInUserId', user.uid);
+        window.location.href = 'index.html';
+    }).catch((error) => {
+        console.error("Erro ao fazer login com Google:", error);
+        showMessage('Erro ao fazer login com Google: ' + error.message, 'signInMessage');
+    });
+});
 
 
     const signUp = document.getElementById('register-btn');
