@@ -235,6 +235,9 @@ function movingBack4() {
     const form3 = document.getElementById("form3") 
     form3.style.display = "none";
 
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "none";
+
     const redLine3 = document.getElementById("redLine3")
     redLine3.style.visibility = "hidden";
 
@@ -245,7 +248,6 @@ function movingBack4() {
     const redLine5 = document.getElementById("redLine5")
     redLine5.style.visibility = "visible";
     redLine5.style.color = "rgb(255, 0, 0)";
-    
 
     const pawIcon2 = document.getElementById("pawIcon2")
     pawIcon2.src = "assets/pawIcon.svg";
@@ -310,6 +312,9 @@ function movingBack5() {
 
     const form4 = document.getElementById("form4") 
     form4.style.display = "none";
+
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "none";
 
 
     const redLine4 = document.getElementById("redLine4")

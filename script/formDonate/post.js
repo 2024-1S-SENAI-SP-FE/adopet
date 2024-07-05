@@ -1,4 +1,3 @@
-
 const RegisterPet = async (event) => {
     event.preventDefault();
 
@@ -17,15 +16,52 @@ const RegisterPet = async (event) => {
     const tutorPhoneFix = document.getElementById('phone-fix').value;
     const tutorPhoneCel = document.getElementById('phone-cel').value;
     const tutorPreferences = document.getElementById('tutorPreferences').value;
+    const warning = document.getElementById('warning')
+    if(age == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(genders == ''){
+        warning.innerText = 'Preencha o campo que especifica o gênero do Pet isso é importante.'
+    }
+    if(sizePet == ''){
+        warning.innerText = 'Preencha o campo de porte/tamanho do pet do Pet isso é importante.'
+    }
+    if(name == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(situation == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(color == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(story == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(nameTutor == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(emailTutor == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(tutorPhoneFix == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(tutorPhoneCel == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    if(tutorPreferences == ''){
+        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    }
+    
     console.log(situation)
     console.log(genders)
     console.log(sizePet)
     console.log(age)
     console.log(selectedValue.toUpperCase())
 
-    if(age ){
 
-    }
+
 
     const formData = new FormData();
     formData.append('name', name);
@@ -87,6 +123,13 @@ const RegisterPet = async (event) => {
 
         if (response.ok) {
             window.alert('Pet Registered!');
+            alert('Adoption form submitted successfully!');
+            const form5 = document.getElementById("form5") 
+            form5.style.display = "none";
+            const sucess = document.getElementById("sucess-form") 
+            sucess.style.display = "block";
+            const imgSucess = document.getElementById('img-pet-sucess')
+            imgSucess.src = `'http://localhost:8080/pet/PetData.photopet_url`
             document.getElementById('petForm').reset();
             GetPet(); 
         } else {
