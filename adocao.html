@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/adocao.css">
     <link rel="stylesheet" href="style/progressBarAdopt.css">
     <link rel="stylesheet" href="style/formAdocao.css">
+    <link rel="stylesheet" href="style/submitedForm.css">
     <script src="script/formAdopt/progressBarAdopt.js"></script>
     <!-- <script type="module" src="/script/login/logged.js"></script> -->
     <script type="module" src="script/login/adocao.js"></script>
@@ -90,6 +91,11 @@
 
         </header>
 
+        <section class="warning-form" id="warning-inputs" style="display: none;">
+            <h1>Aviso Importante</h1>
+            <p id="warning"></p>
+        </section>
+
         <section id="adoptPage1" class="adoptPage1">
 
             <section class="profile-section-card">
@@ -138,7 +144,6 @@
         <form id="form2" class="house-info-form" action="">
 
             <section class="house-info-form-input-radio">
-                <label for="adress" name="adress">Voce ja teve outros animais?</label>
 
                 <label for="info-pets1">Voce ja teve outros animais?</label>
                 <input type="radio" id="info-pets" name="info-pets" value="TENHO">
@@ -234,18 +239,34 @@
 
             <section class="btn-box">
                 <button class="prev-page-btn" onclick="movingArrow4()" type="button"><span>&#60; </span> Voltar</button>
-                <button id="submit-btn" class="go-page-btn" onclick="submitAdoptionForm()" type="button">Continue <span>
+                <button id="submit-btn" class="go-page-btn" onclick="submitAdoptionForm()" type="button">Enviar formulario <span>
                         &#62;</span></button>
             </section>
 
-        </form>
-        <!-- <form id="form6" action="">
+            </form>
 
-            <img src="" alt="">
-            <section class="btn-box2">
-                <button onclick="" type="button">Ir para meu perfil</button>
+            <section class="sucess" id="sucess-form" style="display: none;">
+
+                <article class="text-form">
+                    <h1>Sua solicitação de adoção foi enviada</h1>
+        
+                    <p>Aguarde entraremos em contato com você dentro de 9 dias</p>
+                </article>
+        
+                <figure class="dog-form-submited">
+        
+                    <img id="img-pet-sucess" src="assets/petSubmitedForm.png" alt="">
+        
+                </figure>
+        
+                <section class="button-back-profile">
+        
+                    <button>Ir para o Perfil</button>
+        
+                </section>
+        
             </section>
-        </form> -->
+        
     </main>
 
     <footer class="footer">
