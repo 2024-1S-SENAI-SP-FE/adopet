@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCwA97_hsaNObtZU1kUYoElDta5w7mcMh4",
@@ -74,42 +74,31 @@ const openModalLogin = () => {
     
     const auth = getAuth();
 
+    const googleProvider = new GoogleAuthProvider();
+
+    const googleLoginBtn = document.getElementById('google-login-img');
+googleLoginBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    signInWithPopup(auth, googleProvider)
+    .then((result) => {
+        const user = result.user;
+        showMessage('Login com Google bem-sucedido', 'signInMessage');
+        console.log(user);
+        localStorage.setItem('loggedInUserId', user.uid);
+        window.location.href = 'index.html';
+    }).catch((error) => {
+        console.error("Erro ao fazer login com Google:", error);
+        showMessage('Erro ao fazer login com Google: ' + error.message, 'signInMessage');
+    });
+});
+
+
     const signIn = document.getElementById('login-btn');
     signIn.addEventListener('click', (event) => {
         event.preventDefault();
         const email = document.getElementById('login-email').value;
         const password = document.getElementById('login-password').value;
-
-        // signInWithEmailAndPassword(auth, email, password)
-        //     .then((userCredential) => {
-        //         onAuthStateChanged(auth, (user) => {
-        //             if (user) {
-        //                 if (user.emailVerified) {
-        //                     console.log("User is logged in and email is verified");
-        //                     localStorage.setItem('loggedInUserId', user.uid);
-        //                     window.location.href = 'home.html';
-        //                 } else {
-        //                     console.log("User is logged in but email is not verified");
-        //                     // window.location.href = 'gmail.com';
-        //                     alert("faça a verificação do email")
-                            
-        //                 }
-        //             } else {
-        //                 console.log("No user is logged in");
-        //             }
-        //         });
-        //         showMessage('Logado com sucesso', 'signInMessage');
-        //         const user = userCredential.user;
-        //         localStorage.setItem('loggedInUserId', user.uid);
-        //         window.location.href = 'home.html';
-        //     })
-        //     .catch((error) => {
-        //         const errorCode = error.code;
-        //         if (errorCode === 'auth/invalid-credential') {
-        //             showMessage('Email ou senha incorretos', 'signInMessage');
-        //         }
-        //     })
-
+       
         signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
@@ -138,6 +127,8 @@ const openModalLogin = () => {
 
     })
 }
+
+
 
 const UrlAdote = () => {
     const auth = getAuth();
