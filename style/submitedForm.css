@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.sucess{
+    width: 100%;
+    height: 100%;
+}
+.text-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 90%;
+}
+.text-form h1{
+    font-family: "Inter", sans-serif;
+    padding-bottom: 40px;
+    font-weight: bold;
+}
+.dog-form-submited{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.dog-form-submited img{
+    width: 30vw;
+    height: 50vh;
+    border-radius: 45%;
+}
+
+.button-back-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.button-back-profile button{
+    border: solid var(--dark-red) 1.5px;
+    height: 40px;
+    padding: 6px 40px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    border-radius: 5px;
+}
+
+.button-back-profile button {
+    background-color: #ffff;
+}
+
+.button-back-profile button:hover {
+    box-shadow: inset 200px 0 0 var(--red);
+}
+
+.warning-form {
+    background-color: var(--yellow);
+    border: 1px solid var(--red);
+    color: var(--dark-red);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 35px;
+
+}
+
+.warning-form h1 {
+    color: var(--dark-red);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.warning-form p {
+    margin: 0;
+}
+
