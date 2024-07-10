@@ -150,9 +150,6 @@ async function submitAdoptionForm() {
         button.innerText = "Enviar formulario"
         return
     }
-    
-    // const submitButton = document.getElementById("submit-btn");
-
 
         console.log(termsCheckbox)
         if (termsCheckbox) {
@@ -199,6 +196,7 @@ async function submitAdoptionForm() {
 
         if (response.ok) {
             const result = text ? JSON.parse(text) : {};
+            warningInput.style.display = 'none'
             alert('Adoption form submitted successfully!');
             const headerForm = document.getElementById('progressContainer')
             headerForm.style.display = "none"

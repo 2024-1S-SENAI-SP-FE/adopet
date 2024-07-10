@@ -66,7 +66,7 @@ const GetById = (id) => {
 
                 <section class="profile-section">
 
-                    <img src="http://localhost:8080${Pet.photopetUrl}" alt="">
+                    <img src="${ApiPet}${Pet.photopetUrl}" alt="">
 
                     <h1 class="text-h1">${Pet.name}</h1>
 
@@ -78,7 +78,7 @@ const GetById = (id) => {
 
                         <figure class="big-profile-section">
 
-                            <img class="card1-img" src="http://localhost:8080${Pet.photopetUrl}" alt="foto do ${Pet.name}">
+                            <img class="card1-img" src="${ApiPet}${Pet.photopetUrl}" alt="foto do ${Pet.name}">
 
                         </figure>
 
@@ -171,7 +171,7 @@ const GetById = (id) => {
                     similar += `
                   <section class="son-description">
                         <header class="header-section">
-                            <img src="http://localhost:8080${similarPet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
+                            <img src="${ApiPet}${similarPet.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
                                 <h2>${similarPet.name.toLowerCase()}</h2>
                                 <!-- <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()"> -->
@@ -190,7 +190,7 @@ const GetById = (id) => {
                             </article>
                         </section>
                         <article class="footer-article">
-                            <p class="info-text">${similarPet.description}</p>
+                            <p class="info-text">${similarPet.petstory}</p>
                             <section>
                                 <button type="button" onclick="GetById(${similarPet.id})">More info</button>
                             </section>

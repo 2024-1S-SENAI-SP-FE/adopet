@@ -76,7 +76,7 @@ const openModalLogin = () => {
 
     const googleProvider = new GoogleAuthProvider();
 
-    const googleLoginBtn = document.getElementById('google-login-img');
+    const googleLoginBtn = document.getElementById('google-login-img-login');
 googleLoginBtn.addEventListener('click', (event) => {
     event.preventDefault();
     signInWithPopup(auth, googleProvider)

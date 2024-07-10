@@ -1,5 +1,16 @@
-const RegisterPet = async (event) => {
-    event.preventDefault();
+
+function wrapTextWithSpan(text) {
+    return text.split('').map(char => `${char}`).join('');
+}
+
+const RegisterPet = async () => {
+
+    // event.preventDefaul't();
+
+    const button = document.getElementById('submit-btn')
+    const newText = 'Enviando...';
+    button.innerText = wrapTextWithSpan(newText);
+    button.classList.add('jumping-text');
 
     const selectedRadio = document.querySelector('input[name="specie"]:checked');
     const selectedValue = selectedRadio ? selectedRadio.value : 'None';
@@ -7,7 +18,7 @@ const RegisterPet = async (event) => {
     const age = document.getElementById('age').value.toUpperCase();
     const genders = document.getElementById('gender').value.toUpperCase();
     const sizePet = document.getElementById('display').innerText.toUpperCase();
-    const name = document.getElementById('name').value;
+    const name = document.getElementById('name-pet').value;
     const situation = document.getElementById('situation-select').value.toUpperCase();
     const color =  document.getElementById('color').value;
     const story = document.getElementById('petStory').value;
@@ -17,43 +28,93 @@ const RegisterPet = async (event) => {
     const tutorPhoneCel = document.getElementById('phone-cel').value;
     const tutorPreferences = document.getElementById('tutorPreferences').value;
     const warning = document.getElementById('warning')
-    if(age == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    let warningInput = document.getElementById('warning-inputs')
+
+    if(age == 'TODOS'){
+        warning.innerText = 'Você esqueceu de epecificar em qual periodo de vida o pet está, se ele é filhote, adulto ou idoso.'
+        movingBack3()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(genders == ''){
-        warning.innerText = 'Preencha o campo que especifica o gênero do Pet isso é importante.'
+    else if(genders == 'SEXO'){
+        warning.innerText = 'Você esqueceu de especificar o gênero do pet, essa informação é importante para nós.'
+        movingBack3()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(sizePet == ''){
-        warning.innerText = 'Preencha o campo de porte/tamanho do pet do Pet isso é importante.'
+    else if(sizePet == 'QUAL O PORTE DO PET'){
+        warning.innerText = 'Você esqueceu de especificar o porte do pet, volte e especifique por favor.'
+        movingBack3()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(name == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    // else if(name == ''){
+    //     warning.innerText = 'Você esqueceu de especificar o nome do pet, precisamos saber disso.'
+    //     movingBack3()
+    //     warningInput.style.display = 'block'
+    //     button.innerText = "Enviar formulario"
+    //     return
+    // }
+    else if(situation == 'TODOS'){
+        warning.innerText = 'Precisamos saber em qual situação o pet se encontra, se quiser que ele encontre um lar coloque para adoção, já se encontrou ele perdido, coloque sua situação como perdido, se quiser que ele encontre um tutor deixe como tutor.'
+        movingBack3()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(situation == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(color == 'undefined'){
+        warning.innerText = 'Você esqueceu de especificar a cor do pet, se não souber qual a cor ou se a cor não se encontrar na lista de opções coloque como outros.'
+        movingBack3()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(color == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(story == ''){
+        warning.innerText = 'Você esqueceu de dar uma história para seu pet, precisamos dessa informação.'
+        movingBack5()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(story == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(nameTutor == ''){
+        warning.innerText = 'Você esqueceu de preencher seu nome, precisamos saber qual seu nome ou do tutor anterior do pet.'
+        movingBack6()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(nameTutor == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(emailTutor == ''){
+        warning.innerText = 'Você esqueceu de preencher seu email, precisamos saber qual seu email ou do tutor anterior do pet.'
+        movingBack6()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(emailTutor == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(tutorPhoneFix == ''){
+        warning.innerText = 'Você esqueceu de especificar o número do seu telefone celular, precisamos saber qual seu número ou do tutor anterior do pet, se não possuir apenas coloque 0.'
+        movingBack6()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(tutorPhoneFix == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(tutorPhoneCel == ''){
+        warning.innerText = 'Você esqueceu de especificar o número do seu telefone fixo, precisamos saber qual seu número ou do tutor anterior do pet, se não possuir um apenas coloque 0.'
+        movingBack6()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(tutorPhoneCel == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
+    else if(tutorPreferences == 'null'){
+        warning.innerText = 'você esqueceu de selecionar a preferência de contato.'
+        movingBack6()
+        warningInput.style.display = 'block'
+        button.innerText = "Enviar formulario"
+        return
     }
-    if(tutorPreferences == ''){
-        warning.innerText = 'Preencha o campo de idade do Pet isso é importante.'
-    }
-    
+    console.log(name)
     console.log(situation)
     console.log(genders)
     console.log(sizePet)
@@ -69,7 +130,7 @@ const RegisterPet = async (event) => {
     formData.append('size', sizePet);
     formData.append('gender', genders);
     formData.append('situation', situation);
-    formData.append('species', "CACHORRO");
+    formData.append('species', selectedValue);
     formData.append('color', color);
     formData.append('petstory', story);
     formData.append('lastTutorName', nameTutor);
@@ -129,7 +190,7 @@ const RegisterPet = async (event) => {
             const sucess = document.getElementById("sucess-form") 
             sucess.style.display = "block";
             const imgSucess = document.getElementById('img-pet-sucess')
-            imgSucess.src = `'http://localhost:8080/pet/PetData.photopet_url`
+            // imgSucess.src = `http://localhost:8080/pet${PetData.photopetUrl}`
             document.getElementById('petForm').reset();
             GetPet(); 
         } else {

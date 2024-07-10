@@ -90,7 +90,7 @@ function initializePagination(datas) {
                 const petSection = `
                     <section class="son">
                         <header class="header-section">
-                            <img src="http://localhost:8080${list.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
+                            <img src="${ApiPet}${list.photopetUrl}" alt="foto de um cachorro" class="pet-pic">
                             <span class="itens-top">
                                 <h2>${list.name.toLowerCase()}</h2>
                                 <!-- <img src="assets/icon_heart.png" alt="favorite" class="icon_heart" onclick="favorite()"> -->
@@ -109,7 +109,7 @@ function initializePagination(datas) {
                             </article>
                         </section>
                         <article class="footer-article">
-                            <p class="info-text">${list.description}</p>
+                            <p class="info-text">${list.petstory}</p>
                             <section>
                                 <button type="button" onclick="GetById(${list.id})">More info</button>
                             </section>
