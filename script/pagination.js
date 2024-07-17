@@ -72,7 +72,7 @@ function initializePagination(datas) {
             container.innerHTML = `
                 <section class="not-found">
                     <h3>Ops! Filtro não encontrado</h3>
-                    <img src="../assets/pet-not-found.png" alt="pet not found">
+                    <img src="./../assets/pet-not-found.png" alt="pet not found">
                     <h4>Parece que o filtro que você procura não está disponível no momento. Mas não desanime!</h4>
                 </section>
             `;
