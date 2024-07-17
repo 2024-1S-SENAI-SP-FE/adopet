@@ -72,20 +72,20 @@ const updateDisplay = (value) => {
         large.src = '../assets/paw-print.png'
     } else if (value == 2) {
         display.innerHTML = 'pequeno';
-        small.src = '../assets/paw-print (1).png'
+        small.src = '../assets/paw-print(1).png'
         medium.src = '../assets/paw-print.png'
         large.src = '../assets/paw-print.png'
     } else if (value == 3) {
         display.innerHTML = 'médio';
         small.src = '../assets/paw-print.png'
-        medium.src = '../assets/paw-print (1).png'
+        medium.src = '../assets/paw-print(1).png'
         large.src = '../assets/paw-print.png'
     }
     else if (value == 4) {
         display.innerHTML = 'grande';
         small.src = '../assets/paw-print.png'
         medium.src = '../assets/paw-print.png'
-        large.src = '../assets/paw-print (1).png'
+        large.src = '../assets/paw-print(1).png'
     }
 }
 

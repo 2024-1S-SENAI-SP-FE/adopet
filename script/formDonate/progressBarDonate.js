@@ -11,24 +11,28 @@ const updateDisplay = (value) => {
     var large = document.getElementById('large')
     if (value == 1) {
         display.innerHTML = 'pequeno';
-        small.src = '../assets/paw-print (1).png'
-        medium.src = '../assets/paw-print.png'
-        large.src = '../assets/paw-print.png'
+        small.src = '../../assets/paw-print(1).png'
+        medium.src = '../../assets/paw-print.png'
+        large.src = '../../assets/paw-print.png'
     } else if (value == 2) {
         display.innerHTML = 'médio';
-        small.src = '../assets/paw-print.png'
-        medium.src = '../assets/paw-print (1).png'
-        large.src = '../assets/paw-print.png'
+        small.src = '../../assets/paw-print.png'
+        medium.src = '../../assets/paw-print(1).png'
+        large.src = '../../assets/paw-print.png'
        
     } else if (value == 3) {
         display.innerHTML = 'grande';
-        small.src = '../assets/paw-print.png'
-        medium.src = '../assets/paw-print.png'
-        large.src = '../assets/paw-print (1).png'
+        small.src = '../../assets/paw-print.png'
+        medium.src = '../../assets/paw-print.png'
+        large.src = '../../assets/paw-print(1).png'
     }
 }
 
 function movingBack1(){
+
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "none";
+    
     const form1 = document.getElementById("form1") 
     form1.style.display = "none";
 
@@ -158,6 +162,7 @@ function movingArrow2() {
 }
 // ---------------------------MOVING BACK e NEXT 3-------------------------------------------------------
 function movingBack3(){
+
     // ---- Tiarndo Paginas---------
     const adoptPage1 = document.getElementById("adoptPage1")
     adoptPage1.style.display = "none";
@@ -248,6 +253,9 @@ function movingArrow3() {
 // --------------------------------------------------------------------------------------------------------------
 
 function movingBack4() {
+
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "none";
     
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "46.9%";
@@ -321,6 +329,9 @@ function movingArrow4() {
 
 
 function movingBack5() {
+
+    const form5 = document.getElementById("form5") 
+    form5.style.display = "none";
 
     const orangeArrow = document.getElementById("arrow-start")
     orangeArrow.style.left = "64.5%";

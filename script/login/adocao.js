@@ -44,7 +44,7 @@ onAuthStateChanged(auth, (user) => {
                     const userData = docSnap.data();
                     localStorage.setItem('userData', JSON.stringify(userData));
                     document.getElementById('email').innerText = userData.email
-                    document.getElementById('name').innerText = userData.Name
+                    document.getElementById('name').innerText = userData.Name +" "+ userData.surName
                     document.getElementById('user-select').innerHTML = `<button id="user-select"> ${userData.Name}                        
                         </button>`
                     document.getElementById('user-select').addEventListener('click', userOptions)
